@@ -75,4 +75,5 @@ CMD_LINE = ['7z', 'a'] + ignore_list + [
 #print('CMD_LINE = {}'.format(CMD_LINE))
 
 subprocess.call(CMD_LINE)
+print(indent('Backed up to') + ': {}'.format(filename))
 #os.remove(filename)
