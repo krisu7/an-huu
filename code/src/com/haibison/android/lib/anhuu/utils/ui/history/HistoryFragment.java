@@ -167,7 +167,7 @@ public class HistoryFragment extends DialogFragment implements
         dialog.setContentView(initContentView(dialog.getLayoutInflater(), null));
         dialog.setOnKeyListener(mDialogOnKeyListener);
 
-        UI.adjustDialogSizeForLargeScreen(dialog);
+        UI.adjustDialogSizeForLargeScreens(dialog);
 
         return dialog;
     }// onCreateDialog()
@@ -198,7 +198,7 @@ public class HistoryFragment extends DialogFragment implements
         super.onResume();
         if (mLastScreenOrientation != getResources().getConfiguration().orientation) {
             mLastScreenOrientation = getResources().getConfiguration().orientation;
-            UI.adjustDialogSizeForLargeScreen(getDialog());
+            UI.adjustDialogSizeForLargeScreens(getDialog());
         }
     }// onResume()
 
@@ -212,7 +212,7 @@ public class HistoryFragment extends DialogFragment implements
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
         if (getDialog() != null)
-            UI.adjustDialogSizeForLargeScreen(getDialog());
+            UI.adjustDialogSizeForLargeScreens(getDialog());
     }// onConfigurationChanged()
 
     /*

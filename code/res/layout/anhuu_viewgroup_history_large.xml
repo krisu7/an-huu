@@ -7,7 +7,7 @@
 -->
 
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:afc="http://schemas.android.com/apk/res-auto"
+    xmlns:anhuu="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
 
@@ -40,11 +40,11 @@
             android:layout_marginTop="@dimen/anhuu_5dp"
             android:layout_toLeftOf="@+id/anhuu_viewgroup_navigators"
             android:layout_toRightOf="@id/anhuu_textview_header"
-            afc:closable="false"
-            afc:delayTimeSubmission="@integer/anhuu_search_view_delay_time_submission"
-            afc:enabled="false"
-            afc:hint="@string/anhuu_hint_search"
-            afc:iconified="false" />
+            anhuu:closable="false"
+            anhuu:delayTimeSubmission="@integer/anhuu_search_view_delay_time_submission"
+            anhuu:enabled="false"
+            anhuu:hint="@string/anhuu_hint_search"
+            anhuu:iconified="false" />
 
         <LinearLayout
             android:id="@+id/anhuu_viewgroup_navigators"

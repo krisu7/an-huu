@@ -53,7 +53,7 @@ public class FileChooserActivity_v7 extends ActionBarActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.anhuu_activity_filechooser);
-        UI.adjustDialogSizeForLargeScreen(getWindow());
+        UI.adjustDialogSizeForLargeScreens(getWindow());
 
         /*
          * Make sure RESULT_CANCELED is default.
@@ -70,7 +70,7 @@ public class FileChooserActivity_v7 extends ActionBarActivity {
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
-        UI.adjustDialogSizeForLargeScreen(getWindow());
+        UI.adjustDialogSizeForLargeScreens(getWindow());
     }// onConfigurationChanged()
 
     @Override

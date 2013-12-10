@@ -28,7 +28,7 @@ import com.haibison.android.lib.anhuu.R;
 import com.haibison.android.lib.anhuu.utils.ui.UI;
 
 /**
- * AFC Search view.
+ * An Hữu Search view.
  * 
  * @author Hai Bison
  * @since v5.1 beta

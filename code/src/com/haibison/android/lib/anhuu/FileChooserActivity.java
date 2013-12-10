@@ -99,7 +99,8 @@ public class FileChooserActivity extends FragmentActivity {
      */
 
     /**
-     * Sets value of this key to a theme which is one of {@code Afc_Theme_*}.
+     * Sets value of this key to a theme which is one of {@code AnHuu_Theme_*}
+     * or their descendant.
      * 
      * @since v4.3 beta
      */
@@ -279,7 +280,7 @@ public class FileChooserActivity extends FragmentActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.anhuu_activity_filechooser);
-        UI.adjustDialogSizeForLargeScreen(getWindow());
+        UI.adjustDialogSizeForLargeScreens(getWindow());
 
         /*
          * Make sure RESULT_CANCELED is default.
@@ -296,7 +297,7 @@ public class FileChooserActivity extends FragmentActivity {
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
-        UI.adjustDialogSizeForLargeScreen(getWindow());
+        UI.adjustDialogSizeForLargeScreens(getWindow());
     }// onConfigurationChanged()
 
     @Override

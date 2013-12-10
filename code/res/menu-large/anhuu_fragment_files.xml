@@ -7,25 +7,25 @@
 -->
 
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:afc="http://schemas.android.com/apk/res-auto" >
+    xmlns:anhuu="http://schemas.android.com/apk/res-auto" >
 
     <item
         android:id="@+id/anhuu_menuitem_history"
-        afc:showAsAction="ifRoom"
         android:icon="@android:drawable/ic_menu_recent_history"
-        android:title="@string/anhuu_history"/>
+        android:title="@string/anhuu_history"
+        anhuu:showAsAction="ifRoom"/>
     <item
         android:id="@+id/anhuu_menuitem_sort"
-        afc:showAsAction="ifRoom"
-        android:title="@string/anhuu_cmd_sort"/>
+        android:title="@string/anhuu_cmd_sort"
+        anhuu:showAsAction="ifRoom"/>
     <item
         android:id="@+id/anhuu_menuitem_switch_viewmode"
-        afc:showAsAction="ifRoom"
-        android:title="@null"/>
+        android:title="@null"
+        anhuu:showAsAction="ifRoom"/>
     <item
         android:id="@+id/anhuu_menuitem_new_folder"
-        afc:showAsAction="ifRoom"
         android:icon="@android:drawable/ic_menu_add"
-        android:title="@string/anhuu_cmd_new_folder"/>
+        android:title="@string/anhuu_cmd_new_folder"
+        anhuu:showAsAction="ifRoom"/>
 
 </menu>

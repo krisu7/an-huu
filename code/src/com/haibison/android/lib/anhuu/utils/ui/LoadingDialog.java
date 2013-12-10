@@ -83,7 +83,7 @@ public abstract class LoadingDialog<Params, Progress, Result> extends
 
     /**
      * Creates new {@link LoadingDialog} showing "Loading..." (
-     * {@link R.string#afc_msg_loading}).
+     * {@link R.string#anhuu_msg_loading}).
      * 
      * @param context
      *            {@link Context}
