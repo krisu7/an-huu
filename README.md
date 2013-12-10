@@ -1,13 +1,18 @@
 # An Hữu
 
-* Version: 5.5 beta
+* Version: 5.5
 
 
 Feel free to contact us at:
 
-* [Homepage](http://www.haibison.com)
+* [Homepage]
 * E-mails:
     + haibisonapps[at]gmail.com
+
+
+# What is this project?
+
+This is a simple library - a file chooser for [Android].
 
 
 # CREDITS
@@ -19,15 +24,18 @@ project. We hope this project will be always useful for everyone.
 * Simon McCorkindale
     + [Website](http://www.aroha.mobi/)
 * Philipp Crocoll
-    + Author of open source project [Keepass2Android](https://keepass2android.codeplex.com/)
+    + Author of open source project [Keepass2Android]
 * Dmitry Sviridov
 * And others…
 
 
 # HISTORY
 
-* Version 5.5 beta:
-    + *Initialize:* December 10, 2013
+* Version 5.5:
+    + *Release:* December 10, 2013
+    + Change library name from `android-filechooser` to `An Hữu`. Also change
+      package name from `group.pals.android.lib.ui.filechooser` to
+      `com.haibison.android.lib.anhuu`.
 
 * Version 5.4.4:
     + *Release:* October 28, 2013
@@ -179,8 +187,7 @@ project. We hope this project will be always useful for everyone.
 
 * Version 4.3
     + *Release:* August 29, 2012
-    + Fixed
-      [issue #2](https://code.google.com/p/android-filechooser/issues/detail?id=2);
+    + Fixed [issue #2];
     + Upgraded UI;
     + Added history viewer;
     + Improved some minor code;
@@ -190,9 +197,7 @@ project. We hope this project will be always useful for everyone.
 
 * Version 4.2
     + *Release:* May 15, 2012
-    + due to
-      [this bug](https://code.google.com/p/android/issues/detail?id=30622), so
-      we prefix all resource names with `afc_`;
+    + due to [Android bug #30622], so we prefix all resource names with `afc_`;
     + add small text view below location bar, to show current location's full
       name if it is truncated by the view's ellipsize property;
     + save and restore state after screen orientation changed (except selected
@@ -321,3 +326,10 @@ project. We hope this project will be always useful for everyone.
     + choose file(s) dialog;
     + choose file(s) and/or directory(ies) dialog;
     + save as dialog;
+
+
+[Android]: http://www.android.com
+[Homepage]: http://www.haibison.com
+[Keepass2Android]: https://keepass2android.codeplex.com/
+[issue #2]: https://code.google.com/p/android-filechooser/issues/detail?id=2
+[Android bug #30622]: https://code.google.com/p/android/issues/detail?id=30622
