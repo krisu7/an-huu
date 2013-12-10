@@ -7,13 +7,13 @@
 
 package com.haibison.android.lib.anhuu.providers.history;
 
-import com.haibison.android.lib.anhuu.prefs.Prefs;
-import com.haibison.android.lib.anhuu.providers.DbUtils;
-
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Build;
+
+import com.haibison.android.lib.anhuu.Settings;
+import com.haibison.android.lib.anhuu.providers.DbUtils;
 
 /**
  * SQLite helper for history database.
@@ -39,7 +39,7 @@ public class HistoryHelper extends SQLiteOpenHelper {
 
     public HistoryHelper(Context context) {
         // always use application context
-        super(context.getApplicationContext(), Prefs
+        super(context.getApplicationContext(), Settings
                 .genDatabaseFilename(DB_FILENAME), null, DB_VERSION);
     }// HistoryHelper()
 

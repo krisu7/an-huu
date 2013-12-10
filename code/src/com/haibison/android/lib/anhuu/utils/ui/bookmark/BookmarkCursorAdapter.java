@@ -7,13 +7,6 @@
 
 package com.haibison.android.lib.anhuu.utils.ui.bookmark;
 
-import com.haibison.android.lib.anhuu.BuildConfig;
-import com.haibison.android.lib.anhuu.R;
-import com.haibison.android.lib.anhuu.providers.BaseFileProviderUtils;
-import com.haibison.android.lib.anhuu.providers.bookmark.BookmarkContract;
-import com.haibison.android.lib.anhuu.utils.ui.ContextMenuUtils;
-import com.haibison.android.lib.anhuu.utils.ui.Ui;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,6 +21,13 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.ResourceCursorTreeAdapter;
 import android.widget.TextView;
+
+import com.haibison.android.lib.anhuu.BuildConfig;
+import com.haibison.android.lib.anhuu.R;
+import com.haibison.android.lib.anhuu.providers.BaseFileProviderUtils;
+import com.haibison.android.lib.anhuu.providers.bookmark.BookmarkContract;
+import com.haibison.android.lib.anhuu.utils.ui.ContextMenuUtils;
+import com.haibison.android.lib.anhuu.utils.ui.UI;
 
 /**
  * Bookmark cursor adapter.
@@ -44,9 +44,9 @@ public class BookmarkCursorAdapter extends ResourceCursorTreeAdapter {
      * Advanced selection options: All, None, Invert.
      */
     public static final Integer[] ADVANCED_SELECTION_OPTIONS = new Integer[] {
-            R.string.afc_cmd_advanced_selection_all,
-            R.string.afc_cmd_advanced_selection_none,
-            R.string.afc_cmd_advanced_selection_invert };
+            R.string.anhuu_cmd_advanced_selection_all,
+            R.string.anhuu_cmd_advanced_selection_none,
+            R.string.anhuu_cmd_advanced_selection_invert };
 
     /**
      * The "view holder".
@@ -110,8 +110,8 @@ public class BookmarkCursorAdapter extends ResourceCursorTreeAdapter {
      *            {@link Context}.
      */
     public BookmarkCursorAdapter(Context context) {
-        super(context, null, R.layout.afc_view_bookmark_item,
-                R.layout.afc_view_bookmark_sub_item);
+        super(context, null, R.layout.anhuu_view_bookmark_item,
+                R.layout.anhuu_view_bookmark_sub_item);
     }// BookmarkCursorAdapter()
 
     /**
@@ -253,9 +253,9 @@ public class BookmarkCursorAdapter extends ResourceCursorTreeAdapter {
 
         if (bag == null) {
             bag = new BagChild();
-            bag.mTextName = (TextView) view.findViewById(R.id.afc_text_name);
-            bag.mTextPath = (TextView) view.findViewById(R.id.afc_text_path);
-            bag.mCheckBox = (CheckBox) view.findViewById(R.id.afc_checkbox);
+            bag.mTextName = (TextView) view.findViewById(R.id.anhuu_text_name);
+            bag.mTextPath = (TextView) view.findViewById(R.id.anhuu_text_path);
+            bag.mCheckBox = (CheckBox) view.findViewById(R.id.anhuu_checkbox);
 
             view.setTag(bag);
         }
@@ -266,7 +266,7 @@ public class BookmarkCursorAdapter extends ResourceCursorTreeAdapter {
 
         bag.mTextName.setText(cursor.getString(cursor
                 .getColumnIndex(BookmarkContract.COLUMN_NAME)));
-        Ui.strikeOutText(bag.mTextName, childInfo.mMarkedAsDeleted);
+        UI.strikeOutText(bag.mTextName, childInfo.mMarkedAsDeleted);
 
         /*
          * Path.
@@ -301,17 +301,17 @@ public class BookmarkCursorAdapter extends ResourceCursorTreeAdapter {
             @Override
             public boolean onLongClick(View v) {
                 ContextMenuUtils.showContextMenu(v.getContext(), 0,
-                        R.string.afc_title_advanced_selection,
+                        R.string.anhuu_title_advanced_selection,
                         ADVANCED_SELECTION_OPTIONS,
                         new ContextMenuUtils.OnMenuItemClickListener() {
 
                             @Override
                             public void onClick(final int resId) {
-                                if (resId == R.string.afc_cmd_advanced_selection_all)
+                                if (resId == R.string.anhuu_cmd_advanced_selection_all)
                                     selectAll(true);
-                                else if (resId == R.string.afc_cmd_advanced_selection_none)
+                                else if (resId == R.string.anhuu_cmd_advanced_selection_none)
                                     selectAll(false);
-                                else if (resId == R.string.afc_cmd_advanced_selection_invert)
+                                else if (resId == R.string.anhuu_cmd_advanced_selection_invert)
                                     invertSelection();
                             }// onClick()
                         });
@@ -327,7 +327,7 @@ public class BookmarkCursorAdapter extends ResourceCursorTreeAdapter {
         if (view.getTag() == null) {
             b = new BagGroup();
             b.mTextHeader = (TextView) view
-                    .findViewById(R.id.afc_textview_header);
+                    .findViewById(R.id.anhuu_textview_header);
 
             view.setTag(b);
         } else

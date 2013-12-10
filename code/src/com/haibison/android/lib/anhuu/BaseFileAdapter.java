@@ -23,17 +23,13 @@ import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.haibison.android.lib.anhuu.BuildConfig;
-import com.haibison.android.lib.anhuu.R;
-import com.haibison.android.lib.anhuu.prefs.DisplayPrefs;
-import com.haibison.android.lib.anhuu.prefs.DisplayPrefs.FileTimeDisplay;
 import com.haibison.android.lib.anhuu.providers.BaseFileProviderUtils;
 import com.haibison.android.lib.anhuu.providers.basefile.BaseFileContract.BaseFile;
 import com.haibison.android.lib.anhuu.utils.Converter;
 import com.haibison.android.lib.anhuu.utils.DateUtils;
 import com.haibison.android.lib.anhuu.utils.ui.ContextMenuUtils;
 import com.haibison.android.lib.anhuu.utils.ui.LoadingDialog;
-import com.haibison.android.lib.anhuu.utils.ui.Ui;
+import com.haibison.android.lib.anhuu.utils.ui.UI;
 
 /**
  * Adapter of base file.
@@ -79,37 +75,32 @@ public class BaseFileAdapter extends ResourceCursorAdapter {
     }// OnBuildOptionsMenuListener
 
     private final int mFilterMode;
-    private final FileTimeDisplay mFileTimeDisplay;
     private final Integer[] mAdvancedSelectionOptions;
     private boolean mMultiSelection;
     private OnBuildOptionsMenuListener mOnBuildOptionsMenuListener;
 
     public BaseFileAdapter(Context context, int filterMode,
             boolean multiSelection) {
-        super(context, R.layout.afc_file_item, null, 0);
+        super(context, R.layout.anhuu_file_item, null, 0);
         mFilterMode = filterMode;
         mMultiSelection = multiSelection;
 
         switch (mFilterMode) {
         case BaseFile.FILTER_FILES_AND_DIRECTORIES:
             mAdvancedSelectionOptions = new Integer[] {
-                    R.string.afc_cmd_advanced_selection_all,
-                    R.string.afc_cmd_advanced_selection_none,
-                    R.string.afc_cmd_advanced_selection_invert,
-                    R.string.afc_cmd_select_all_files,
-                    R.string.afc_cmd_select_all_folders };
+                    R.string.anhuu_cmd_advanced_selection_all,
+                    R.string.anhuu_cmd_advanced_selection_none,
+                    R.string.anhuu_cmd_advanced_selection_invert,
+                    R.string.anhuu_cmd_select_all_files,
+                    R.string.anhuu_cmd_select_all_folders };
             break;// FILTER_FILES_AND_DIRECTORIES
         default:
             mAdvancedSelectionOptions = new Integer[] {
-                    R.string.afc_cmd_advanced_selection_all,
-                    R.string.afc_cmd_advanced_selection_none,
-                    R.string.afc_cmd_advanced_selection_invert };
+                    R.string.anhuu_cmd_advanced_selection_all,
+                    R.string.anhuu_cmd_advanced_selection_none,
+                    R.string.anhuu_cmd_advanced_selection_invert };
             break;// FILTER_DIRECTORIES_ONLY and FILTER_FILES_ONLY
         }
-
-        mFileTimeDisplay = new FileTimeDisplay(
-                DisplayPrefs.isShowTimeForOldDaysThisYear(context),
-                DisplayPrefs.isShowTimeForOldDays(context));
     }// BaseFileAdapter()
 
     @Override
@@ -155,15 +146,15 @@ public class BaseFileAdapter extends ResourceCursorAdapter {
         if (bag == null) {
             bag = new Bag();
             bag.mImageIcon = (ImageView) view
-                    .findViewById(R.id.afc_imageview_icon);
+                    .findViewById(R.id.anhuu_imageview_icon);
             bag.mImageLockedSymbol = (ImageView) view
-                    .findViewById(R.id.afc_imageview_locked_symbol);
+                    .findViewById(R.id.anhuu_imageview_locked_symbol);
             bag.mTxtFileName = (TextView) view
-                    .findViewById(R.id.afc_textview_filename);
+                    .findViewById(R.id.anhuu_textview_filename);
             bag.mTxtFileInfo = (TextView) view
-                    .findViewById(R.id.afc_textview_file_info);
+                    .findViewById(R.id.anhuu_textview_file_info);
             bag.mCheckboxSelection = (CheckBox) view
-                    .findViewById(R.id.afc_checkbox_selection);
+                    .findViewById(R.id.anhuu_checkbox_selection);
 
             view.setTag(bag);
         }
@@ -205,14 +196,13 @@ public class BaseFileAdapter extends ResourceCursorAdapter {
          * Filename.
          */
         bag.mTxtFileName.setText(BaseFileProviderUtils.getFileName(cursor));
-        Ui.strikeOutText(bag.mTxtFileName, bagInfo.mMarkedAsDeleted);
+        UI.strikeOutText(bag.mTxtFileName, bagInfo.mMarkedAsDeleted);
 
         /*
          * File info.
          */
         String time = DateUtils.formatDate(context, cursor.getLong(cursor
-                .getColumnIndex(BaseFile.COLUMN_MODIFICATION_TIME)),
-                mFileTimeDisplay);
+                .getColumnIndex(BaseFile.COLUMN_MODIFICATION_TIME)));
         if (BaseFileProviderUtils.isFile(cursor))
             bag.mTxtFileInfo.setText(String.format("%s, %s", Converter
                     .sizeToStr(cursor.getLong(cursor
@@ -469,7 +459,7 @@ public class BaseFileAdapter extends ResourceCursorAdapter {
 
             switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
-                v.setBackgroundResource(R.drawable.afc_image_button_dark_pressed);
+                v.setBackgroundResource(R.drawable.anhuu_image_button_dark_pressed);
                 break;
             case MotionEvent.ACTION_UP:
             case MotionEvent.ACTION_CANCEL:
@@ -505,27 +495,27 @@ public class BaseFileAdapter extends ResourceCursorAdapter {
         @Override
         public boolean onLongClick(final View v) {
             ContextMenuUtils.showContextMenu(v.getContext(), 0,
-                    R.string.afc_title_advanced_selection,
+                    R.string.anhuu_title_advanced_selection,
                     mAdvancedSelectionOptions,
                     new ContextMenuUtils.OnMenuItemClickListener() {
 
                         @Override
                         public void onClick(final int resId) {
                             new LoadingDialog<Void, Void, Void>(v.getContext(),
-                                    R.string.afc_msg_loading, false) {
+                                    R.string.anhuu_msg_loading, false) {
 
                                 @Override
                                 protected Void doInBackground(Void... params) {
-                                    if (resId == R.string.afc_cmd_advanced_selection_all)
+                                    if (resId == R.string.anhuu_cmd_advanced_selection_all)
                                         asyncSelectAll(-1, true);
-                                    else if (resId == R.string.afc_cmd_advanced_selection_none)
+                                    else if (resId == R.string.anhuu_cmd_advanced_selection_none)
                                         asyncSelectAll(-1, false);
-                                    else if (resId == R.string.afc_cmd_advanced_selection_invert)
+                                    else if (resId == R.string.anhuu_cmd_advanced_selection_invert)
                                         asyncInvertSelection();
-                                    else if (resId == R.string.afc_cmd_select_all_files)
+                                    else if (resId == R.string.anhuu_cmd_select_all_files)
                                         asyncSelectAll(BaseFile.FILE_TYPE_FILE,
                                                 true);
-                                    else if (resId == R.string.afc_cmd_select_all_folders)
+                                    else if (resId == R.string.anhuu_cmd_select_all_folders)
                                         asyncSelectAll(
                                                 BaseFile.FILE_TYPE_DIRECTORY,
                                                 true);

@@ -9,14 +9,14 @@ package com.haibison.android.lib.anhuu.providers.basefile;
 
 import java.io.File;
 
+import android.content.ContentResolver;
+import android.net.Uri;
+
 import com.haibison.android.lib.anhuu.providers.BaseColumns;
 import com.haibison.android.lib.anhuu.providers.ProviderUtils;
 import com.haibison.android.lib.anhuu.providers.localfile.FileObserverEx;
 import com.haibison.android.lib.anhuu.providers.localfile.LocalFileProvider;
 import com.haibison.android.lib.anhuu.utils.Sys;
-
-import android.content.ContentResolver;
-import android.net.Uri;
 
 /**
  * Base file contract.

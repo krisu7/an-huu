@@ -19,15 +19,13 @@ import android.view.KeyEvent;
 import android.widget.GridView;
 import android.widget.ListView;
 
-import com.haibison.android.lib.anhuu.BuildConfig;
-import com.haibison.android.lib.anhuu.R;
-import com.haibison.android.lib.anhuu.prefs.DisplayPrefs;
+import com.haibison.android.lib.anhuu.Settings.Display;
 import com.haibison.android.lib.anhuu.providers.BaseFileProviderUtils;
 import com.haibison.android.lib.anhuu.providers.basefile.BaseFileContract.BaseFile;
 import com.haibison.android.lib.anhuu.providers.localfile.LocalFileContract;
 import com.haibison.android.lib.anhuu.providers.localfile.LocalFileProvider;
 import com.haibison.android.lib.anhuu.utils.ui.Dlg;
-import com.haibison.android.lib.anhuu.utils.ui.Ui;
+import com.haibison.android.lib.anhuu.utils.ui.UI;
 
 /**
  * Main activity for this library.
@@ -42,12 +40,11 @@ import com.haibison.android.lib.anhuu.utils.ui.Ui;
  * <ol>
  * <li>About keys {@link FileChooserActivity#EXTRA_ROOTPATH},
  * {@link FileChooserActivity#EXTRA_SELECT_FILE} and preference
- * {@link DisplayPrefs#isRememberLastLocation(Context)}, the priorities of them
- * are:
+ * {@link Display#isRememberLastLocation(Context)}, the priorities of them are:
  * <ol>
  * <li>{@link FileChooserActivity#EXTRA_SELECT_FILE}</li>
  * <li>{@link FileChooserActivity#EXTRA_ROOTPATH}</li>
- * <li>{@link DisplayPrefs#isRememberLastLocation(Context)}</li>
+ * <li>{@link Display#isRememberLastLocation(Context)}</li>
  * </ol>
  * </li>
  * <li>{@link #ACTION_CHOOSE} will return {@link #EXTRA_RESULTS} as an
@@ -278,11 +275,11 @@ public class FileChooserActivity extends FragmentActivity {
 
         if (getIntent().hasExtra(EXTRA_THEME))
             setTheme(getIntent().getIntExtra(EXTRA_THEME,
-                    R.style.Afc_Theme_Dark));
+                    R.style.AnHuu_Theme_Dark));
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.afc_activity_filechooser);
-        Ui.adjustDialogSizeForLargeScreen(getWindow());
+        setContentView(R.layout.anhuu_activity_filechooser);
+        UI.adjustDialogSizeForLargeScreen(getWindow());
 
         /*
          * Make sure RESULT_CANCELED is default.
@@ -293,13 +290,13 @@ public class FileChooserActivity extends FragmentActivity {
         mFragmentFiles.getArguments().putString(FragmentFiles.EXTRA_ACTION,
                 getIntent().getAction());
         getSupportFragmentManager().beginTransaction()
-                .add(R.id.afc_fragment_files, mFragmentFiles).commit();
+                .add(R.id.anhuu_fragment_files, mFragmentFiles).commit();
     }// onCreate()
 
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
-        Ui.adjustDialogSizeForLargeScreen(getWindow());
+        UI.adjustDialogSizeForLargeScreen(getWindow());
     }// onConfigurationChanged()
 
     @Override
@@ -317,7 +314,7 @@ public class FileChooserActivity extends FragmentActivity {
                     Log.d(CLASSNAME,
                             "onKeyDown() >> KEYCODE_BACK >> cancelling previous query...");
                 mFragmentFiles.cancelPreviousLoader();
-                Dlg.toast(this, R.string.afc_msg_cancelled, Dlg.LENGTH_SHORT);
+                Dlg.toast(this, R.string.anhuu_msg_cancelled, Dlg.LENGTH_SHORT);
                 return true;
             }
         }

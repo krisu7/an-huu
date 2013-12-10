@@ -7,7 +7,6 @@
 
 package com.haibison.android.lib.anhuu.providers.localfile;
 
-import com.haibison.android.lib.anhuu.BuildConfig;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Build;
@@ -17,6 +16,8 @@ import android.os.HandlerThread;
 import android.os.Message;
 import android.os.SystemClock;
 import android.util.Log;
+
+import com.haibison.android.lib.anhuu.BuildConfig;
 
 /**
  * Extended class of {@link FileObserver}, to watch for changes of a directory

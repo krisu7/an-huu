@@ -7,7 +7,6 @@
 
 package com.haibison.android.lib.anhuu.utils.ui;
 
-import com.haibison.android.lib.anhuu.R;
 import android.app.Dialog;
 import android.content.Context;
 import android.text.TextUtils;
@@ -17,6 +16,8 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ListView;
+
+import com.haibison.android.lib.anhuu.R;
 
 /**
  * Utilities for context menu.
@@ -43,8 +44,8 @@ public class ContextMenuUtils {
     public static void showContextMenu(Context context, int iconId,
             String title, final Integer[] itemIds,
             final OnMenuItemClickListener listener) {
-        final Dialog dialog = new Dialog(context, Ui.resolveAttribute(context,
-                R.attr.afc_theme_dialog));
+        final Dialog dialog = new Dialog(context, UI.resolveAttribute(context,
+                R.attr.anhuu_theme_dialog));
         dialog.setCanceledOnTouchOutside(true);
         if (iconId > 0)
             dialog.requestWindowFeature(Window.FEATURE_LEFT_ICON);
@@ -57,9 +58,9 @@ public class ContextMenuUtils {
                 dialog.getContext(), itemIds);
 
         View view = LayoutInflater.from(context).inflate(
-                R.layout.afc_context_menu_view, null);
+                R.layout.anhuu_context_menu_view, null);
         ListView listview = (ListView) view
-                .findViewById(R.id.afc_listview_menu);
+                .findViewById(R.id.anhuu_listview_menu);
         listview.setAdapter(_adapter);
 
         dialog.setContentView(view);
@@ -86,7 +87,7 @@ public class ContextMenuUtils {
         WindowManager.LayoutParams lp = new WindowManager.LayoutParams();
         lp.copyFrom(dialog.getWindow().getAttributes());
         lp.width = context.getResources().getDimensionPixelSize(
-                R.dimen.afc_context_menu_width);
+                R.dimen.anhuu_context_menu_width);
         dialog.getWindow().setAttributes(lp);
     }// showContextMenu()
 

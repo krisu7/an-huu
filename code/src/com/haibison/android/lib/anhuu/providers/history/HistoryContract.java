@@ -7,13 +7,13 @@
 
 package com.haibison.android.lib.anhuu.providers.history;
 
+import android.content.Context;
+import android.net.Uri;
+
 import com.haibison.android.lib.anhuu.providers.BaseColumns;
 import com.haibison.android.lib.anhuu.providers.ProviderUtils;
 import com.haibison.android.lib.anhuu.providers.basefile.BaseFileContract.BaseFile;
 import com.haibison.android.lib.anhuu.utils.Sys;
-
-import android.content.Context;
-import android.net.Uri;
 
 /**
  * History contract.

@@ -9,14 +9,14 @@ package com.haibison.android.lib.anhuu.providers.basefile;
 
 import java.text.Collator;
 
-import com.haibison.android.lib.anhuu.providers.basefile.BaseFileContract.BaseFile;
-
 import android.content.ContentProvider;
 import android.content.ContentValues;
 import android.content.UriMatcher;
 import android.database.Cursor;
 import android.net.Uri;
 import android.util.SparseBooleanArray;
+
+import com.haibison.android.lib.anhuu.providers.basefile.BaseFileContract.BaseFile;
 
 /**
  * Base provider for files.

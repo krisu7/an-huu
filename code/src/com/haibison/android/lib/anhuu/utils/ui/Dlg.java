@@ -7,13 +7,14 @@
 
 package com.haibison.android.lib.anhuu.utils.ui;
 
-import com.haibison.android.lib.anhuu.R;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.view.ContextThemeWrapper;
 import android.widget.Toast;
+
+import com.haibison.android.lib.anhuu.R;
 
 /**
  * Utilities for message boxes.
@@ -79,7 +80,7 @@ public class Dlg {
             DialogInterface.OnDismissListener listener) {
         AlertDialog dlg = newAlertDlg(context);
         dlg.setIcon(android.R.drawable.ic_dialog_info);
-        dlg.setTitle(R.string.afc_title_info);
+        dlg.setTitle(R.string.anhuu_title_info);
         dlg.setMessage(msg);
         dlg.setOnDismissListener(listener);
         dlg.show();
@@ -138,7 +139,7 @@ public class Dlg {
             DialogInterface.OnCancelListener listener) {
         AlertDialog dlg = newAlertDlg(context);
         dlg.setIcon(android.R.drawable.ic_dialog_alert);
-        dlg.setTitle(R.string.afc_title_error);
+        dlg.setTitle(R.string.anhuu_title_error);
         dlg.setMessage(msg);
         dlg.setOnCancelListener(listener);
         dlg.show();
@@ -171,10 +172,8 @@ public class Dlg {
      */
     public static void showUnknownError(Context context, Throwable t,
             DialogInterface.OnCancelListener listener) {
-        showError(
-                context,
-                String.format(
-                        context.getString(R.string.afc_pmsg_unknown_error), t),
+        showError(context, String.format(
+                context.getString(R.string.anhuu_pmsg_unknown_error), t),
                 listener);
     }// showUnknownError()
 
@@ -196,7 +195,7 @@ public class Dlg {
             DialogInterface.OnCancelListener onNo) {
         AlertDialog dlg = newAlertDlg(context);
         dlg.setIcon(android.R.drawable.ic_dialog_alert);
-        dlg.setTitle(R.string.afc_title_confirmation);
+        dlg.setTitle(R.string.anhuu_title_confirmation);
         dlg.setMessage(msg);
         dlg.setButton(DialogInterface.BUTTON_POSITIVE,
                 context.getString(android.R.string.yes), onYes);
@@ -230,8 +229,8 @@ public class Dlg {
      * @since v4.3 beta
      */
     public static Dialog newDlg(Context context) {
-        Dialog res = new Dialog(context, Ui.resolveAttribute(context,
-                R.attr.afc_theme_dialog));
+        Dialog res = new Dialog(context, UI.resolveAttribute(context,
+                R.attr.anhuu_theme_dialog));
         res.setCanceledOnTouchOutside(true);
         return res;
     }// newAlertDlg()
@@ -261,7 +260,7 @@ public class Dlg {
      */
     public static AlertDialog.Builder newAlertDlgBuilder(Context context) {
         return new AlertDialog.Builder(new ContextThemeWrapper(context,
-                Ui.resolveAttribute(context, R.attr.afc_theme_dialog)));
+                UI.resolveAttribute(context, R.attr.anhuu_theme_dialog)));
     }// newAlertDlgBuilder()
 
 }

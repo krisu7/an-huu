@@ -7,20 +7,6 @@
 
 package com.haibison.android.lib.anhuu.utils.ui.bookmark;
 
-import com.haibison.android.lib.anhuu.BuildConfig;
-import com.haibison.android.lib.anhuu.R;
-import com.haibison.android.lib.anhuu.prefs.DisplayPrefs;
-import com.haibison.android.lib.anhuu.providers.DbUtils;
-import com.haibison.android.lib.anhuu.providers.bookmark.BookmarkContract;
-import com.haibison.android.lib.anhuu.utils.EnvUtils;
-import com.haibison.android.lib.anhuu.utils.Texts;
-import com.haibison.android.lib.anhuu.utils.ui.ContextMenuUtils;
-import com.haibison.android.lib.anhuu.utils.ui.Dlg;
-import com.haibison.android.lib.anhuu.utils.ui.GestureUtils;
-import com.haibison.android.lib.anhuu.utils.ui.Ui;
-import com.haibison.android.lib.anhuu.utils.ui.GestureUtils.FlingDirection;
-import com.haibison.android.lib.anhuu.utils.ui.history.HistoryFragment;
-
 import java.text.Collator;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -59,6 +45,20 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ExpandableListView;
 import android.widget.TextView;
+
+import com.haibison.android.lib.anhuu.BuildConfig;
+import com.haibison.android.lib.anhuu.R;
+import com.haibison.android.lib.anhuu.Settings.Display;
+import com.haibison.android.lib.anhuu.providers.DbUtils;
+import com.haibison.android.lib.anhuu.providers.bookmark.BookmarkContract;
+import com.haibison.android.lib.anhuu.utils.EnvUtils;
+import com.haibison.android.lib.anhuu.utils.Texts;
+import com.haibison.android.lib.anhuu.utils.ui.ContextMenuUtils;
+import com.haibison.android.lib.anhuu.utils.ui.Dlg;
+import com.haibison.android.lib.anhuu.utils.ui.GestureUtils;
+import com.haibison.android.lib.anhuu.utils.ui.GestureUtils.FlingDirection;
+import com.haibison.android.lib.anhuu.utils.ui.UI;
+import com.haibison.android.lib.anhuu.utils.ui.history.HistoryFragment;
 
 /**
  * Fragment to manage bookmarks.
@@ -146,14 +146,14 @@ public class BookmarkFragment extends DialogFragment implements
         if (BuildConfig.DEBUG)
             Log.d(CLASSNAME, "onCreateDialog()");
 
-        Dialog dialog = new Dialog(getActivity(), Ui.resolveAttribute(
-                getActivity(), R.attr.afc_theme_dialog));
+        Dialog dialog = new Dialog(getActivity(), UI.resolveAttribute(
+                getActivity(), R.attr.anhuu_theme_dialog));
         dialog.setCanceledOnTouchOutside(true);
         dialog.requestWindowFeature(Window.FEATURE_LEFT_ICON);
-        dialog.setTitle(R.string.afc_title_bookmark_manager);
+        dialog.setTitle(R.string.anhuu_title_bookmark_manager);
         dialog.setContentView(initContentView(dialog.getLayoutInflater(), null));
         dialog.setFeatureDrawableResource(Window.FEATURE_LEFT_ICON,
-                R.drawable.afc_bookmarks_dark);
+                R.drawable.anhuu_bookmarks_dark);
 
         return dialog;
     }// onCreateDialog()
@@ -204,7 +204,7 @@ public class BookmarkFragment extends DialogFragment implements
         if (id == mLoaderBookmarkData) {
             mHandler.removeCallbacksAndMessages(null);
             mHandler.postDelayed(mViewLoadingShower,
-                    DisplayPrefs.DELAY_TIME_FOR_SIMPLE_ANIMATION);
+                    Display.DELAY_TIME_FOR_SIMPLE_ANIMATION);
 
             mBookmarkCursorAdapter.changeCursor(null);
 
@@ -263,21 +263,22 @@ public class BookmarkFragment extends DialogFragment implements
      * Loads content view from XML and init controls.
      */
     private View initContentView(LayoutInflater inflater, ViewGroup container) {
-        View mainView = inflater.inflate(R.layout.afc_viewgroup_bookmarks,
+        View mainView = inflater.inflate(R.layout.anhuu_viewgroup_bookmarks,
                 container, false);
 
         /*
          * Maps controls.
          */
 
-        mViewGroupControls = mainView.findViewById(R.id.afc_viewgroup_controls);
+        mViewGroupControls = mainView
+                .findViewById(R.id.anhuu_viewgroup_controls);
         mListView = (ExpandableListView) mainView
-                .findViewById(R.id.afc_listview_bookmarks);
+                .findViewById(R.id.anhuu_listview_bookmarks);
         mViewFooter = (ViewGroup) mainView
-                .findViewById(R.id.afc_viewgroup_footer);
-        mBtnClear = (Button) mainView.findViewById(R.id.afc_button_clear);
-        mBtnOk = (Button) mainView.findViewById(R.id.afc_button_ok);
-        mViewLoading = mainView.findViewById(R.id.afc_view_loading);
+                .findViewById(R.id.anhuu_viewgroup_footer);
+        mBtnClear = (Button) mainView.findViewById(R.id.anhuu_button_clear);
+        mBtnOk = (Button) mainView.findViewById(R.id.anhuu_button_ok);
+        mViewLoading = mainView.findViewById(R.id.anhuu_view_loading);
 
         if (mEditor) {
             mViewFooter.setVisibility(View.VISIBLE);
@@ -287,7 +288,7 @@ public class BookmarkFragment extends DialogFragment implements
          * Listview.
          */
 
-        mListView.setEmptyView(mainView.findViewById(R.id.afc_empty_view));
+        mListView.setEmptyView(mainView.findViewById(R.id.anhuu_empty_view));
         mListView.setOnChildClickListener(mListViewOnChildClickListener);
         mListView.setOnItemLongClickListener(mListViewOnItemLongClickListener);
         initListViewGestureListener();
@@ -357,7 +358,7 @@ public class BookmarkFragment extends DialogFragment implements
                                                 .genContentUri(getActivity()),
                                         sb.toString(), null);
                             }// run()
-                        }, DisplayPrefs.DELAY_TIME_FOR_VERY_SHORT_ANIMATION);
+                        }, Display.DELAY_TIME_FOR_VERY_SHORT_ANIMATION);
 
                         return true;
                     }// onFling()
@@ -483,19 +484,19 @@ public class BookmarkFragment extends DialogFragment implements
                     Log.d(CLASSNAME, String.format(
                             "onItemLongClick() -- group = %,d", iGroup));
                 ContextMenuUtils.showContextMenu(getActivity(), 0,
-                        R.string.afc_title_advanced_selection,
+                        R.string.anhuu_title_advanced_selection,
                         BookmarkCursorAdapter.ADVANCED_SELECTION_OPTIONS,
                         new ContextMenuUtils.OnMenuItemClickListener() {
 
                             @Override
                             public void onClick(final int resId) {
-                                if (resId == R.string.afc_cmd_advanced_selection_all)
+                                if (resId == R.string.anhuu_cmd_advanced_selection_all)
                                     mBookmarkCursorAdapter.selectAll(iGroup,
                                             true);
-                                else if (resId == R.string.afc_cmd_advanced_selection_none)
+                                else if (resId == R.string.anhuu_cmd_advanced_selection_none)
                                     mBookmarkCursorAdapter.selectAll(iGroup,
                                             false);
-                                else if (resId == R.string.afc_cmd_advanced_selection_invert)
+                                else if (resId == R.string.anhuu_cmd_advanced_selection_invert)
                                     mBookmarkCursorAdapter
                                             .invertSelection(iGroup);
                             }// onClick()
@@ -515,18 +516,18 @@ public class BookmarkFragment extends DialogFragment implements
                         .getColumnIndex(BookmarkContract.COLUMN_NAME));
 
                 ContextMenuUtils.showContextMenu(getActivity(),
-                        R.drawable.afc_bookmarks_dark, Texts.quote(name),
-                        new Integer[] { R.string.afc_cmd_rename,
-                                R.string.afc_cmd_sort_by_name },
+                        R.drawable.anhuu_bookmarks_dark, Texts.quote(name),
+                        new Integer[] { R.string.anhuu_cmd_rename,
+                                R.string.anhuu_cmd_sort_by_name },
                         new ContextMenuUtils.OnMenuItemClickListener() {
 
                             @Override
                             public void onClick(int resId) {
-                                if (resId == R.string.afc_cmd_rename) {
+                                if (resId == R.string.anhuu_cmd_rename) {
                                     doEnterNewNameOrRenameBookmark(
                                             getActivity(), providerId,
                                             bookmarkId, uri, name);
-                                } else if (resId == R.string.afc_cmd_sort_by_name) {
+                                } else if (resId == R.string.anhuu_cmd_sort_by_name) {
                                     sortBookmarks(iGroup);
                                 }
                             }// onClick()
@@ -611,18 +612,19 @@ public class BookmarkFragment extends DialogFragment implements
         final AlertDialog dialog = Dlg.newAlertDlg(context);
 
         View view = LayoutInflater.from(context).inflate(
-                R.layout.afc_simple_text_input_view, null);
-        final EditText textName = (EditText) view.findViewById(R.id.afc_text1);
+                R.layout.anhuu_simple_text_input_view, null);
+        final EditText textName = (EditText) view
+                .findViewById(R.id.anhuu_text1);
         textName.setText(name);
         textName.selectAll();
-        textName.setHint(R.string.afc_hint_new_name);
+        textName.setHint(R.string.anhuu_hint_new_name);
         textName.setOnEditorActionListener(new TextView.OnEditorActionListener() {
 
             @Override
             public boolean onEditorAction(TextView v, int actionId,
                     KeyEvent event) {
                 if (actionId == EditorInfo.IME_ACTION_DONE) {
-                    Ui.showSoftKeyboard(textName, false);
+                    UI.showSoftKeyboard(textName, false);
                     Button btn = dialog
                             .getButton(DialogInterface.BUTTON_POSITIVE);
                     if (btn.isEnabled())
@@ -634,9 +636,9 @@ public class BookmarkFragment extends DialogFragment implements
         });
 
         dialog.setView(view);
-        dialog.setIcon(R.drawable.afc_bookmarks_dark);
-        dialog.setTitle(id < 0 ? R.string.afc_title_new_bookmark
-                : R.string.afc_title_rename);
+        dialog.setIcon(R.drawable.anhuu_bookmarks_dark);
+        dialog.setTitle(id < 0 ? R.string.anhuu_title_new_bookmark
+                : R.string.anhuu_title_rename);
         dialog.setButton(DialogInterface.BUTTON_POSITIVE,
                 context.getString(android.R.string.ok),
                 new DialogInterface.OnClickListener() {
@@ -645,13 +647,14 @@ public class BookmarkFragment extends DialogFragment implements
                     public void onClick(DialogInterface dialog, int which) {
                         String newName = textName.getText().toString().trim();
                         if (android.text.TextUtils.isEmpty(newName)) {
-                            Dlg.toast(context,
-                                    R.string.afc_msg_bookmark_name_is_invalid,
+                            Dlg.toast(
+                                    context,
+                                    R.string.anhuu_msg_bookmark_name_is_invalid,
                                     Dlg.LENGTH_SHORT);
                             return;
                         }
 
-                        Ui.showSoftKeyboard(textName, false);
+                        UI.showSoftKeyboard(textName, false);
 
                         ContentValues values = new ContentValues();
                         values.put(BookmarkContract.COLUMN_NAME, newName);
@@ -718,13 +721,13 @@ public class BookmarkFragment extends DialogFragment implements
                         }
 
                         Dlg.toast(context,
-                                context.getString(R.string.afc_msg_done),
+                                context.getString(R.string.anhuu_msg_done),
                                 Dlg.LENGTH_SHORT);
                     }// onClick()
                 });
 
         dialog.show();
-        Ui.showSoftKeyboard(textName, true);
+        UI.showSoftKeyboard(textName, true);
 
         final Button buttonOk = dialog
                 .getButton(DialogInterface.BUTTON_POSITIVE);
@@ -770,7 +773,7 @@ public class BookmarkFragment extends DialogFragment implements
             } else {
                 Dlg.confirmYesno(
                         getActivity(),
-                        getString(R.string.afc_msg_confirm_clear_all_bookmarks),
+                        getString(R.string.anhuu_msg_confirm_clear_all_bookmarks),
                         new DialogInterface.OnClickListener() {
 
                             @Override

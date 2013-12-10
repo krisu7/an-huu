@@ -7,9 +7,9 @@
 
 package com.haibison.android.lib.anhuu.providers.localfile;
 
-import com.haibison.android.lib.anhuu.utils.Sys;
-
 import android.content.Context;
+
+import com.haibison.android.lib.anhuu.utils.Sys;
 
 /**
  * Contract for local file.

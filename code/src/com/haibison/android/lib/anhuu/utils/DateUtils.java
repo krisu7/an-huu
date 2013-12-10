@@ -7,12 +7,11 @@
 
 package com.haibison.android.lib.anhuu.utils;
 
-import com.haibison.android.lib.anhuu.R;
-import com.haibison.android.lib.anhuu.prefs.DisplayPrefs.FileTimeDisplay;
-
 import java.util.Calendar;
 
 import android.content.Context;
+
+import com.haibison.android.lib.anhuu.R;
 
 /**
  * Date utilities.
@@ -51,15 +50,12 @@ public class DateUtils {
      *            {@link Context}.
      * @param millis
      *            time in milliseconds.
-     * @param fileTimeDisplay
-     *            {@link FileTimeDisplay}.
      * @return the formatted string
      */
-    public static String formatDate(Context context, long millis,
-            FileTimeDisplay fileTimeDisplay) {
+    public static String formatDate(Context context, long millis) {
         Calendar cal = Calendar.getInstance();
         cal.setTimeInMillis(millis);
-        return formatDate(context, cal, fileTimeDisplay);
+        return formatDate(context, cal);
     }// formatDate()
 
     /**
@@ -69,12 +65,9 @@ public class DateUtils {
      *            {@link Context}.
      * @param date
      *            {@link Calendar}.
-     * @param fileTimeDisplay
-     *            {@link FileTimeDisplay}.
      * @return the formatted string, for local human reading.
      */
-    public static String formatDate(Context context, Calendar date,
-            FileTimeDisplay fileTimeDisplay) {
+    public static String formatDate(Context context, Calendar date) {
         final Calendar yesterday = Calendar.getInstance();
         yesterday.add(Calendar.DAY_OF_YEAR, -1);
 
@@ -89,28 +82,17 @@ public class DateUtils {
                         .get(Calendar.DAY_OF_YEAR)) {
             res = String.format(
                     "%s, %s",
-                    context.getString(R.string.afc_yesterday),
+                    context.getString(R.string.anhuu_yesterday),
                     android.text.format.DateUtils.formatDateTime(context,
                             date.getTimeInMillis(), FORMAT_SHORT_TIME));
         }// yesterday
         else if (date.get(Calendar.YEAR) == yesterday.get(Calendar.YEAR)) {
-            if (fileTimeDisplay.showTimeForOldDaysThisYear)
-                res = android.text.format.DateUtils.formatDateTime(context,
-                        date.getTimeInMillis(), FORMAT_SHORT_TIME
-                                | FORMAT_MONTH_AND_DAY);
-            else
-                res = android.text.format.DateUtils.formatDateTime(context,
-                        date.getTimeInMillis(), FORMAT_MONTH_AND_DAY);
+            res = android.text.format.DateUtils.formatDateTime(context,
+                    date.getTimeInMillis(), FORMAT_MONTH_AND_DAY);
         }// this year
         else {
-            if (fileTimeDisplay.showTimeForOldDays)
-                res = android.text.format.DateUtils.formatDateTime(context,
-                        date.getTimeInMillis(), FORMAT_SHORT_TIME
-                                | FORMAT_MONTH_AND_DAY | FORMAT_YEAR);
-            else
-                res = android.text.format.DateUtils.formatDateTime(context,
-                        date.getTimeInMillis(), FORMAT_MONTH_AND_DAY
-                                | FORMAT_YEAR);
+            res = android.text.format.DateUtils.formatDateTime(context,
+                    date.getTimeInMillis(), FORMAT_MONTH_AND_DAY | FORMAT_YEAR);
         }// other years (maybe older or newer than this year)
 
         return res;

@@ -7,13 +7,13 @@
 
 package com.haibison.android.lib.anhuu.providers.bookmark;
 
-import com.haibison.android.lib.anhuu.prefs.Prefs;
-import com.haibison.android.lib.anhuu.providers.DbUtils;
-
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Build;
+
+import com.haibison.android.lib.anhuu.Settings;
+import com.haibison.android.lib.anhuu.providers.DbUtils;
 
 /**
  * Database for bookmark.
@@ -44,7 +44,7 @@ public class BookmarkHelper extends SQLiteOpenHelper {
 
     public BookmarkHelper(Context context) {
         // always use application context
-        super(context.getApplicationContext(), Prefs
+        super(context.getApplicationContext(), Settings
                 .genDatabaseFilename(DB_FILENAME), null, DB_VERSION);
     }// BookmarkHelper()
 

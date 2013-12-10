@@ -7,11 +7,6 @@
 
 package com.haibison.android.lib.anhuu.providers.history;
 
-import com.haibison.android.lib.anhuu.BuildConfig;
-import com.haibison.android.lib.anhuu.providers.BaseFileProviderUtils;
-import com.haibison.android.lib.anhuu.providers.DbUtils;
-import com.haibison.android.lib.anhuu.providers.basefile.BaseFileContract.BaseFile;
-
 import java.util.Arrays;
 import java.util.Date;
 import java.util.HashMap;
@@ -30,6 +25,11 @@ import android.database.sqlite.SQLiteQueryBuilder;
 import android.net.Uri;
 import android.text.TextUtils;
 import android.util.Log;
+
+import com.haibison.android.lib.anhuu.BuildConfig;
+import com.haibison.android.lib.anhuu.providers.BaseFileProviderUtils;
+import com.haibison.android.lib.anhuu.providers.DbUtils;
+import com.haibison.android.lib.anhuu.providers.basefile.BaseFileContract.BaseFile;
 
 /**
  * History provider.

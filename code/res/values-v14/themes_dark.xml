@@ -8,8 +8,8 @@
 
 <resources xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <style name="Afc.BaseTheme.Dialog.Dark" parent="@android:style/Theme.DeviceDefault.Dialog"></style>
+    <style name="AnHuu.BaseTheme.Dialog.Dark" parent="@android:style/Theme.DeviceDefault.Dialog"></style>
 
-    <style name="afc_base_button_location" parent="@android:style/Widget.DeviceDefault.TextView"></style>
+    <style name="anhuu_base_button_location" parent="@android:style/Widget.DeviceDefault.TextView"></style>
 
 </resources>

@@ -8,7 +8,7 @@
 
 <resources>
 
-    <item name="afc_fragment_files" type="layout">@layout/afc_fragment_files_large</item>
-    <item name="afc_viewgroup_history" type="layout">@layout/afc_viewgroup_history_large</item>
+    <item name="anhuu_fragment_files" type="layout">@layout/anhuu_fragment_files_large</item>
+    <item name="anhuu_viewgroup_history" type="layout">@layout/anhuu_viewgroup_history_large</item>
 
 </resources>

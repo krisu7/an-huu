@@ -7,7 +7,6 @@
 
 package com.haibison.android.lib.anhuu.utils;
 
-import com.haibison.android.lib.anhuu.R;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
@@ -16,6 +15,8 @@ import android.view.ContextThemeWrapper;
 import android.view.View;
 import android.view.Window;
 import android.widget.TextView;
+
+import com.haibison.android.lib.anhuu.R;
 
 /**
  * Something funny :-)
@@ -42,10 +43,10 @@ public class E {
         }
 
         final Context ctw = new ContextThemeWrapper(context,
-                R.style.Afc_Theme_Dialog_Dark);
+                R.style.AnHuu_Theme_Dialog_Dark);
 
         final int padding = ctw.getResources().getDimensionPixelSize(
-                R.dimen.afc_10dp);
+                R.dimen.anhuu_10dp);
         TextView textView = new TextView(ctw);
         textView.setText(msg);
         textView.setPadding(padding, padding, padding, padding);
@@ -64,7 +65,7 @@ public class E {
             }// onClick()
         });
 
-        Dialog dialog = new Dialog(ctw, R.style.Afc_Theme_Dialog_Dark);
+        Dialog dialog = new Dialog(ctw, R.style.AnHuu_Theme_Dialog_Dark);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialog.setCanceledOnTouchOutside(true);
         dialog.setContentView(textView);

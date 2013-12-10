@@ -7,13 +7,14 @@
 
 package com.haibison.android.lib.anhuu.utils.ui;
 
-import com.haibison.android.lib.anhuu.R;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
+
+import com.haibison.android.lib.anhuu.R;
 
 /**
  * Adapter for context menu.
@@ -58,7 +59,7 @@ public class MenuItemAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         if (convertView == null) {
             convertView = LayoutInflater.from(mContext).inflate(
-                    R.layout.afc_context_menu_tiem, null);
+                    R.layout.anhuu_context_menu_tiem, null);
         }
 
         ((TextView) convertView).setText(mItems[position]);

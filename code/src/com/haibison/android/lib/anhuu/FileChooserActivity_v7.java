@@ -12,10 +12,8 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 
-import com.haibison.android.lib.anhuu.BuildConfig;
-import com.haibison.android.lib.anhuu.R;
 import com.haibison.android.lib.anhuu.utils.ui.Dlg;
-import com.haibison.android.lib.anhuu.utils.ui.Ui;
+import com.haibison.android.lib.anhuu.utils.ui.UI;
 
 /**
  * Helper class for {@link FileChooserActivity} in API 7+.
@@ -51,11 +49,11 @@ public class FileChooserActivity_v7 extends ActionBarActivity {
 
         if (getIntent().hasExtra(FileChooserActivity.EXTRA_THEME))
             setTheme(getIntent().getIntExtra(FileChooserActivity.EXTRA_THEME,
-                    R.style.Afc_Theme_Dark));
+                    R.style.AnHuu_Theme_Dark));
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.afc_activity_filechooser);
-        Ui.adjustDialogSizeForLargeScreen(getWindow());
+        setContentView(R.layout.anhuu_activity_filechooser);
+        UI.adjustDialogSizeForLargeScreen(getWindow());
 
         /*
          * Make sure RESULT_CANCELED is default.
@@ -66,13 +64,13 @@ public class FileChooserActivity_v7 extends ActionBarActivity {
         mFragmentFiles.getArguments().putString(FragmentFiles.EXTRA_ACTION,
                 getIntent().getAction());
         getSupportFragmentManager().beginTransaction()
-                .add(R.id.afc_fragment_files, mFragmentFiles).commit();
+                .add(R.id.anhuu_fragment_files, mFragmentFiles).commit();
     }// onCreate()
 
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
-        Ui.adjustDialogSizeForLargeScreen(getWindow());
+        UI.adjustDialogSizeForLargeScreen(getWindow());
     }// onConfigurationChanged()
 
     @Override
@@ -85,7 +83,7 @@ public class FileChooserActivity_v7 extends ActionBarActivity {
                 Log.d(CLASSNAME,
                         "onBackPressed() >> cancelling previous query...");
             mFragmentFiles.cancelPreviousLoader();
-            Dlg.toast(this, R.string.afc_msg_cancelled, Dlg.LENGTH_SHORT);
+            Dlg.toast(this, R.string.anhuu_msg_cancelled, Dlg.LENGTH_SHORT);
             return;
         }
 

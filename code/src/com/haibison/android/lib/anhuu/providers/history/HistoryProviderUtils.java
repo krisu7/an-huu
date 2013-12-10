@@ -7,15 +7,15 @@
 
 package com.haibison.android.lib.anhuu.providers.history;
 
-import com.haibison.android.lib.anhuu.BuildConfig;
-import com.haibison.android.lib.anhuu.R;
-import com.haibison.android.lib.anhuu.providers.DbUtils;
-
 import java.util.Date;
 
 import android.content.Context;
 import android.text.format.DateUtils;
 import android.util.Log;
+
+import com.haibison.android.lib.anhuu.BuildConfig;
+import com.haibison.android.lib.anhuu.R;
+import com.haibison.android.lib.anhuu.providers.DbUtils;
 
 /**
  * Utilities for History provider.
@@ -45,7 +45,7 @@ public class HistoryProviderUtils {
              */
             final long validityInMillis = new Date().getTime()
                     - (context.getResources().getInteger(
-                            R.integer.afc_pkey_history_validity_in_days_def) * DateUtils.DAY_IN_MILLIS);
+                            R.integer.anhuu_pkey_history_validity_in_days_def) * DateUtils.DAY_IN_MILLIS);
 
             if (BuildConfig.DEBUG)
                 Log.d(CLASSNAME, String.format(

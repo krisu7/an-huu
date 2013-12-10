@@ -7,15 +7,6 @@
 
 package com.haibison.android.lib.anhuu.providers.localfile;
 
-import com.haibison.android.lib.anhuu.BuildConfig;
-import com.haibison.android.lib.anhuu.R;
-import com.haibison.android.lib.anhuu.providers.BaseFileProviderUtils;
-import com.haibison.android.lib.anhuu.providers.ProviderUtils;
-import com.haibison.android.lib.anhuu.providers.basefile.BaseFileProvider;
-import com.haibison.android.lib.anhuu.providers.basefile.BaseFileContract.BaseFile;
-import com.haibison.android.lib.anhuu.utils.FileUtils;
-import com.haibison.android.lib.anhuu.utils.Texts;
-
 import java.io.File;
 import java.io.FileFilter;
 import java.io.IOException;
@@ -33,6 +24,15 @@ import android.database.MatrixCursor.RowBuilder;
 import android.net.Uri;
 import android.os.Environment;
 import android.util.Log;
+
+import com.haibison.android.lib.anhuu.BuildConfig;
+import com.haibison.android.lib.anhuu.R;
+import com.haibison.android.lib.anhuu.providers.BaseFileProviderUtils;
+import com.haibison.android.lib.anhuu.providers.ProviderUtils;
+import com.haibison.android.lib.anhuu.providers.basefile.BaseFileContract.BaseFile;
+import com.haibison.android.lib.anhuu.providers.basefile.BaseFileProvider;
+import com.haibison.android.lib.anhuu.utils.FileUtils;
+import com.haibison.android.lib.anhuu.utils.Texts;
 
 /**
  * Local file provider.
@@ -193,8 +193,8 @@ public class LocalFileProvider extends BaseFileProvider {
                     BaseFile.COLUMN_PROVIDER_ID, BaseFile.COLUMN_PROVIDER_NAME,
                     BaseFile.COLUMN_PROVIDER_ICON_ATTR });
             matrixCursor.newRow().add(LocalFileContract._ID)
-                    .add(getContext().getString(R.string.afc_phone))
-                    .add(R.attr.afc_badge_file_provider_localfile);
+                    .add(getContext().getString(R.string.anhuu_phone))
+                    .add(R.attr.anhuu_badge_file_provider_localfile);
             return matrixCursor;
         }
         case URI_API_COMMAND: {

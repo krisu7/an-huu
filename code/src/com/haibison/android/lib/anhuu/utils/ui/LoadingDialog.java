@@ -7,13 +7,14 @@
 
 package com.haibison.android.lib.anhuu.utils.ui;
 
-import com.haibison.android.lib.anhuu.R;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.os.AsyncTask;
 import android.os.Handler;
 import android.util.Log;
+
+import com.haibison.android.lib.anhuu.R;
 
 /**
  * An {@link AsyncTask}, used to show {@link ProgressDialog} while doing some
@@ -90,7 +91,7 @@ public abstract class LoadingDialog<Params, Progress, Result> extends
      *            as the name means.
      */
     public LoadingDialog(Context context, boolean cancelable) {
-        this(context, context.getString(R.string.afc_msg_loading), cancelable);
+        this(context, context.getString(R.string.anhuu_msg_loading), cancelable);
     }// LoadingDialog()
 
     /**

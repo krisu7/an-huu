@@ -16,33 +16,33 @@
     - Actual themes which extend BaseThemeHelpers: contain customizations that are the same for all API levels.
     -->
 
-    <style name="Afc.BaseTheme.Dark" parent="@android:style/Theme"></style>
+    <style name="AnHuu.BaseTheme.Dark" parent="@android:style/Theme"></style>
 
-    <style name="Afc.BaseThemeHelper.Dark" parent="@style/Afc.BaseTheme.Dark">
-        <item name="afc_ic_menu_bookmarks">@drawable/afc_ic_menu_bookmarks</item>
-        <item name="afc_ic_menu_home">@drawable/afc_ic_menu_home</item>
-        <item name="afc_ic_menu_gridview">@drawable/afc_ic_menu_gridview</item>
-        <item name="afc_ic_menu_listview">@drawable/afc_ic_menu_listview</item>
-        <item name="afc_ic_menu_sort_by_date_asc">@drawable/afc_ic_menu_sort_by_date_asc</item>
-        <item name="afc_ic_menu_sort_by_date_desc">@drawable/afc_ic_menu_sort_by_date_desc</item>
-        <item name="afc_ic_menu_sort_by_name_asc">@drawable/afc_ic_menu_sort_by_name_asc</item>
-        <item name="afc_ic_menu_sort_by_name_desc">@drawable/afc_ic_menu_sort_by_name_desc</item>
-        <item name="afc_ic_menu_sort_by_size_asc">@drawable/afc_ic_menu_sort_by_size_asc</item>
-        <item name="afc_ic_menu_sort_by_size_desc">@drawable/afc_ic_menu_sort_by_size_desc</item>
-        <item name="afc_ic_button_sort_by_date_asc">@drawable/afc_ic_menu_sort_by_date_asc</item>
-        <item name="afc_ic_button_sort_by_date_desc">@drawable/afc_ic_menu_sort_by_date_desc</item>
-        <item name="afc_ic_button_sort_by_name_asc">@drawable/afc_ic_menu_sort_by_name_asc</item>
-        <item name="afc_ic_button_sort_by_name_desc">@drawable/afc_ic_menu_sort_by_name_desc</item>
-        <item name="afc_ic_button_sort_by_size_asc">@drawable/afc_ic_menu_sort_by_size_asc</item>
-        <item name="afc_ic_button_sort_by_size_desc">@drawable/afc_ic_menu_sort_by_size_desc</item>
-        <item name="afc_button_bar_style">@null</item>
-        <item name="afc_button_bar_button_style">@null</item>
-        <item name="afc_ic_widget_search_view_action_clear">@drawable/afc_ic_action_clear_dark</item>
+    <style name="AnHuu.BaseThemeHelper.Dark" parent="@style/AnHuu.BaseTheme.Dark">
+        <item name="anhuu_ic_menu_bookmarks">@drawable/anhuu_ic_menu_bookmarks</item>
+        <item name="anhuu_ic_menu_home">@drawable/anhuu_ic_menu_home</item>
+        <item name="anhuu_ic_menu_gridview">@drawable/anhuu_ic_menu_gridview</item>
+        <item name="anhuu_ic_menu_listview">@drawable/anhuu_ic_menu_listview</item>
+        <item name="anhuu_ic_menu_sort_by_date_asc">@drawable/anhuu_ic_menu_sort_by_date_asc</item>
+        <item name="anhuu_ic_menu_sort_by_date_desc">@drawable/anhuu_ic_menu_sort_by_date_desc</item>
+        <item name="anhuu_ic_menu_sort_by_name_asc">@drawable/anhuu_ic_menu_sort_by_name_asc</item>
+        <item name="anhuu_ic_menu_sort_by_name_desc">@drawable/anhuu_ic_menu_sort_by_name_desc</item>
+        <item name="anhuu_ic_menu_sort_by_size_asc">@drawable/anhuu_ic_menu_sort_by_size_asc</item>
+        <item name="anhuu_ic_menu_sort_by_size_desc">@drawable/anhuu_ic_menu_sort_by_size_desc</item>
+        <item name="anhuu_ic_button_sort_by_date_asc">@drawable/anhuu_ic_menu_sort_by_date_asc</item>
+        <item name="anhuu_ic_button_sort_by_date_desc">@drawable/anhuu_ic_menu_sort_by_date_desc</item>
+        <item name="anhuu_ic_button_sort_by_name_asc">@drawable/anhuu_ic_menu_sort_by_name_asc</item>
+        <item name="anhuu_ic_button_sort_by_name_desc">@drawable/anhuu_ic_menu_sort_by_name_desc</item>
+        <item name="anhuu_ic_button_sort_by_size_asc">@drawable/anhuu_ic_menu_sort_by_size_asc</item>
+        <item name="anhuu_ic_button_sort_by_size_desc">@drawable/anhuu_ic_menu_sort_by_size_desc</item>
+        <item name="anhuu_button_bar_style">@null</item>
+        <item name="anhuu_button_bar_button_style">@null</item>
+        <item name="anhuu_ic_widget_search_view_action_clear">@drawable/anhuu_ic_action_clear_dark</item>
     </style>
 
-    <style name="Afc.BaseTheme.Dialog.Dark" parent="@android:style/Theme" />
+    <style name="AnHuu.BaseTheme.Dialog.Dark" parent="@android:style/Theme" />
 
-    <style name="Afc.BaseThemeHelper.Dialog.Dark" parent="@style/Afc.BaseTheme.Dialog.Dark">
+    <style name="AnHuu.BaseThemeHelper.Dialog.Dark" parent="@style/AnHuu.BaseTheme.Dialog.Dark">
 
         <!-- AOSP -->
 
@@ -60,28 +60,28 @@
 
         <!-- An Hữu -->
 
-        <item name="afc_ic_menu_bookmarks">@drawable/afc_ic_menu_bookmarks</item>
-        <item name="afc_ic_menu_home">@drawable/afc_ic_menu_home</item>
-        <item name="afc_ic_menu_gridview">@drawable/afc_ic_menu_gridview</item>
-        <item name="afc_ic_menu_listview">@drawable/afc_ic_menu_listview</item>
-        <item name="afc_ic_menu_sort_by_date_asc">@drawable/afc_ic_menu_sort_by_date_asc</item>
-        <item name="afc_ic_menu_sort_by_date_desc">@drawable/afc_ic_menu_sort_by_date_desc</item>
-        <item name="afc_ic_menu_sort_by_name_asc">@drawable/afc_ic_menu_sort_by_name_asc</item>
-        <item name="afc_ic_menu_sort_by_name_desc">@drawable/afc_ic_menu_sort_by_name_desc</item>
-        <item name="afc_ic_menu_sort_by_size_asc">@drawable/afc_ic_menu_sort_by_size_asc</item>
-        <item name="afc_ic_menu_sort_by_size_desc">@drawable/afc_ic_menu_sort_by_size_desc</item>
-        <item name="afc_ic_button_sort_by_date_asc">@drawable/afc_ic_menu_sort_by_date_asc</item>
-        <item name="afc_ic_button_sort_by_date_desc">@drawable/afc_ic_menu_sort_by_date_desc</item>
-        <item name="afc_ic_button_sort_by_name_asc">@drawable/afc_ic_menu_sort_by_name_asc</item>
-        <item name="afc_ic_button_sort_by_name_desc">@drawable/afc_ic_menu_sort_by_name_desc</item>
-        <item name="afc_ic_button_sort_by_size_asc">@drawable/afc_ic_menu_sort_by_size_asc</item>
-        <item name="afc_ic_button_sort_by_size_desc">@drawable/afc_ic_menu_sort_by_size_desc</item>
-        <item name="afc_button_bar_style">@null</item>
-        <item name="afc_button_bar_button_style">@null</item>
-        <item name="afc_ic_widget_search_view_action_clear">@drawable/afc_ic_action_clear_dark</item>
+        <item name="anhuu_ic_menu_bookmarks">@drawable/anhuu_ic_menu_bookmarks</item>
+        <item name="anhuu_ic_menu_home">@drawable/anhuu_ic_menu_home</item>
+        <item name="anhuu_ic_menu_gridview">@drawable/anhuu_ic_menu_gridview</item>
+        <item name="anhuu_ic_menu_listview">@drawable/anhuu_ic_menu_listview</item>
+        <item name="anhuu_ic_menu_sort_by_date_asc">@drawable/anhuu_ic_menu_sort_by_date_asc</item>
+        <item name="anhuu_ic_menu_sort_by_date_desc">@drawable/anhuu_ic_menu_sort_by_date_desc</item>
+        <item name="anhuu_ic_menu_sort_by_name_asc">@drawable/anhuu_ic_menu_sort_by_name_asc</item>
+        <item name="anhuu_ic_menu_sort_by_name_desc">@drawable/anhuu_ic_menu_sort_by_name_desc</item>
+        <item name="anhuu_ic_menu_sort_by_size_asc">@drawable/anhuu_ic_menu_sort_by_size_asc</item>
+        <item name="anhuu_ic_menu_sort_by_size_desc">@drawable/anhuu_ic_menu_sort_by_size_desc</item>
+        <item name="anhuu_ic_button_sort_by_date_asc">@drawable/anhuu_ic_menu_sort_by_date_asc</item>
+        <item name="anhuu_ic_button_sort_by_date_desc">@drawable/anhuu_ic_menu_sort_by_date_desc</item>
+        <item name="anhuu_ic_button_sort_by_name_asc">@drawable/anhuu_ic_menu_sort_by_name_asc</item>
+        <item name="anhuu_ic_button_sort_by_name_desc">@drawable/anhuu_ic_menu_sort_by_name_desc</item>
+        <item name="anhuu_ic_button_sort_by_size_asc">@drawable/anhuu_ic_menu_sort_by_size_asc</item>
+        <item name="anhuu_ic_button_sort_by_size_desc">@drawable/anhuu_ic_menu_sort_by_size_desc</item>
+        <item name="anhuu_button_bar_style">@null</item>
+        <item name="anhuu_button_bar_button_style">@null</item>
+        <item name="anhuu_ic_widget_search_view_action_clear">@drawable/anhuu_ic_action_clear_dark</item>
     </style>
 
-    <style name="Afc.Theme.Dark" parent="@style/Afc.BaseThemeHelper.Dark">
+    <style name="AnHuu.Theme.Dark" parent="@style/AnHuu.BaseThemeHelper.Dark">
 
         <!-- AOSP -->
 
@@ -89,35 +89,35 @@
 
         <!-- An Hữu -->
 
-        <item name="afc_theme_dialog">@style/Afc.Theme.Dialog.Dark</item>
-        <item name="afc_button_home">@drawable/afc_button_home_light</item>
-        <item name="afc_ic_widget_search_view_action_search">@drawable/afc_ic_action_search_light</item>
-        <item name="afc_badge_file_provider_localfile">@drawable/afc_badge_file_provider_localfile_light</item>
-        <item name="afc_selector_image_button">@drawable/afc_selector_image_button_dark</item>
-        <item name="afc_selector_button_location">@drawable/afc_selector_button_location_dark</item>
-        <item name="afc_selector_main_button_navi_left">@drawable/afc_selector_main_button_navi_left_dark</item>
-        <item name="afc_selector_main_button_navi_right">@drawable/afc_selector_main_button_navi_right_dark</item>
-        <item name="afc_selector_button_ok_saveas">@drawable/afc_selector_button_ok_saveas_dark</item>
-        <item name="afc_selector_action_navi_left_foreground">@drawable/afc_selector_action_navi_left_dark_foreground</item>
-        <item name="afc_selector_action_navi_right_foreground">@drawable/afc_selector_action_navi_right_dark_foreground</item>
-        <item name="afc_color_listview_cache_hint">@color/afc_listview_cache_hint_dark</item>
-        <item name="afc_color_list_group_view_background">@color/afc_list_group_view_background_dark</item>
+        <item name="anhuu_theme_dialog">@style/AnHuu.Theme.Dialog.Dark</item>
+        <item name="anhuu_button_home">@drawable/anhuu_button_home_light</item>
+        <item name="anhuu_ic_widget_search_view_action_search">@drawable/anhuu_ic_action_search_light</item>
+        <item name="anhuu_badge_file_provider_localfile">@drawable/anhuu_badge_file_provider_localfile_light</item>
+        <item name="anhuu_selector_image_button">@drawable/anhuu_selector_image_button_dark</item>
+        <item name="anhuu_selector_button_location">@drawable/anhuu_selector_button_location_dark</item>
+        <item name="anhuu_selector_main_button_navi_left">@drawable/anhuu_selector_main_button_navi_left_dark</item>
+        <item name="anhuu_selector_main_button_navi_right">@drawable/anhuu_selector_main_button_navi_right_dark</item>
+        <item name="anhuu_selector_button_ok_saveas">@drawable/anhuu_selector_button_ok_saveas_dark</item>
+        <item name="anhuu_selector_action_navi_left_foreground">@drawable/anhuu_selector_action_navi_left_dark_foreground</item>
+        <item name="anhuu_selector_action_navi_right_foreground">@drawable/anhuu_selector_action_navi_right_dark_foreground</item>
+        <item name="anhuu_color_listview_cache_hint">@color/anhuu_listview_cache_hint_dark</item>
+        <item name="anhuu_color_list_group_view_background">@color/anhuu_list_group_view_background_dark</item>
     </style>
 
-    <style name="Afc.Theme.Dialog.Dark" parent="@style/Afc.BaseThemeHelper.Dialog.Dark">
-        <item name="afc_theme_dialog">@style/Afc.Theme.Dialog.Dark</item>
-        <item name="afc_button_home">@drawable/afc_button_home_light</item>
-        <item name="afc_ic_widget_search_view_action_search">@drawable/afc_ic_action_search_light</item>
-        <item name="afc_badge_file_provider_localfile">@drawable/afc_badge_file_provider_localfile_light</item>
-        <item name="afc_selector_image_button">@drawable/afc_selector_image_button_dark</item>
-        <item name="afc_selector_button_location">@drawable/afc_selector_button_location_dark</item>
-        <item name="afc_selector_main_button_navi_left">@drawable/afc_selector_main_button_navi_left_dark</item>
-        <item name="afc_selector_main_button_navi_right">@drawable/afc_selector_main_button_navi_right_dark</item>
-        <item name="afc_selector_button_ok_saveas">@drawable/afc_selector_button_ok_saveas_dark</item>
-        <item name="afc_selector_action_navi_left_foreground">@drawable/afc_selector_action_navi_left_dark_foreground</item>
-        <item name="afc_selector_action_navi_right_foreground">@drawable/afc_selector_action_navi_right_dark_foreground</item>
-        <item name="afc_color_listview_cache_hint">@color/afc_listview_cache_hint_dark</item>
-        <item name="afc_color_list_group_view_background">@color/afc_list_group_view_background_dark</item>
+    <style name="AnHuu.Theme.Dialog.Dark" parent="@style/AnHuu.BaseThemeHelper.Dialog.Dark">
+        <item name="anhuu_theme_dialog">@style/AnHuu.Theme.Dialog.Dark</item>
+        <item name="anhuu_button_home">@drawable/anhuu_button_home_light</item>
+        <item name="anhuu_ic_widget_search_view_action_search">@drawable/anhuu_ic_action_search_light</item>
+        <item name="anhuu_badge_file_provider_localfile">@drawable/anhuu_badge_file_provider_localfile_light</item>
+        <item name="anhuu_selector_image_button">@drawable/anhuu_selector_image_button_dark</item>
+        <item name="anhuu_selector_button_location">@drawable/anhuu_selector_button_location_dark</item>
+        <item name="anhuu_selector_main_button_navi_left">@drawable/anhuu_selector_main_button_navi_left_dark</item>
+        <item name="anhuu_selector_main_button_navi_right">@drawable/anhuu_selector_main_button_navi_right_dark</item>
+        <item name="anhuu_selector_button_ok_saveas">@drawable/anhuu_selector_button_ok_saveas_dark</item>
+        <item name="anhuu_selector_action_navi_left_foreground">@drawable/anhuu_selector_action_navi_left_dark_foreground</item>
+        <item name="anhuu_selector_action_navi_right_foreground">@drawable/anhuu_selector_action_navi_right_dark_foreground</item>
+        <item name="anhuu_color_listview_cache_hint">@color/anhuu_listview_cache_hint_dark</item>
+        <item name="anhuu_color_list_group_view_background">@color/anhuu_list_group_view_background_dark</item>
     </style>
 
 </resources>

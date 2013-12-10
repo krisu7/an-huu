@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright (c) 2012 Hai Bison
+
+    See the file LICENSE at the root directory of this project for copying
+    permission.
+-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+
+    <RelativeLayout
+        android:id="@+id/anhuu_viewgroup_bookmarks"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight=".3" >
+
+        <TextView
+            android:id="@+id/anhuu_textview_home"
+            style="@style/anhuu_home_button_navigators"
+            android:drawableLeft="?attr/anhuu_button_home"
+            android:text="@string/anhuu_cmd_home" />
+
+        <TextView
+            android:id="@+id/anhuu_textview_bookmarks"
+            style="@style/anhuu_home_button_navigators"
+            android:layout_below="@id/anhuu_textview_home"
+            android:drawableLeft="@drawable/anhuu_bookmarks_dark"
+            android:text="@string/anhuu_title_bookmarks" />
+
+        <View
+            android:id="@+id/anhuu_viewgroup_bookmarks_view_divider"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/anhuu_viewgroup_button_locations_bottom_divider_height"
+            android:layout_below="@id/anhuu_textview_bookmarks"
+            android:background="@color/anhuu_border_line_dark" />
+
+        <FrameLayout
+            android:id="@+id/anhuu_fragment_bookmarks"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/anhuu_viewgroup_bookmarks_view_divider" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="@dimen/anhuu_5dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/anhuu_expandable_listview_group_divider" />
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight=".7" >
+
+        <RelativeLayout
+            android:id="@+id/anhuu_viewgroup_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true" >
+
+            <ImageView
+                android:id="@+id/anhuu_button_go_back"
+                style="@style/anhuu_main_button_navi_left"
+                android:layout_alignParentLeft="true" />
+
+            <ImageView
+                android:id="@+id/anhuu_button_go_forward"
+                style="@style/anhuu_main_button_navi_right"
+                android:layout_toRightOf="@id/anhuu_button_go_back" />
+
+            <RelativeLayout
+                android:id="@+id/anhuu_viewgroup_button_locations"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/anhuu_5dp"
+                android:layout_marginTop="@dimen/anhuu_5dp"
+                android:layout_toRightOf="@id/anhuu_button_go_forward" >
+
+                <HorizontalScrollView
+                    android:id="@+id/anhuu_view_locations_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true" >
+
+                    <LinearLayout
+                        android:id="@+id/anhuu_view_locations"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:showDividers="middle" />
+                </HorizontalScrollView>
+
+                <View
+                    android:id="@+id/anhuu_header_view_divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/anhuu_viewgroup_button_locations_bottom_divider_height"
+                    android:layout_below="@id/anhuu_view_locations_container"
+                    android:background="@color/anhuu_border_line_dark" />
+
+                <TextView
+                    android:id="@+id/anhuu_textview_full_dir_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/anhuu_header_view_divider"
+                    android:layout_centerHorizontal="true"
+                    android:ellipsize="start"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:visibility="gone" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/anhuu_viewgroup_footer_container"
+            android:layout_below="@id/anhuu_viewgroup_header"
+            android:layout_marginBottom="@dimen/anhuu_10dp"
+            android:layout_marginTop="@dimen/anhuu_10dp" >
+
+            <RelativeLayout
+                android:id="@+id/anhuu_viewgroup_files"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" >
+
+                <LinearLayout
+                    android:id="@+id/anhuu_view_files_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@+id/anhuu_view_files_footer_view"
+                    android:orientation="horizontal" >
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/anhuu_view_files_footer_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/anhuu_10dp"
+                    android:gravity="center"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textStyle="italic"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <include
+                android:id="@+id/anhuu_view_loading"
+                android:layout_centerInParent="true"
+                layout="@layout/anhuu_view_loading" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/anhuu_viewgroup_footer_container"
+            style="?attr/anhuu_button_bar_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:orientation="vertical"
+            android:visibility="gone" >
+
+            <View
+                android:id="@+id/anhuu_footer_view_divider"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/anhuu_viewgroup_button_locations_bottom_divider_height" />
+
+            <LinearLayout
+                android:id="@+id/anhuu_viewgroup_footer"
+                style="?attr/anhuu_button_bar_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:visibility="gone" >
+
+                <EditText
+                    android:id="@+id/anhuu_textview_saveas_filename"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/anhuu_5dp"
+                    android:layout_weight="1"
+                    android:hint="@string/anhuu_hint_save_as_filename"
+                    android:imeOptions="actionDone"
+                    android:singleLine="true"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:visibility="gone" >
+
+                    <requestFocus />
+                </EditText>
+
+                <Button
+                    android:id="@+id/anhuu_button_ok"
+                    style="?attr/anhuu_button_bar_button_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/anhuu_5dp"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

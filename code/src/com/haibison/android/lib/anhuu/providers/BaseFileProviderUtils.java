@@ -12,15 +12,15 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
 
-import com.haibison.android.lib.anhuu.providers.basefile.BaseFileContract.BaseFile;
-import com.haibison.android.lib.anhuu.providers.localfile.LocalFileProvider;
-import com.haibison.android.lib.anhuu.utils.ui.Ui;
-
 import android.content.Context;
 import android.database.Cursor;
 import android.database.MatrixCursor;
 import android.net.Uri;
 import android.os.Bundle;
+
+import com.haibison.android.lib.anhuu.providers.basefile.BaseFileContract.BaseFile;
+import com.haibison.android.lib.anhuu.providers.localfile.LocalFileProvider;
+import com.haibison.android.lib.anhuu.utils.ui.UI;
 
 /**
  * Utilities for base file provider.
@@ -185,7 +185,7 @@ public class BaseFileProviderUtils {
             }
         }
 
-        int res = Ui.resolveAttribute(context, attr);
+        int res = UI.resolveAttribute(context, attr);
         if (res == 0)
             res = attr;
         return res;

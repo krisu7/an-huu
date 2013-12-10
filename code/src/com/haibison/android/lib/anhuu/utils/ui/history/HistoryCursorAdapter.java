@@ -7,15 +7,6 @@
 
 package com.haibison.android.lib.anhuu.utils.ui.history;
 
-import com.haibison.android.lib.anhuu.BuildConfig;
-import com.haibison.android.lib.anhuu.R;
-import com.haibison.android.lib.anhuu.providers.BaseFileProviderUtils;
-import com.haibison.android.lib.anhuu.providers.basefile.BaseFileContract.BaseFile;
-import com.haibison.android.lib.anhuu.providers.history.HistoryContract;
-import com.haibison.android.lib.anhuu.utils.DateUtils;
-import com.haibison.android.lib.anhuu.utils.ui.ContextMenuUtils;
-import com.haibison.android.lib.anhuu.utils.ui.Ui;
-
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
@@ -31,6 +22,15 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.ResourceCursorTreeAdapter;
 import android.widget.TextView;
+
+import com.haibison.android.lib.anhuu.BuildConfig;
+import com.haibison.android.lib.anhuu.R;
+import com.haibison.android.lib.anhuu.providers.BaseFileProviderUtils;
+import com.haibison.android.lib.anhuu.providers.basefile.BaseFileContract.BaseFile;
+import com.haibison.android.lib.anhuu.providers.history.HistoryContract;
+import com.haibison.android.lib.anhuu.utils.DateUtils;
+import com.haibison.android.lib.anhuu.utils.ui.ContextMenuUtils;
+import com.haibison.android.lib.anhuu.utils.ui.UI;
 
 /**
  * History cursor adapter.
@@ -52,9 +52,9 @@ public class HistoryCursorAdapter extends ResourceCursorTreeAdapter {
      * Advanced selection options: All, None, Invert.
      */
     public static final Integer[] ADVANCED_SELECTION_OPTIONS = new Integer[] {
-            R.string.afc_cmd_advanced_selection_all,
-            R.string.afc_cmd_advanced_selection_none,
-            R.string.afc_cmd_advanced_selection_invert };
+            R.string.anhuu_cmd_advanced_selection_all,
+            R.string.anhuu_cmd_advanced_selection_none,
+            R.string.anhuu_cmd_advanced_selection_invert };
 
     private static class BagGroup {
 
@@ -108,8 +108,8 @@ public class HistoryCursorAdapter extends ResourceCursorTreeAdapter {
      *            {@link Context}.
      */
     public HistoryCursorAdapter(Context context) {
-        super(context, null, R.layout.afc_view_history_item,
-                R.layout.afc_view_history_sub_item);
+        super(context, null, R.layout.anhuu_view_history_item,
+                R.layout.anhuu_view_history_sub_item);
     }// BookmarkCursorAdapter()
 
     /**
@@ -241,12 +241,12 @@ public class HistoryCursorAdapter extends ResourceCursorTreeAdapter {
         if (view.getTag() == null) {
             child = new BagChild();
             child.mTextViewTime = (TextView) view
-                    .findViewById(R.id.afc_textview_time);
+                    .findViewById(R.id.anhuu_textview_time);
             child.mTextViewName = (TextView) view
-                    .findViewById(R.id.afc_textview_name);
+                    .findViewById(R.id.anhuu_textview_name);
             child.mTextViewPath = (TextView) view
-                    .findViewById(R.id.afc_textview_path);
-            child.mCheckBox = (CheckBox) view.findViewById(R.id.afc_checkbox);
+                    .findViewById(R.id.anhuu_textview_path);
+            child.mCheckBox = (CheckBox) view.findViewById(R.id.anhuu_checkbox);
 
             view.setTag(child);
         } else
@@ -273,7 +273,7 @@ public class HistoryCursorAdapter extends ResourceCursorTreeAdapter {
                         Long.parseLong(cursor.getString(cursor
                                 .getColumnIndex(HistoryContract.COLUMN_MODIFICATION_TIME)))));
         child.mTextViewName.setText(fileName);
-        Ui.strikeOutText(child.mTextViewName, childInfo.mMarkedAsDeleted);
+        UI.strikeOutText(child.mTextViewName, childInfo.mMarkedAsDeleted);
         child.mTextViewPath.setText(fileUri);
 
         /*
@@ -309,17 +309,17 @@ public class HistoryCursorAdapter extends ResourceCursorTreeAdapter {
             @Override
             public boolean onLongClick(View v) {
                 ContextMenuUtils.showContextMenu(v.getContext(), 0,
-                        R.string.afc_title_advanced_selection,
+                        R.string.anhuu_title_advanced_selection,
                         ADVANCED_SELECTION_OPTIONS,
                         new ContextMenuUtils.OnMenuItemClickListener() {
 
                             @Override
                             public void onClick(final int resId) {
-                                if (resId == R.string.afc_cmd_advanced_selection_all)
+                                if (resId == R.string.anhuu_cmd_advanced_selection_all)
                                     selectAll(true);
-                                else if (resId == R.string.afc_cmd_advanced_selection_none)
+                                else if (resId == R.string.anhuu_cmd_advanced_selection_none)
                                     selectAll(false);
-                                else if (resId == R.string.afc_cmd_advanced_selection_invert)
+                                else if (resId == R.string.anhuu_cmd_advanced_selection_invert)
                                     invertSelection();
                             }// onClick()
                         });
@@ -335,7 +335,7 @@ public class HistoryCursorAdapter extends ResourceCursorTreeAdapter {
         if (view.getTag() == null) {
             b = new BagGroup();
             b.mTextViewHeader = (TextView) view
-                    .findViewById(R.id.afc_textview_header);
+                    .findViewById(R.id.anhuu_textview_header);
 
             view.setTag(b);
         } else
@@ -576,7 +576,7 @@ public class HistoryCursorAdapter extends ResourceCursorTreeAdapter {
      */
     private static String formatDate(Context c, long millis) {
         if (android.text.format.DateUtils.isToday(millis))
-            return c.getString(R.string.afc_today);
+            return c.getString(R.string.anhuu_today);
 
         Calendar cal = Calendar.getInstance();
         cal.setTimeInMillis(millis);
@@ -587,7 +587,7 @@ public class HistoryCursorAdapter extends ResourceCursorTreeAdapter {
         if (cal.get(Calendar.YEAR) == yesterday.get(Calendar.YEAR)) {
             if (cal.get(Calendar.DAY_OF_YEAR) == yesterday
                     .get(Calendar.DAY_OF_YEAR))
-                return c.getString(R.string.afc_yesterday);
+                return c.getString(R.string.anhuu_yesterday);
             else
                 return android.text.format.DateUtils.formatDateTime(c, millis,
                         DateUtils.FORMAT_MONTH_AND_DAY);

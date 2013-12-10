@@ -7,13 +7,14 @@
 
 package com.haibison.android.lib.anhuu.utils.ui;
 
-import com.haibison.android.lib.anhuu.BuildConfig;
 import android.graphics.Rect;
 import android.util.Log;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.AbsListView;
+
+import com.haibison.android.lib.anhuu.BuildConfig;
 
 /**
  * Utilities for user's gesture.

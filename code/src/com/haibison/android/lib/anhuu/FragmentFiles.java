@@ -60,10 +60,8 @@ import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.haibison.android.lib.anhuu.BuildConfig;
-import com.haibison.android.lib.anhuu.R;
 import com.haibison.android.lib.anhuu.FileChooserActivity.ViewType;
-import com.haibison.android.lib.anhuu.prefs.DisplayPrefs;
+import com.haibison.android.lib.anhuu.Settings.Display;
 import com.haibison.android.lib.anhuu.providers.BaseFileProviderUtils;
 import com.haibison.android.lib.anhuu.providers.DbUtils;
 import com.haibison.android.lib.anhuu.providers.ProviderUtils;
@@ -83,7 +81,7 @@ import com.haibison.android.lib.anhuu.utils.history.HistoryStore;
 import com.haibison.android.lib.anhuu.utils.ui.ContextMenuUtils;
 import com.haibison.android.lib.anhuu.utils.ui.Dlg;
 import com.haibison.android.lib.anhuu.utils.ui.LoadingDialog;
-import com.haibison.android.lib.anhuu.utils.ui.Ui;
+import com.haibison.android.lib.anhuu.utils.ui.UI;
 import com.haibison.android.lib.anhuu.utils.ui.bookmark.BookmarkFragment;
 import com.haibison.android.lib.anhuu.utils.ui.history.HistoryFragment;
 
@@ -314,35 +312,35 @@ public class FragmentFiles extends Fragment implements
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
-        final View rootView = inflater.inflate(R.layout.afc_fragment_files,
+        final View rootView = inflater.inflate(R.layout.anhuu_fragment_files,
                 container, false);
 
         /*
          * MAP CONTROLS
          */
 
-        mBtnGoHome = rootView.findViewById(R.id.afc_textview_home);
+        mBtnGoHome = rootView.findViewById(R.id.anhuu_textview_home);
         mBtnBookmarkManager = rootView
-                .findViewById(R.id.afc_textview_bookmarks);
+                .findViewById(R.id.anhuu_textview_bookmarks);
         mViewGoBack = (ImageView) rootView
-                .findViewById(R.id.afc_button_go_back);
+                .findViewById(R.id.anhuu_button_go_back);
         mViewGoForward = (ImageView) rootView
-                .findViewById(R.id.afc_button_go_forward);
+                .findViewById(R.id.anhuu_button_go_forward);
         mViewAddressBar = (ViewGroup) rootView
-                .findViewById(R.id.afc_view_locations);
+                .findViewById(R.id.anhuu_view_locations);
         mViewLocationsContainer = (HorizontalScrollView) rootView
-                .findViewById(R.id.afc_view_locations_container);
+                .findViewById(R.id.anhuu_view_locations_container);
         mTextFullDirName = (TextView) rootView
-                .findViewById(R.id.afc_textview_full_dir_name);
-        mViewGroupFiles = rootView.findViewById(R.id.afc_viewgroup_files);
+                .findViewById(R.id.anhuu_textview_full_dir_name);
+        mViewGroupFiles = rootView.findViewById(R.id.anhuu_viewgroup_files);
         mViewFilesContainer = (ViewGroup) rootView
-                .findViewById(R.id.afc_view_files_container);
+                .findViewById(R.id.anhuu_view_files_container);
         mFooterView = (TextView) rootView
-                .findViewById(R.id.afc_view_files_footer_view);
-        mViewLoading = rootView.findViewById(R.id.afc_view_loading);
+                .findViewById(R.id.anhuu_view_files_footer_view);
+        mViewLoading = rootView.findViewById(R.id.anhuu_view_loading);
         mTextSaveas = (EditText) rootView
-                .findViewById(R.id.afc_textview_saveas_filename);
-        mBtnOk = (Button) rootView.findViewById(R.id.afc_button_ok);
+                .findViewById(R.id.anhuu_textview_saveas_filename);
+        mBtnOk = (Button) rootView.findViewById(R.id.anhuu_button_ok);
 
         /*
          * INIT CONTROLS
@@ -352,17 +350,18 @@ public class FragmentFiles extends Fragment implements
          * Load BookmarkFragment.
          */
 
-        View viewBookmarks = rootView.findViewById(R.id.afc_fragment_bookmarks);
+        View viewBookmarks = rootView
+                .findViewById(R.id.anhuu_fragment_bookmarks);
         if (viewBookmarks != null) {
             mBookmarkFragment = (BookmarkFragment) getChildFragmentManager()
-                    .findFragmentById(R.id.afc_fragment_bookmarks);
+                    .findFragmentById(R.id.anhuu_fragment_bookmarks);
             if (mBookmarkFragment == null) {
                 mBookmarkFragment = BookmarkFragment.newInstance(false);
                 mBookmarkFragment
                         .setOnBookmarkItemClickListener(mBookmarkFragmentOnBookmarkItemClickListener);
 
                 getChildFragmentManager().beginTransaction()
-                        .add(R.id.afc_fragment_bookmarks, mBookmarkFragment)
+                        .add(R.id.anhuu_fragment_bookmarks, mBookmarkFragment)
                         .commit();
             }
         }// if
@@ -384,7 +383,7 @@ public class FragmentFiles extends Fragment implements
 
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-        inflater.inflate(R.menu.afc_fragment_files, menu);
+        inflater.inflate(R.menu.anhuu_fragment_files, menu);
     }// onCreateOptionsMenu()
 
     @Override
@@ -402,25 +401,24 @@ public class FragmentFiles extends Fragment implements
          * Sorting.
          */
 
-        final boolean sortAscending = DisplayPrefs
-                .isSortAscending(getActivity());
-        MenuItem miSort = menu.findItem(R.id.afc_menuitem_sort);
+        final boolean sortAscending = Display.isSortAscending(getActivity());
+        MenuItem miSort = menu.findItem(R.id.anhuu_menuitem_sort);
 
-        switch (DisplayPrefs.getSortType(getActivity())) {
+        switch (Display.getSortType(getActivity())) {
         case BaseFile.SORT_BY_NAME:
-            miSort.setIcon(Ui.resolveAttribute(getActivity(),
-                    sortAscending ? R.attr.afc_ic_menu_sort_by_name_asc
-                            : R.attr.afc_ic_menu_sort_by_name_desc));
+            miSort.setIcon(UI.resolveAttribute(getActivity(),
+                    sortAscending ? R.attr.anhuu_ic_menu_sort_by_name_asc
+                            : R.attr.anhuu_ic_menu_sort_by_name_desc));
             break;
         case BaseFile.SORT_BY_SIZE:
-            miSort.setIcon(Ui.resolveAttribute(getActivity(),
-                    sortAscending ? R.attr.afc_ic_menu_sort_by_size_asc
-                            : R.attr.afc_ic_menu_sort_by_size_desc));
+            miSort.setIcon(UI.resolveAttribute(getActivity(),
+                    sortAscending ? R.attr.anhuu_ic_menu_sort_by_size_asc
+                            : R.attr.anhuu_ic_menu_sort_by_size_desc));
             break;
         case BaseFile.SORT_BY_MODIFICATION_TIME:
-            miSort.setIcon(Ui.resolveAttribute(getActivity(),
-                    sortAscending ? R.attr.afc_ic_menu_sort_by_date_asc
-                            : R.attr.afc_ic_menu_sort_by_date_desc));
+            miSort.setIcon(UI.resolveAttribute(getActivity(),
+                    sortAscending ? R.attr.anhuu_ic_menu_sort_by_date_asc
+                            : R.attr.anhuu_ic_menu_sort_by_date_desc));
             break;
         }
 
@@ -428,17 +426,17 @@ public class FragmentFiles extends Fragment implements
          * View type.
          */
 
-        MenuItem menuItem = menu.findItem(R.id.afc_menuitem_switch_viewmode);
-        switch (DisplayPrefs.getViewType(getActivity())) {
+        MenuItem menuItem = menu.findItem(R.id.anhuu_menuitem_switch_viewmode);
+        switch (Display.getViewType(getActivity())) {
         case GRID:
-            menuItem.setIcon(Ui.resolveAttribute(getActivity(),
-                    R.attr.afc_ic_menu_listview));
-            menuItem.setTitle(R.string.afc_cmd_list_view);
+            menuItem.setIcon(UI.resolveAttribute(getActivity(),
+                    R.attr.anhuu_ic_menu_listview));
+            menuItem.setTitle(R.string.anhuu_cmd_list_view);
             break;
         case LIST:
-            menuItem.setIcon(Ui.resolveAttribute(getActivity(),
-                    R.attr.afc_ic_menu_gridview));
-            menuItem.setTitle(R.string.afc_cmd_grid_view);
+            menuItem.setIcon(UI.resolveAttribute(getActivity(),
+                    R.attr.anhuu_ic_menu_gridview));
+            menuItem.setTitle(R.string.anhuu_cmd_grid_view);
             break;
         }
 
@@ -446,22 +444,22 @@ public class FragmentFiles extends Fragment implements
          * New folder.
          */
 
-        menu.findItem(R.id.afc_menuitem_new_folder).setEnabled(!mLoading);
+        menu.findItem(R.id.anhuu_menuitem_new_folder).setEnabled(!mLoading);
     }// onPrepareOptionsMenu()
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == R.id.afc_menuitem_sort)
+        if (item.getItemId() == R.id.anhuu_menuitem_sort)
             resortViewFiles();
-        else if (item.getItemId() == R.id.afc_menuitem_new_folder)
+        else if (item.getItemId() == R.id.anhuu_menuitem_new_folder)
             checkConditionsThenConfirmUserToCreateNewDir();
-        else if (item.getItemId() == R.id.afc_menuitem_switch_viewmode)
+        else if (item.getItemId() == R.id.anhuu_menuitem_switch_viewmode)
             switchViewType();
-        else if (item.getItemId() == R.id.afc_menuitem_home)
+        else if (item.getItemId() == R.id.anhuu_menuitem_home)
             goHome();
-        else if (item.getItemId() == R.id.afc_menuitem_history)
+        else if (item.getItemId() == R.id.anhuu_menuitem_history)
             showHistoryManager();
-        else if (item.getItemId() == R.id.afc_menuitem_bookmarks)
+        else if (item.getItemId() == R.id.anhuu_menuitem_bookmarks)
             showBookmarkManager();
         else
             return false;
@@ -508,7 +506,7 @@ public class FragmentFiles extends Fragment implements
             public void run() {
                 mViewLoading.setVisibility(View.VISIBLE);
             }// run()
-        }, DisplayPrefs.DELAY_TIME_FOR_SHORT_ANIMATION);
+        }, Display.DELAY_TIME_FOR_SHORT_ANIMATION);
 
         getActivity().supportInvalidateOptionsMenu();
 
@@ -539,11 +537,11 @@ public class FragmentFiles extends Fragment implements
                                 Integer.toString(mFilterMode))
                         .appendQueryParameter(
                                 BaseFile.PARAM_SORT_BY,
-                                Integer.toString(DisplayPrefs
+                                Integer.toString(Display
                                         .getSortType(getActivity())))
                         .appendQueryParameter(
                                 BaseFile.PARAM_SORT_ASCENDING,
-                                Boolean.toString(DisplayPrefs
+                                Boolean.toString(Display
                                         .isSortAscending(getActivity())))
                         .appendQueryParameter(BaseFile.PARAM_LIMIT,
                                 Integer.toString(mMaxFileCount))
@@ -574,7 +572,7 @@ public class FragmentFiles extends Fragment implements
 
         if (data == null) {
             showFooterView(true,
-                    getString(R.string.afc_msg_failed_please_try_again), true);
+                    getString(R.string.anhuu_msg_failed_please_try_again), true);
             return;
         }
 
@@ -615,8 +613,8 @@ public class FragmentFiles extends Fragment implements
         showFooterView(
                 hasMoreFiles || mFileAdapter.isEmpty(),
                 hasMoreFiles ? getString(
-                        R.string.afc_pmsg_max_file_count_allowed, mMaxFileCount)
-                        : getString(R.string.afc_msg_empty),
+                        R.string.anhuu_pmsg_max_file_count_allowed,
+                        mMaxFileCount) : getString(R.string.anhuu_msg_empty),
                 mFileAdapter.isEmpty());
 
         if (mNewLoader || selectedFile != null)
@@ -640,7 +638,7 @@ public class FragmentFiles extends Fragment implements
             public void run() {
                 mViewLoading.setVisibility(View.VISIBLE);
             }// run()
-        }, DisplayPrefs.DELAY_TIME_FOR_SHORT_ANIMATION);
+        }, Display.DELAY_TIME_FOR_SHORT_ANIMATION);
 
         getActivity().supportInvalidateOptionsMenu();
     }// onLoaderReset()
@@ -663,25 +661,25 @@ public class FragmentFiles extends Fragment implements
                     .setOnClickListener(mBtnBookmarkManagerOnClickListener);
 
         if (mIsSaveDialog) {
-            getActivity().setTitle(R.string.afc_title_save_as);
+            getActivity().setTitle(R.string.anhuu_title_save_as);
         } else {
             switch (mFilterMode) {
             case BaseFile.FILTER_FILES_ONLY:
                 getActivity().setTitle(
                         getResources().getQuantityText(
-                                R.plurals.afc_title_choose_files,
+                                R.plurals.anhuu_title_choose_files,
                                 mIsMultiSelection ? 2 : 1));
                 break;
             case BaseFile.FILTER_FILES_AND_DIRECTORIES:
                 getActivity().setTitle(
                         getResources().getQuantityText(
-                                R.plurals.afc_title_choose_files_directories,
+                                R.plurals.anhuu_title_choose_files_directories,
                                 mIsMultiSelection ? 2 : 1));
                 break;
             case BaseFile.FILTER_DIRECTORIES_ONLY:
                 getActivity().setTitle(
                         getResources().getQuantityText(
-                                R.plurals.afc_title_choose_directories,
+                                R.plurals.anhuu_title_choose_directories,
                                 mIsMultiSelection ? 2 : 1));
                 break;
             }
@@ -707,14 +705,14 @@ public class FragmentFiles extends Fragment implements
      * </ul>
      */
     private void setupViewFiles() {
-        switch (DisplayPrefs.getViewType(getActivity())) {
+        switch (Display.getViewType(getActivity())) {
         case GRID:
             mViewFiles = (AbsListView) getLayoutInflater(null).inflate(
-                    R.layout.afc_gridview_files, null);
+                    R.layout.anhuu_gridview_files, null);
             break;
         case LIST:
             mViewFiles = (AbsListView) getLayoutInflater(null).inflate(
-                    R.layout.afc_listview_files, null);
+                    R.layout.anhuu_listview_files, null);
             break;
         }
 
@@ -737,8 +735,8 @@ public class FragmentFiles extends Fragment implements
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.HONEYCOMB
                 && !getActivity().getWindow().isFloating()) {
             mViewFiles.setCacheColorHint(getResources().getColor(
-                    Ui.resolveAttribute(getActivity(),
-                            R.attr.afc_color_listview_cache_hint)));
+                    UI.resolveAttribute(getActivity(),
+                            R.attr.anhuu_color_listview_cache_hint)));
         }
 
         /*
@@ -776,9 +774,9 @@ public class FragmentFiles extends Fragment implements
          */
 
         ViewGroup viewGroupFooterContainer = (ViewGroup) getView()
-                .findViewById(R.id.afc_viewgroup_footer_container);
+                .findViewById(R.id.anhuu_viewgroup_footer_container);
         ViewGroup viewGroupFooter = (ViewGroup) getView().findViewById(
-                R.id.afc_viewgroup_footer);
+                R.id.anhuu_viewgroup_footer);
 
         if (mIsSaveDialog) {
             viewGroupFooterContainer.setVisibility(View.VISIBLE);
@@ -794,7 +792,7 @@ public class FragmentFiles extends Fragment implements
                         public boolean onEditorAction(TextView v, int actionId,
                                 KeyEvent event) {
                             if (actionId == EditorInfo.IME_ACTION_DONE) {
-                                Ui.showSoftKeyboard(v, false);
+                                UI.showSoftKeyboard(v, false);
                                 mBtnOk.performClick();
                                 return true;
                             }
@@ -832,11 +830,11 @@ public class FragmentFiles extends Fragment implements
 
             mBtnOk.setVisibility(View.VISIBLE);
             mBtnOk.setOnClickListener(mBtnOk_SaveDialog_OnClickListener);
-            mBtnOk.setBackgroundResource(Ui.resolveAttribute(getActivity(),
-                    R.attr.afc_selector_button_ok_saveas));
+            mBtnOk.setBackgroundResource(UI.resolveAttribute(getActivity(),
+                    R.attr.anhuu_selector_button_ok_saveas));
 
             int size = getResources().getDimensionPixelSize(
-                    R.dimen.afc_button_ok_saveas_size);
+                    R.dimen.anhuu_button_ok_saveas_size);
             LinearLayout.LayoutParams lp = (LinearLayout.LayoutParams) mBtnOk
                     .getLayoutParams();
             lp.width = size;
@@ -853,7 +851,7 @@ public class FragmentFiles extends Fragment implements
                 viewGroupFooter.setLayoutParams(lp);
 
                 mBtnOk.setMinWidth(getResources().getDimensionPixelSize(
-                        R.dimen.afc_single_button_min_width));
+                        R.dimen.anhuu_single_button_min_width));
                 mBtnOk.setText(android.R.string.ok);
                 mBtnOk.setVisibility(View.VISIBLE);
                 mBtnOk.setOnClickListener(mBtnOk_OpenDialog_OnClickListener);
@@ -881,7 +879,7 @@ public class FragmentFiles extends Fragment implements
                     RelativeLayout.LayoutParams.MATCH_PARENT);
             if (!center)
                 lp.addRule(RelativeLayout.ABOVE,
-                        R.id.afc_view_files_footer_view);
+                        R.id.anhuu_view_files_footer_view);
             mViewFilesContainer.setLayoutParams(lp);
 
             lp = (RelativeLayout.LayoutParams) mFooterView.getLayoutParams();
@@ -1104,8 +1102,8 @@ public class FragmentFiles extends Fragment implements
                  * Last location
                  */
                 if (path == null
-                        && DisplayPrefs.isRememberLastLocation(getActivity())) {
-                    String lastLocation = DisplayPrefs
+                        && Display.isRememberLastLocation(getActivity())) {
+                    String lastLocation = Display
                             .getLastLocation(getActivity());
                     if (lastLocation != null)
                         path = Uri.parse(lastLocation);
@@ -1132,7 +1130,7 @@ public class FragmentFiles extends Fragment implements
                     result.putParcelable(PATH, path);
                     return result;
                 } else {
-                    errMsg = getString(R.string.afc_pmsg_cannot_access_dir,
+                    errMsg = getString(R.string.anhuu_pmsg_cannot_access_dir,
                             BaseFileProviderUtils.getFileName(getActivity(),
                                     path));
                 }
@@ -1195,7 +1193,7 @@ public class FragmentFiles extends Fragment implements
      */
     private void showCannotConnectToServiceAndWaitForTheUserToFinish() {
         Dlg.showError(getActivity(),
-                R.string.afc_msg_cannot_connect_to_file_provider_service,
+                R.string.anhuu_msg_cannot_connect_to_file_provider_service,
                 new DialogInterface.OnCancelListener() {
 
                     @Override
@@ -1307,24 +1305,25 @@ public class FragmentFiles extends Fragment implements
     }// showHistoryManager()
 
     private static final int[] BUTTON_SORT_IDS = {
-            R.id.afc_button_sort_by_name_asc,
-            R.id.afc_button_sort_by_name_desc,
-            R.id.afc_button_sort_by_size_asc,
-            R.id.afc_button_sort_by_size_desc,
-            R.id.afc_button_sort_by_date_asc, R.id.afc_button_sort_by_date_desc };
+            R.id.anhuu_button_sort_by_name_asc,
+            R.id.anhuu_button_sort_by_name_desc,
+            R.id.anhuu_button_sort_by_size_asc,
+            R.id.anhuu_button_sort_by_size_desc,
+            R.id.anhuu_button_sort_by_date_asc,
+            R.id.anhuu_button_sort_by_date_desc };
 
     /**
      * Show a dialog for sorting options and resort file list after user
      * selected an option.
      */
     private void resortViewFiles() {
-        final Dialog dialog = new Dialog(getActivity(), Ui.resolveAttribute(
-                getActivity(), R.attr.afc_theme_dialog));
+        final Dialog dialog = new Dialog(getActivity(), UI.resolveAttribute(
+                getActivity(), R.attr.anhuu_theme_dialog));
         dialog.setCanceledOnTouchOutside(true);
 
         // get the index of button of current sort type
         int btnCurrentSortTypeIdx = 0;
-        switch (DisplayPrefs.getSortType(getActivity())) {
+        switch (Display.getSortType(getActivity())) {
         case BaseFile.SORT_BY_NAME:
             btnCurrentSortTypeIdx = 0;
             break;
@@ -1335,7 +1334,7 @@ public class FragmentFiles extends Fragment implements
             btnCurrentSortTypeIdx = 4;
             break;
         }
-        if (!DisplayPrefs.isSortAscending(getActivity()))
+        if (!Display.isSortAscending(getActivity()))
             btnCurrentSortTypeIdx++;
 
         View.OnClickListener listener = new View.OnClickListener() {
@@ -1344,30 +1343,26 @@ public class FragmentFiles extends Fragment implements
             public void onClick(View v) {
                 dialog.dismiss();
 
-                if (v.getId() == R.id.afc_button_sort_by_name_asc) {
-                    DisplayPrefs.setSortType(getActivity(),
-                            BaseFile.SORT_BY_NAME);
-                    DisplayPrefs.setSortAscending(getActivity(), true);
-                } else if (v.getId() == R.id.afc_button_sort_by_name_desc) {
-                    DisplayPrefs.setSortType(getActivity(),
-                            BaseFile.SORT_BY_NAME);
-                    DisplayPrefs.setSortAscending(getActivity(), false);
-                } else if (v.getId() == R.id.afc_button_sort_by_size_asc) {
-                    DisplayPrefs.setSortType(getActivity(),
-                            BaseFile.SORT_BY_SIZE);
-                    DisplayPrefs.setSortAscending(getActivity(), true);
-                } else if (v.getId() == R.id.afc_button_sort_by_size_desc) {
-                    DisplayPrefs.setSortType(getActivity(),
-                            BaseFile.SORT_BY_SIZE);
-                    DisplayPrefs.setSortAscending(getActivity(), false);
-                } else if (v.getId() == R.id.afc_button_sort_by_date_asc) {
-                    DisplayPrefs.setSortType(getActivity(),
+                if (v.getId() == R.id.anhuu_button_sort_by_name_asc) {
+                    Display.setSortType(getActivity(), BaseFile.SORT_BY_NAME);
+                    Display.setSortAscending(getActivity(), true);
+                } else if (v.getId() == R.id.anhuu_button_sort_by_name_desc) {
+                    Display.setSortType(getActivity(), BaseFile.SORT_BY_NAME);
+                    Display.setSortAscending(getActivity(), false);
+                } else if (v.getId() == R.id.anhuu_button_sort_by_size_asc) {
+                    Display.setSortType(getActivity(), BaseFile.SORT_BY_SIZE);
+                    Display.setSortAscending(getActivity(), true);
+                } else if (v.getId() == R.id.anhuu_button_sort_by_size_desc) {
+                    Display.setSortType(getActivity(), BaseFile.SORT_BY_SIZE);
+                    Display.setSortAscending(getActivity(), false);
+                } else if (v.getId() == R.id.anhuu_button_sort_by_date_asc) {
+                    Display.setSortType(getActivity(),
                             BaseFile.SORT_BY_MODIFICATION_TIME);
-                    DisplayPrefs.setSortAscending(getActivity(), true);
-                } else if (v.getId() == R.id.afc_button_sort_by_date_desc) {
-                    DisplayPrefs.setSortType(getActivity(),
+                    Display.setSortAscending(getActivity(), true);
+                } else if (v.getId() == R.id.anhuu_button_sort_by_date_desc) {
+                    Display.setSortType(getActivity(),
                             BaseFile.SORT_BY_MODIFICATION_TIME);
-                    DisplayPrefs.setSortAscending(getActivity(), false);
+                    Display.setSortAscending(getActivity(), false);
                 }
 
                 /*
@@ -1379,18 +1374,18 @@ public class FragmentFiles extends Fragment implements
         };// listener
 
         View view = getLayoutInflater(null).inflate(
-                R.layout.afc_settings_sort_view, null);
+                R.layout.anhuu_settings_sort_view, null);
         for (int i = 0; i < BUTTON_SORT_IDS.length; i++) {
             View v = view.findViewById(BUTTON_SORT_IDS[i]);
             v.setOnClickListener(listener);
             if (i == btnCurrentSortTypeIdx) {
                 v.setEnabled(false);
                 if (v instanceof Button)
-                    ((Button) v).setText(R.string.afc_bullet);
+                    ((Button) v).setText(R.string.anhuu_bullet);
             }
         }
 
-        dialog.setTitle(R.string.afc_title_sort_by);
+        dialog.setTitle(R.string.anhuu_title_sort_by);
         dialog.setContentView(view);
         dialog.show();
     }// resortViewFiles()
@@ -1399,12 +1394,12 @@ public class FragmentFiles extends Fragment implements
      * Switch view type between {@link ViewType#LIST} and {@link ViewType#GRID}
      */
     private void switchViewType() {
-        switch (DisplayPrefs.getViewType(getActivity())) {
+        switch (Display.getViewType(getActivity())) {
         case GRID:
-            DisplayPrefs.setViewType(getActivity(), ViewType.LIST);
+            Display.setViewType(getActivity(), ViewType.LIST);
             break;
         case LIST:
-            DisplayPrefs.setViewType(getActivity(), ViewType.GRID);
+            Display.setViewType(getActivity(), ViewType.GRID);
             break;
         }
 
@@ -1424,7 +1419,7 @@ public class FragmentFiles extends Fragment implements
                         Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
             Dlg.toast(
                     getActivity(),
-                    R.string.afc_msg_app_doesnot_have_permission_to_create_files,
+                    R.string.anhuu_msg_app_doesnot_have_permission_to_create_files,
                     Dlg.LENGTH_SHORT);
             return;
         }
@@ -1446,7 +1441,7 @@ public class FragmentFiles extends Fragment implements
                     showNewDirectoryCreationDialog();
                 else
                     Dlg.toast(getActivity(),
-                            R.string.afc_msg_cannot_create_new_folder_here,
+                            R.string.anhuu_msg_cannot_create_new_folder_here,
                             Dlg.LENGTH_SHORT);
             }// onProgressUpdate()
 
@@ -1460,16 +1455,17 @@ public class FragmentFiles extends Fragment implements
         final AlertDialog dialog = Dlg.newAlertDlg(getActivity());
 
         View view = getLayoutInflater(null).inflate(
-                R.layout.afc_simple_text_input_view, null);
-        final EditText textFile = (EditText) view.findViewById(R.id.afc_text1);
-        textFile.setHint(R.string.afc_hint_folder_name);
+                R.layout.anhuu_simple_text_input_view, null);
+        final EditText textFile = (EditText) view
+                .findViewById(R.id.anhuu_text1);
+        textFile.setHint(R.string.anhuu_hint_folder_name);
         textFile.setOnEditorActionListener(new TextView.OnEditorActionListener() {
 
             @Override
             public boolean onEditorAction(TextView v, int actionId,
                     KeyEvent event) {
                 if (actionId == EditorInfo.IME_ACTION_DONE) {
-                    Ui.showSoftKeyboard(v, false);
+                    UI.showSoftKeyboard(v, false);
                     dialog.getButton(DialogInterface.BUTTON_POSITIVE)
                             .performClick();
                     return true;
@@ -1479,7 +1475,7 @@ public class FragmentFiles extends Fragment implements
         });
 
         dialog.setView(view);
-        dialog.setTitle(R.string.afc_cmd_new_folder);
+        dialog.setTitle(R.string.anhuu_cmd_new_folder);
         dialog.setIcon(android.R.drawable.ic_menu_add);
         dialog.setButton(DialogInterface.BUTTON_POSITIVE,
                 getString(android.R.string.ok),
@@ -1493,7 +1489,7 @@ public class FragmentFiles extends Fragment implements
                             Dlg.toast(
                                     getActivity(),
                                     getString(
-                                            R.string.afc_pmsg_filename_is_invalid,
+                                            R.string.anhuu_pmsg_filename_is_invalid,
                                             name), Dlg.LENGTH_SHORT);
                             return;
                         }
@@ -1527,13 +1523,13 @@ public class FragmentFiles extends Fragment implements
 
                                 if (result != null) {
                                     Dlg.toast(getActivity(),
-                                            getString(R.string.afc_msg_done),
+                                            getString(R.string.anhuu_msg_done),
                                             Dlg.LENGTH_SHORT);
                                 } else
                                     Dlg.toast(
                                             getActivity(),
                                             getString(
-                                                    R.string.afc_pmsg_cannot_create_folder,
+                                                    R.string.anhuu_pmsg_cannot_create_folder,
                                                     name), Dlg.LENGTH_SHORT);
                             }// onPostExecute()
 
@@ -1541,7 +1537,7 @@ public class FragmentFiles extends Fragment implements
                     }// onClick()
                 });
         dialog.show();
-        Ui.showSoftKeyboard(textFile, true);
+        UI.showSoftKeyboard(textFile, true);
 
         final Button buttonOk = dialog
                 .getButton(DialogInterface.BUTTON_POSITIVE);
@@ -1592,10 +1588,10 @@ public class FragmentFiles extends Fragment implements
         if (!BaseFileProviderUtils.fileCanWrite(cursor)) {
             Dlg.toast(
                     getActivity(),
-                    getString(R.string.afc_pmsg_cannot_delete_file,
-                            isFile ? getString(R.string.afc_file)
-                                    : getString(R.string.afc_folder), filename),
-                    Dlg.LENGTH_SHORT);
+                    getString(R.string.anhuu_pmsg_cannot_delete_file,
+                            isFile ? getString(R.string.anhuu_file)
+                                    : getString(R.string.anhuu_folder),
+                            filename), Dlg.LENGTH_SHORT);
             return;
         }
 
@@ -1605,7 +1601,7 @@ public class FragmentFiles extends Fragment implements
                         Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
             Dlg.toast(
                     getActivity(),
-                    R.string.afc_msg_app_doesnot_have_permission_to_delete_files,
+                    R.string.anhuu_msg_app_doesnot_have_permission_to_delete_files,
                     Dlg.LENGTH_SHORT);
             return;
         }
@@ -1621,9 +1617,9 @@ public class FragmentFiles extends Fragment implements
 
         Dlg.confirmYesno(
                 getActivity(),
-                getString(R.string.afc_pmsg_confirm_delete_file,
-                        isFile ? getString(R.string.afc_file)
-                                : getString(R.string.afc_folder), filename),
+                getString(R.string.anhuu_pmsg_confirm_delete_file,
+                        isFile ? getString(R.string.anhuu_file)
+                                : getString(R.string.anhuu_folder), filename),
                 new DialogInterface.OnClickListener() {
 
                     @Override
@@ -1631,9 +1627,9 @@ public class FragmentFiles extends Fragment implements
                         new LoadingDialog<Void, Void, Boolean>(
                                 getActivity(),
                                 getString(
-                                        R.string.afc_pmsg_deleting_file,
-                                        isFile ? getString(R.string.afc_file)
-                                                : getString(R.string.afc_folder),
+                                        R.string.anhuu_pmsg_deleting_file,
+                                        isFile ? getString(R.string.anhuu_file)
+                                                : getString(R.string.anhuu_folder),
                                         filename), true) {
 
                             final int taskId = EnvUtils.genId();
@@ -1642,9 +1638,9 @@ public class FragmentFiles extends Fragment implements
                                 Dlg.toast(
                                         getActivity(),
                                         getString(
-                                                R.string.afc_pmsg_file_has_been_deleted,
-                                                isFile ? getString(R.string.afc_file)
-                                                        : getString(R.string.afc_folder),
+                                                R.string.anhuu_pmsg_file_has_been_deleted,
+                                                isFile ? getString(R.string.anhuu_file)
+                                                        : getString(R.string.anhuu_folder),
                                                 filename), Dlg.LENGTH_SHORT);
                             }// notifyFileDeleted()
 
@@ -1687,8 +1683,9 @@ public class FragmentFiles extends Fragment implements
                                         if (result) {
                                             mFileAdapter.markItemAsDeleted(id,
                                                     false);
-                                            Dlg.toast(getActivity(),
-                                                    R.string.afc_msg_cancelled,
+                                            Dlg.toast(
+                                                    getActivity(),
+                                                    R.string.anhuu_msg_cancelled,
                                                     Dlg.LENGTH_SHORT);
                                         } else
                                             notifyFileDeleted();
@@ -1710,9 +1707,9 @@ public class FragmentFiles extends Fragment implements
                                     Dlg.toast(
                                             getActivity(),
                                             getString(
-                                                    R.string.afc_pmsg_cannot_delete_file,
-                                                    isFile ? getString(R.string.afc_file)
-                                                            : getString(R.string.afc_folder),
+                                                    R.string.anhuu_pmsg_cannot_delete_file,
+                                                    isFile ? getString(R.string.anhuu_file)
+                                                            : getString(R.string.anhuu_folder),
                                                     filename), Dlg.LENGTH_SHORT);
                                 }
                             }// onPostExecute()
@@ -1771,13 +1768,13 @@ public class FragmentFiles extends Fragment implements
             protected Uri doInBackground(Void... params) {
                 if (!BaseFileProviderUtils.fileCanWrite(getActivity(),
                         getCurrentLocation())) {
-                    publishProgress(getString(R.string.afc_msg_cannot_save_a_file_here));
+                    publishProgress(getString(R.string.anhuu_msg_cannot_save_a_file_here));
                     return null;
                 }
 
                 if (fileUri == null && !FileUtils.isFilenameValid(filename)) {
                     publishProgress(getString(
-                            R.string.afc_pmsg_filename_is_invalid, filename));
+                            R.string.anhuu_pmsg_filename_is_invalid, filename));
                     return null;
                 }
 
@@ -1821,7 +1818,8 @@ public class FragmentFiles extends Fragment implements
                 case BaseFile.FILE_TYPE_DIRECTORY: {
                     Dlg.toast(
                             getActivity(),
-                            getString(R.string.afc_pmsg_filename_is_directory,
+                            getString(
+                                    R.string.anhuu_pmsg_filename_is_directory,
                                     filename), Dlg.LENGTH_SHORT);
                     break;
                 }// FILE_TYPE_DIRECTORY
@@ -1829,7 +1827,7 @@ public class FragmentFiles extends Fragment implements
                 case BaseFile.FILE_TYPE_FILE: {
                     Dlg.confirmYesno(
                             getActivity(),
-                            getString(R.string.afc_pmsg_confirm_replace_file,
+                            getString(R.string.anhuu_pmsg_confirm_replace_file,
                                     filename),
                             new DialogInterface.OnClickListener() {
 
@@ -1898,7 +1896,7 @@ public class FragmentFiles extends Fragment implements
                     return bundle;
                 }// if
 
-                errMsg = getString(R.string.afc_pmsg_cannot_access_dir,
+                errMsg = getString(R.string.anhuu_pmsg_cannot_access_dir,
                         BaseFileProviderUtils.getFileName(getActivity(),
                                 params[0]));
 
@@ -1998,7 +1996,7 @@ public class FragmentFiles extends Fragment implements
             LinearLayout.LayoutParams lpDivider;
             LayoutInflater inflater = getLayoutInflater(null);
             final int dim = getResources().getDimensionPixelSize(
-                    R.dimen.afc_5dp);
+                    R.dimen.anhuu_5dp);
             int count = 0;
 
             @Override
@@ -2047,7 +2045,7 @@ public class FragmentFiles extends Fragment implements
                  */
                 if (mViewAddressBar.getChildCount() > 0) {
                     View divider = inflater.inflate(
-                            R.layout.afc_view_locations_divider, null);
+                            R.layout.anhuu_view_locations_divider, null);
 
                     if (lpDivider == null) {
                         lpDivider = new LinearLayout.LayoutParams(dim, dim);
@@ -2061,9 +2059,9 @@ public class FragmentFiles extends Fragment implements
                         .getColumnIndex(BaseFile.COLUMN_URI)));
 
                 TextView btnLoc = (TextView) inflater.inflate(
-                        R.layout.afc_button_location, null);
+                        R.layout.anhuu_button_location, null);
                 String name = BaseFileProviderUtils.getFileName(progress[0]);
-                btnLoc.setText(TextUtils.isEmpty(name) ? getString(R.string.afc_root)
+                btnLoc.setText(TextUtils.isEmpty(name) ? getString(R.string.anhuu_root)
                         : name);
                 btnLoc.setTag(lastUri);
                 btnLoc.setOnClickListener(mBtnLocationOnClickListener);
@@ -2074,7 +2072,7 @@ public class FragmentFiles extends Fragment implements
                     Rect r = new Rect();
                     btnLoc.getPaint().getTextBounds(name, 0, name.length(), r);
                     if (r.width() >= getResources().getDimensionPixelSize(
-                            R.dimen.afc_button_location_max_width)
+                            R.dimen.anhuu_button_location_max_width)
                             - btnLoc.getPaddingLeft()
                             - btnLoc.getPaddingRight()) {
                         mTextFullDirName.setText(progress[0]
@@ -2099,7 +2097,7 @@ public class FragmentFiles extends Fragment implements
                         mViewLocationsContainer
                                 .fullScroll(HorizontalScrollView.FOCUS_RIGHT);
                     }// run()
-                }, DisplayPrefs.DELAY_TIME_FOR_VERY_SHORT_ANIMATION);
+                }, Display.DELAY_TIME_FOR_VERY_SHORT_ANIMATION);
             }// onPostExecute()
 
         }.execute();
@@ -2164,12 +2162,12 @@ public class FragmentFiles extends Fragment implements
         /*
          * Save settings...
          */
-        if (DisplayPrefs.isRememberLastLocation(getActivity())
+        if (Display.isRememberLastLocation(getActivity())
                 && getCurrentLocation() != null)
-            DisplayPrefs.setLastLocation(getActivity(), getCurrentLocation()
+            Display.setLastLocation(getActivity(), getCurrentLocation()
                     .toString());
         else
-            DisplayPrefs.setLastLocation(getActivity(), null);
+            Display.setLastLocation(getActivity(), null);
 
         /*
          * Finish!
@@ -2279,7 +2277,7 @@ public class FragmentFiles extends Fragment implements
 
         @Override
         public void onClick(View v) {
-            Ui.showSoftKeyboard(v, false);
+            UI.showSoftKeyboard(v, false);
             checkSaveasFilenameAndFinish();
         }// onClick()
     };// mBtnOk_SaveDialog_OnClickListener
@@ -2404,12 +2402,12 @@ public class FragmentFiles extends Fragment implements
             final String name = BaseFileProviderUtils.getFileName(cursor);
 
             ContextMenuUtils.showContextMenu(getActivity(), 0, 0,
-                    new Integer[] { R.string.afc_cmd_add_to_bookmarks },
+                    new Integer[] { R.string.anhuu_cmd_add_to_bookmarks },
                     new ContextMenuUtils.OnMenuItemClickListener() {
 
                         @Override
                         public void onClick(final int resId) {
-                            if (resId == R.string.afc_cmd_add_to_bookmarks) {
+                            if (resId == R.string.anhuu_cmd_add_to_bookmarks) {
                                 BookmarkFragment
                                         .doEnterNewNameOrRenameBookmark(
                                                 getActivity(),
@@ -2536,7 +2534,7 @@ public class FragmentFiles extends Fragment implements
                         else if (!mFileAdapter.isEmpty())
                             mViewFiles.setSelection(0);
                     }// run()
-                }, DisplayPrefs.DELAY_TIME_FOR_VERY_SHORT_ANIMATION);
+                }, Display.DELAY_TIME_FOR_VERY_SHORT_ANIMATION);
             }// onPostExecute()
 
         };
