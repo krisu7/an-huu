@@ -9,9 +9,9 @@ package com.haibison.android.lib.anhuu.utils;
 
 /**
  * System constants.
- * 
+ *
  * @author Hai Bison
- * 
+ *
  */
 public class Sys {
 
@@ -28,11 +28,11 @@ public class Sys {
     /**
      * The library version name.
      */
-    public static final String LIB_VERSION_NAME = "5.5";
+    public static final String LIB_VERSION_NAME = "5.5.1";
 
     /**
      * The library version code.
      */
-    public static final int LIB_VERSION_CODE = 59;
+    public static final int LIB_VERSION_CODE = 60;
 
 }

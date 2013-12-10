@@ -1,6 +1,6 @@
 # An Hữu
 
-* Version: 5.5
+* Version: 5.5.1
 
 
 Feel free to contact us at:
@@ -30,6 +30,12 @@ project. We hope this project will be always useful for everyone.
 
 
 # HISTORY
+
+* Version 5.5.1:
+    + *Release:* December 10, 2013
+    + Update prefix of resource IDs from `afc_` to `anhuu_`, 'Afc_' to `AnHuu_`.
+    + Refactor some "preferences" classes to one class `Settings`.
+    + Optimize code.
 
 * Version 5.5:
     + *Release:* December 10, 2013
