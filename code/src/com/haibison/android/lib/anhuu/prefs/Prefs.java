@@ -38,7 +38,7 @@ public class Prefs {
      * @return the global preference filename.
      */
     public static final String genPreferenceFilename() {
-        return String.format("%s_%s", Sys.LIB_NAME, UID);
+        return String.format("%s_%s", Sys.LIB_CODE_NAME, UID);
     }
 
     /**
@@ -49,7 +49,7 @@ public class Prefs {
      * @return the global database filename.
      */
     public static final String genDatabaseFilename(String name) {
-        return String.format("%s_%s_%s", Sys.LIB_NAME, UID, name);
+        return String.format("%s_%s_%s", Sys.LIB_CODE_NAME, UID, name);
     }
 
     /**

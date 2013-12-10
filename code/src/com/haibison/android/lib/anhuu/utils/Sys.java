@@ -18,7 +18,12 @@ public class Sys {
     /**
      * The library name.
      */
-    public static final String LIB_NAME = "an-huu";
+    public static final String LIB_NAME = "An Hữu";
+
+    /**
+     * The library "code name".
+     */
+    public static final String LIB_CODE_NAME = "an-huu";
 
     /**
      * The library version name.

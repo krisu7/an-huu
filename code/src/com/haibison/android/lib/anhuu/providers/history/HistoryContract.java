@@ -26,7 +26,7 @@ public final class HistoryContract implements BaseColumns {
     /**
      * The raw authority.
      */
-    private static final String AUTHORITY = Sys.LIB_NAME + ".history";
+    private static final String AUTHORITY = Sys.LIB_CODE_NAME + ".history";
 
     /**
      * Gets the authority of this provider.
@@ -87,14 +87,14 @@ public final class HistoryContract implements BaseColumns {
      * items.
      */
     public static final String CONTENT_TYPE = "vnd.android.cursor.dir/vnd."
-            + Sys.LIB_NAME + ".history";
+            + Sys.LIB_CODE_NAME + ".history";
 
     /**
      * The MIME type of a {@link #_ContentUri} sub-directory of a single history
      * item.
      */
     public static final String CONTENT_ITEM_TYPE = "vnd.android.cursor.item/vnd."
-            + Sys.LIB_NAME + ".history";
+            + Sys.LIB_CODE_NAME + ".history";
 
     /**
      * The default sort order for this table.

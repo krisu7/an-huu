@@ -440,13 +440,13 @@ public class BaseFileContract {
          * The MIME type providing a directory of files.
          */
         public static final String CONTENT_TYPE = "vnd.android.cursor.dir/vnd."
-                + Sys.LIB_NAME + ".basefile";
+                + Sys.LIB_CODE_NAME + ".basefile";
 
         /**
          * The MIME type of a single file.
          */
         public static final String CONTENT_ITEM_TYPE = "vnd.android.cursor.item/vnd."
-                + Sys.LIB_NAME + ".basefile";
+                + Sys.LIB_CODE_NAME + ".basefile";
 
         /*
          * Column definitions

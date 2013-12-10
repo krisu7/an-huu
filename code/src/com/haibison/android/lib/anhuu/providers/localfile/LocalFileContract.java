@@ -22,7 +22,7 @@ public class LocalFileContract {
     /**
      * The raw authority of this provider.
      */
-    private static final String AUTHORITY = Sys.LIB_NAME + ".localfile";
+    private static final String AUTHORITY = Sys.LIB_CODE_NAME + ".localfile";
 
     /**
      * Gets the authority of this provider.

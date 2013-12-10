@@ -25,7 +25,7 @@ public final class BookmarkContract implements BaseColumns {
     /**
      * The raw authority.
      */
-    private static final String AUTHORITY = Sys.LIB_NAME + ".bookmark";
+    private static final String AUTHORITY = Sys.LIB_CODE_NAME + ".bookmark";
 
     /**
      * Gets the authority of this provider.
@@ -86,14 +86,14 @@ public final class BookmarkContract implements BaseColumns {
      * items.
      */
     public static final String CONTENT_TYPE = "vnd.android.cursor.dir/vnd."
-            + Sys.LIB_NAME + ".bookmarks";
+            + Sys.LIB_CODE_NAME + ".bookmarks";
 
     /**
      * The MIME type of a {@link #_ContentUri} sub-directory of a single
      * Bookmark item.
      */
     public static final String CONTENT_ITEM_TYPE = "vnd.android.cursor.item/vnd."
-            + Sys.LIB_NAME + ".bookmarks";
+            + Sys.LIB_CODE_NAME + ".bookmarks";
 
     /**
      * The default sort order for this table.
