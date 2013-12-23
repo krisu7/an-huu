@@ -1,6 +1,6 @@
 # An Hữu
 
-* Version: 5.5.1
+* Version: 5.5.2 beta
 
 
 Feel free to contact us at:
@@ -30,6 +30,9 @@ project. We hope this project will be always useful for everyone.
 
 
 # HISTORY
+
+* Version 5.5.2 beta:
+    + *Initialize:* December 24, 2013
 
 * Version 5.5.1:
     + *Release:* December 10, 2013

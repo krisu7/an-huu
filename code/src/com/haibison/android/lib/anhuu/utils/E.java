@@ -36,7 +36,7 @@ public class E {
         try {
             msg = String.format("Hi  :-)\n\n" + "%s v%s\n"
                     + "…by Hai Bison Apps\n\n" + "http://www.haibison.com\n\n"
-                    + "Hope you enjoy this library.", Sys.LIB_CODE_NAME,
+                    + "Hope you enjoy this library.", Sys.LIB_NAME,
                     Sys.LIB_VERSION_NAME);
         } catch (Exception e) {
             msg = "Oops… You've found a broken Easter egg, try again later  :-(";
