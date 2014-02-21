@@ -35,7 +35,7 @@
 
         <!-- AOSP -->
 
-        <item name="android:windowBackground">@drawable/aosp_background_holo_light</item>
+        <item name="android:windowBackground">@drawable/anhuu_background_holo_light</item>
 
         <!-- An Hữu -->
 

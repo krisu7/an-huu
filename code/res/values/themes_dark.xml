@@ -85,7 +85,7 @@
 
         <!-- AOSP -->
 
-        <item name="android:windowBackground">@drawable/aosp_background_holo_dark</item>
+        <item name="android:windowBackground">@drawable/anhuu_background_holo_dark</item>
 
         <!-- An Hữu -->
 
