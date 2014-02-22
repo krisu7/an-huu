@@ -7,7 +7,7 @@ Feel free to contact us at:
 
 * [Homepage]
 * E-mails:
-    + haibisonapps[at]gmail.com
+    + haibison.apps[at]gmail.com
 
 
 # What is this project?
