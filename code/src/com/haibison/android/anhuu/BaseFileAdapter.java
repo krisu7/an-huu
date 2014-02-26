@@ -81,7 +81,7 @@ public class BaseFileAdapter extends ResourceCursorAdapter {
 
     public BaseFileAdapter(Context context, int filterMode,
             boolean multiSelection) {
-        super(context, R.layout.anhuu_file_item, null, 0);
+        super(context, R.layout.anhuu_f5be488d_file_item, null, 0);
         mFilterMode = filterMode;
         mMultiSelection = multiSelection;
 

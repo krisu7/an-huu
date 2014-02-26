@@ -58,7 +58,7 @@ public class ContextMenuUtils {
                 dialog.getContext(), itemIds);
 
         View view = LayoutInflater.from(context).inflate(
-                R.layout.anhuu_context_menu_view, null);
+                R.layout.anhuu_f5be488d_context_menu_view, null);
         ListView listview = (ListView) view
                 .findViewById(R.id.anhuu_listview_menu);
         listview.setAdapter(_adapter);

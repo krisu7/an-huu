@@ -312,7 +312,7 @@ public class FragmentFiles extends Fragment implements
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
-        final View rootView = inflater.inflate(R.layout.anhuu_fragment_files,
+        final View rootView = inflater.inflate(R.layout.anhuu_f5be488d_fragment_files,
                 container, false);
 
         /*
@@ -383,7 +383,7 @@ public class FragmentFiles extends Fragment implements
 
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-        inflater.inflate(R.menu.anhuu_fragment_files, menu);
+        inflater.inflate(R.menu.anhuu_f5be488d_fragment_files, menu);
     }// onCreateOptionsMenu()
 
     @Override
@@ -708,11 +708,11 @@ public class FragmentFiles extends Fragment implements
         switch (Display.getViewType(getActivity())) {
         case GRID:
             mViewFiles = (AbsListView) getLayoutInflater(null).inflate(
-                    R.layout.anhuu_gridview_files, null);
+                    R.layout.anhuu_f5be488d_gridview_files, null);
             break;
         case LIST:
             mViewFiles = (AbsListView) getLayoutInflater(null).inflate(
-                    R.layout.anhuu_listview_files, null);
+                    R.layout.anhuu_f5be488d_listview_files, null);
             break;
         }
 
@@ -1374,7 +1374,7 @@ public class FragmentFiles extends Fragment implements
         };// listener
 
         View view = getLayoutInflater(null).inflate(
-                R.layout.anhuu_settings_sort_view, null);
+                R.layout.anhuu_f5be488d_settings_sort_view, null);
         for (int i = 0; i < BUTTON_SORT_IDS.length; i++) {
             View v = view.findViewById(BUTTON_SORT_IDS[i]);
             v.setOnClickListener(listener);
@@ -1455,7 +1455,7 @@ public class FragmentFiles extends Fragment implements
         final AlertDialog dialog = Dlg.newAlertDlg(getActivity());
 
         View view = getLayoutInflater(null).inflate(
-                R.layout.anhuu_simple_text_input_view, null);
+                R.layout.anhuu_f5be488d_simple_text_input_view, null);
         final EditText textFile = (EditText) view
                 .findViewById(R.id.anhuu_text1);
         textFile.setHint(R.string.anhuu_hint_folder_name);
@@ -2045,7 +2045,7 @@ public class FragmentFiles extends Fragment implements
                  */
                 if (mViewAddressBar.getChildCount() > 0) {
                     View divider = inflater.inflate(
-                            R.layout.anhuu_view_locations_divider, null);
+                            R.layout.anhuu_f5be488d_view_locations_divider, null);
 
                     if (lpDivider == null) {
                         lpDivider = new LinearLayout.LayoutParams(dim, dim);
@@ -2059,7 +2059,7 @@ public class FragmentFiles extends Fragment implements
                         .getColumnIndex(BaseFile.COLUMN_URI)));
 
                 TextView btnLoc = (TextView) inflater.inflate(
-                        R.layout.anhuu_button_location, null);
+                        R.layout.anhuu_f5be488d_button_location, null);
                 String name = BaseFileProviderUtils.getFileName(progress[0]);
                 btnLoc.setText(TextUtils.isEmpty(name) ? getString(R.string.anhuu_root)
                         : name);

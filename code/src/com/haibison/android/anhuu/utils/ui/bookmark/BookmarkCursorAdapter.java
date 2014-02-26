@@ -110,8 +110,8 @@ public class BookmarkCursorAdapter extends ResourceCursorTreeAdapter {
      *            {@link Context}.
      */
     public BookmarkCursorAdapter(Context context) {
-        super(context, null, R.layout.anhuu_view_bookmark_item,
-                R.layout.anhuu_view_bookmark_sub_item);
+        super(context, null, R.layout.anhuu_f5be488d_view_bookmark_item,
+                R.layout.anhuu_f5be488d_view_bookmark_sub_item);
     }// BookmarkCursorAdapter()
 
     /**

@@ -109,7 +109,7 @@
         <include
             android:id="@+id/anhuu_view_loading"
             android:layout_centerInParent="true"
-            layout="@layout/anhuu_view_loading" />
+            layout="@layout/anhuu_f5be488d_view_loading" />
     </RelativeLayout>
 
     <LinearLayout

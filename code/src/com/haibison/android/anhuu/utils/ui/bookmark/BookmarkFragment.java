@@ -263,7 +263,7 @@ public class BookmarkFragment extends DialogFragment implements
      * Loads content view from XML and init controls.
      */
     private View initContentView(LayoutInflater inflater, ViewGroup container) {
-        View mainView = inflater.inflate(R.layout.anhuu_viewgroup_bookmarks,
+        View mainView = inflater.inflate(R.layout.anhuu_f5be488d_viewgroup_bookmarks,
                 container, false);
 
         /*
@@ -612,7 +612,7 @@ public class BookmarkFragment extends DialogFragment implements
         final AlertDialog dialog = Dlg.newAlertDlg(context);
 
         View view = LayoutInflater.from(context).inflate(
-                R.layout.anhuu_simple_text_input_view, null);
+                R.layout.anhuu_f5be488d_simple_text_input_view, null);
         final EditText textName = (EditText) view
                 .findViewById(R.id.anhuu_text1);
         textName.setText(name);

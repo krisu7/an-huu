@@ -279,7 +279,7 @@ public class FileChooserActivity extends FragmentActivity {
                     R.style.AnHuu_Theme_Dark));
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.anhuu_activity_filechooser);
+        setContentView(R.layout.anhuu_f5be488d_activity_filechooser);
         UI.adjustDialogSizeForLargeScreens(getWindow());
 
         /*

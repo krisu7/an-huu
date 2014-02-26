@@ -136,7 +136,7 @@ public class HistoryFragment extends DialogFragment implements
             @Override
             public boolean onCreateOptionsMenu(Menu menu) {
                 getActivity().getMenuInflater().inflate(
-                        R.menu.anhuu_viewgroup_history, menu);
+                        R.menu.anhuu_f5be488d_viewgroup_history, menu);
                 return super.onCreateOptionsMenu(menu);
             }// onCreateOptionsMenu()
 
@@ -361,7 +361,7 @@ public class HistoryFragment extends DialogFragment implements
         /*
          * LOADS CONTROLS
          */
-        View mainView = inflater.inflate(R.layout.anhuu_viewgroup_history,
+        View mainView = inflater.inflate(R.layout.anhuu_f5be488d_viewgroup_history,
                 container, false);
 
         mBtnSearch = mainView.findViewById(R.id.anhuu_button_search);

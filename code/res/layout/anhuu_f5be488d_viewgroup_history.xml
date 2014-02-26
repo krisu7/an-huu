@@ -20,31 +20,27 @@
 
         <TextView
             android:id="@+id/anhuu_textview_header"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/anhuu_button_search"
             android:drawableLeft="@android:drawable/ic_menu_recent_history"
             android:gravity="center_vertical"
             android:text="@string/anhuu_history"
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
-        <com.haibison.android.anhuu.ui.widget.AnHuuSearchView
-            android:id="@+id/anhuu_search_view"
-            android:layout_width="match_parent"
+        <ImageButton
+            android:id="@+id/anhuu_button_search"
+            style="@style/anhuu_widget_search_view_button_search"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_marginBottom="@dimen/anhuu_5dp"
-            android:layout_marginLeft="@dimen/anhuu_15dp"
             android:layout_marginRight="@dimen/anhuu_15dp"
-            android:layout_marginTop="@dimen/anhuu_5dp"
             android:layout_toLeftOf="@+id/anhuu_viewgroup_navigators"
-            android:layout_toRightOf="@id/anhuu_textview_header"
-            anhuu:closable="false"
-            anhuu:delayTimeSubmission="@integer/anhuu_search_view_delay_time_submission"
-            anhuu:enabled="false"
-            anhuu:hint="@string/anhuu_hint_search"
-            anhuu:iconified="false" />
+            android:contentDescription="@string/anhuu_hint_search"
+            android:enabled="false"
+            android:visibility="gone" />
 
         <LinearLayout
             android:id="@+id/anhuu_viewgroup_navigators"
@@ -70,11 +66,25 @@
         </LinearLayout>
     </RelativeLayout>
 
+    <com.haibison.android.anhuu.ui.widget.AnHuuSearchView
+        android:id="@+id/anhuu_search_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/anhuu_viewgroup_header"
+        android:layout_marginBottom="@dimen/anhuu_5dp"
+        android:layout_marginLeft="@dimen/anhuu_15dp"
+        android:layout_marginRight="@dimen/anhuu_15dp"
+        android:layout_marginTop="@dimen/anhuu_5dp"
+        android:visibility="gone"
+        anhuu:delayTimeSubmission="@integer/anhuu_search_view_delay_time_submission"
+        anhuu:enabled="false"
+        anhuu:hint="@string/anhuu_hint_search" />
+
     <View
         android:id="@+id/anhuu_view_header_divider"
         android:layout_width="match_parent"
         android:layout_height="@dimen/anhuu_viewgroup_button_locations_bottom_divider_height"
-        android:layout_below="@id/anhuu_viewgroup_header"
+        android:layout_below="@id/anhuu_search_view"
         android:background="@color/anhuu_border_line_dark" />
 
     <RelativeLayout
@@ -110,7 +120,7 @@
 
         <include
             android:id="@+id/anhuu_view_loading"
-            layout="@layout/anhuu_view_loading" />
+            layout="@layout/anhuu_f5be488d_view_loading" />
     </RelativeLayout>
 
 </RelativeLayout>

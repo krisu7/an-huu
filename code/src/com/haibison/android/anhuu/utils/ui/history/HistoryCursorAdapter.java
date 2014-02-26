@@ -108,8 +108,8 @@ public class HistoryCursorAdapter extends ResourceCursorTreeAdapter {
      *            {@link Context}.
      */
     public HistoryCursorAdapter(Context context) {
-        super(context, null, R.layout.anhuu_view_history_item,
-                R.layout.anhuu_view_history_sub_item);
+        super(context, null, R.layout.anhuu_f5be488d_view_history_item,
+                R.layout.anhuu_f5be488d_view_history_sub_item);
     }// BookmarkCursorAdapter()
 
     /**
