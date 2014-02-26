@@ -49,7 +49,7 @@ public class FileChooserActivity_v7 extends ActionBarActivity {
 
         if (getIntent().hasExtra(FileChooserActivity.EXTRA_THEME))
             setTheme(getIntent().getIntExtra(FileChooserActivity.EXTRA_THEME,
-                    R.style.AnHuu_Theme_Dark));
+                    R.style.AnHuu_f5be488d_Theme_Dark));
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.anhuu_f5be488d_activity_filechooser);
@@ -64,7 +64,8 @@ public class FileChooserActivity_v7 extends ActionBarActivity {
         mFragmentFiles.getArguments().putString(FragmentFiles.EXTRA_ACTION,
                 getIntent().getAction());
         getSupportFragmentManager().beginTransaction()
-                .add(R.id.anhuu_fragment_files, mFragmentFiles).commit();
+                .add(R.id.anhuu_f5be488d_fragment_files, mFragmentFiles)
+                .commit();
     }// onCreate()
 
     @Override

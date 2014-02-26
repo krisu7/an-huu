@@ -8,7 +8,7 @@
 
 <resources xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <style name="AnHuu.BaseTheme.Dialog.Light" parent="@android:style/Theme.DeviceDefault.Light.Dialog"></style>
+    <style name="AnHuu.f5be488d.BaseTheme.Dialog.Light" parent="@android:style/Theme.DeviceDefault.Light.Dialog"></style>
 
     <style name="anhuu_f5be488d_base_button_location" parent="@android:style/Widget.DeviceDefault.Light.TextView"></style>
 

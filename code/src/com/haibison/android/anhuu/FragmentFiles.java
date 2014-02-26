@@ -319,28 +319,29 @@ public class FragmentFiles extends Fragment implements
          * MAP CONTROLS
          */
 
-        mBtnGoHome = rootView.findViewById(R.id.anhuu_textview_home);
+        mBtnGoHome = rootView.findViewById(R.id.anhuu_f5be488d_textview_home);
         mBtnBookmarkManager = rootView
-                .findViewById(R.id.anhuu_textview_bookmarks);
+                .findViewById(R.id.anhuu_f5be488d_textview_bookmarks);
         mViewGoBack = (ImageView) rootView
-                .findViewById(R.id.anhuu_button_go_back);
+                .findViewById(R.id.anhuu_f5be488d_button_go_back);
         mViewGoForward = (ImageView) rootView
-                .findViewById(R.id.anhuu_button_go_forward);
+                .findViewById(R.id.anhuu_f5be488d_button_go_forward);
         mViewAddressBar = (ViewGroup) rootView
-                .findViewById(R.id.anhuu_view_locations);
+                .findViewById(R.id.anhuu_f5be488d_view_locations);
         mViewLocationsContainer = (HorizontalScrollView) rootView
-                .findViewById(R.id.anhuu_view_locations_container);
+                .findViewById(R.id.anhuu_f5be488d_view_locations_container);
         mTextFullDirName = (TextView) rootView
-                .findViewById(R.id.anhuu_textview_full_dir_name);
-        mViewGroupFiles = rootView.findViewById(R.id.anhuu_viewgroup_files);
+                .findViewById(R.id.anhuu_f5be488d_textview_full_dir_name);
+        mViewGroupFiles = rootView
+                .findViewById(R.id.anhuu_f5be488d_viewgroup_files);
         mViewFilesContainer = (ViewGroup) rootView
-                .findViewById(R.id.anhuu_view_files_container);
+                .findViewById(R.id.anhuu_f5be488d_view_files_container);
         mFooterView = (TextView) rootView
-                .findViewById(R.id.anhuu_view_files_footer_view);
-        mViewLoading = rootView.findViewById(R.id.anhuu_view_loading);
+                .findViewById(R.id.anhuu_f5be488d_view_files_footer_view);
+        mViewLoading = rootView.findViewById(R.id.anhuu_f5be488d_view_loading);
         mTextSaveas = (EditText) rootView
-                .findViewById(R.id.anhuu_textview_saveas_filename);
-        mBtnOk = (Button) rootView.findViewById(R.id.anhuu_button_ok);
+                .findViewById(R.id.anhuu_f5be488d_textview_saveas_filename);
+        mBtnOk = (Button) rootView.findViewById(R.id.anhuu_f5be488d_button_ok);
 
         /*
          * INIT CONTROLS
@@ -351,18 +352,19 @@ public class FragmentFiles extends Fragment implements
          */
 
         View viewBookmarks = rootView
-                .findViewById(R.id.anhuu_fragment_bookmarks);
+                .findViewById(R.id.anhuu_f5be488d_fragment_bookmarks);
         if (viewBookmarks != null) {
             mBookmarkFragment = (BookmarkFragment) getChildFragmentManager()
-                    .findFragmentById(R.id.anhuu_fragment_bookmarks);
+                    .findFragmentById(R.id.anhuu_f5be488d_fragment_bookmarks);
             if (mBookmarkFragment == null) {
                 mBookmarkFragment = BookmarkFragment.newInstance(false);
                 mBookmarkFragment
                         .setOnBookmarkItemClickListener(mBookmarkFragmentOnBookmarkItemClickListener);
 
-                getChildFragmentManager().beginTransaction()
-                        .add(R.id.anhuu_fragment_bookmarks, mBookmarkFragment)
-                        .commit();
+                getChildFragmentManager()
+                        .beginTransaction()
+                        .add(R.id.anhuu_f5be488d_fragment_bookmarks,
+                                mBookmarkFragment).commit();
             }
         }// if
 
@@ -402,7 +404,7 @@ public class FragmentFiles extends Fragment implements
          */
 
         final boolean sortAscending = Display.isSortAscending(getActivity());
-        MenuItem miSort = menu.findItem(R.id.anhuu_menuitem_sort);
+        MenuItem miSort = menu.findItem(R.id.anhuu_f5be488d_menuitem_sort);
 
         switch (Display.getSortType(getActivity())) {
         case BaseFile.SORT_BY_NAME:
@@ -432,7 +434,8 @@ public class FragmentFiles extends Fragment implements
          * View type.
          */
 
-        MenuItem menuItem = menu.findItem(R.id.anhuu_menuitem_switch_viewmode);
+        MenuItem menuItem = menu
+                .findItem(R.id.anhuu_f5be488d_menuitem_switch_viewmode);
         switch (Display.getViewType(getActivity())) {
         case GRID:
             menuItem.setIcon(UI.resolveAttribute(getActivity(),
@@ -450,22 +453,23 @@ public class FragmentFiles extends Fragment implements
          * New folder.
          */
 
-        menu.findItem(R.id.anhuu_menuitem_new_folder).setEnabled(!mLoading);
+        menu.findItem(R.id.anhuu_f5be488d_menuitem_new_folder).setEnabled(
+                !mLoading);
     }// onPrepareOptionsMenu()
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == R.id.anhuu_menuitem_sort)
+        if (item.getItemId() == R.id.anhuu_f5be488d_menuitem_sort)
             resortViewFiles();
-        else if (item.getItemId() == R.id.anhuu_menuitem_new_folder)
+        else if (item.getItemId() == R.id.anhuu_f5be488d_menuitem_new_folder)
             checkConditionsThenConfirmUserToCreateNewDir();
-        else if (item.getItemId() == R.id.anhuu_menuitem_switch_viewmode)
+        else if (item.getItemId() == R.id.anhuu_f5be488d_menuitem_switch_viewmode)
             switchViewType();
-        else if (item.getItemId() == R.id.anhuu_menuitem_home)
+        else if (item.getItemId() == R.id.anhuu_f5be488d_menuitem_home)
             goHome();
-        else if (item.getItemId() == R.id.anhuu_menuitem_history)
+        else if (item.getItemId() == R.id.anhuu_f5be488d_menuitem_history)
             showHistoryManager();
-        else if (item.getItemId() == R.id.anhuu_menuitem_bookmarks)
+        else if (item.getItemId() == R.id.anhuu_f5be488d_menuitem_bookmarks)
             showBookmarkManager();
         else
             return false;
@@ -787,9 +791,9 @@ public class FragmentFiles extends Fragment implements
          */
 
         ViewGroup viewGroupFooterContainer = (ViewGroup) getView()
-                .findViewById(R.id.anhuu_viewgroup_footer_container);
+                .findViewById(R.id.anhuu_f5be488d_viewgroup_footer_container);
         ViewGroup viewGroupFooter = (ViewGroup) getView().findViewById(
-                R.id.anhuu_viewgroup_footer);
+                R.id.anhuu_f5be488d_viewgroup_footer);
 
         if (mIsSaveDialog) {
             viewGroupFooterContainer.setVisibility(View.VISIBLE);
@@ -892,7 +896,7 @@ public class FragmentFiles extends Fragment implements
                     RelativeLayout.LayoutParams.MATCH_PARENT);
             if (!center)
                 lp.addRule(RelativeLayout.ABOVE,
-                        R.id.anhuu_view_files_footer_view);
+                        R.id.anhuu_f5be488d_view_files_footer_view);
             mViewFilesContainer.setLayoutParams(lp);
 
             lp = (RelativeLayout.LayoutParams) mFooterView.getLayoutParams();
@@ -1320,12 +1324,12 @@ public class FragmentFiles extends Fragment implements
     }// showHistoryManager()
 
     private static final int[] BUTTON_SORT_IDS = {
-            R.id.anhuu_button_sort_by_name_asc,
-            R.id.anhuu_button_sort_by_name_desc,
-            R.id.anhuu_button_sort_by_size_asc,
-            R.id.anhuu_button_sort_by_size_desc,
-            R.id.anhuu_button_sort_by_date_asc,
-            R.id.anhuu_button_sort_by_date_desc };
+            R.id.anhuu_f5be488d_button_sort_by_name_asc,
+            R.id.anhuu_f5be488d_button_sort_by_name_desc,
+            R.id.anhuu_f5be488d_button_sort_by_size_asc,
+            R.id.anhuu_f5be488d_button_sort_by_size_desc,
+            R.id.anhuu_f5be488d_button_sort_by_date_asc,
+            R.id.anhuu_f5be488d_button_sort_by_date_desc };
 
     /**
      * Show a dialog for sorting options and resort file list after user
@@ -1358,23 +1362,23 @@ public class FragmentFiles extends Fragment implements
             public void onClick(View v) {
                 dialog.dismiss();
 
-                if (v.getId() == R.id.anhuu_button_sort_by_name_asc) {
+                if (v.getId() == R.id.anhuu_f5be488d_button_sort_by_name_asc) {
                     Display.setSortType(getActivity(), BaseFile.SORT_BY_NAME);
                     Display.setSortAscending(getActivity(), true);
-                } else if (v.getId() == R.id.anhuu_button_sort_by_name_desc) {
+                } else if (v.getId() == R.id.anhuu_f5be488d_button_sort_by_name_desc) {
                     Display.setSortType(getActivity(), BaseFile.SORT_BY_NAME);
                     Display.setSortAscending(getActivity(), false);
-                } else if (v.getId() == R.id.anhuu_button_sort_by_size_asc) {
+                } else if (v.getId() == R.id.anhuu_f5be488d_button_sort_by_size_asc) {
                     Display.setSortType(getActivity(), BaseFile.SORT_BY_SIZE);
                     Display.setSortAscending(getActivity(), true);
-                } else if (v.getId() == R.id.anhuu_button_sort_by_size_desc) {
+                } else if (v.getId() == R.id.anhuu_f5be488d_button_sort_by_size_desc) {
                     Display.setSortType(getActivity(), BaseFile.SORT_BY_SIZE);
                     Display.setSortAscending(getActivity(), false);
-                } else if (v.getId() == R.id.anhuu_button_sort_by_date_asc) {
+                } else if (v.getId() == R.id.anhuu_f5be488d_button_sort_by_date_asc) {
                     Display.setSortType(getActivity(),
                             BaseFile.SORT_BY_MODIFICATION_TIME);
                     Display.setSortAscending(getActivity(), true);
-                } else if (v.getId() == R.id.anhuu_button_sort_by_date_desc) {
+                } else if (v.getId() == R.id.anhuu_f5be488d_button_sort_by_date_desc) {
                     Display.setSortType(getActivity(),
                             BaseFile.SORT_BY_MODIFICATION_TIME);
                     Display.setSortAscending(getActivity(), false);
@@ -1473,7 +1477,7 @@ public class FragmentFiles extends Fragment implements
         View view = getLayoutInflater(null).inflate(
                 R.layout.anhuu_f5be488d_simple_text_input_view, null);
         final EditText textFile = (EditText) view
-                .findViewById(R.id.anhuu_text1);
+                .findViewById(R.id.anhuu_f5be488d_text1);
         textFile.setHint(R.string.anhuu_f5be488d_hint_folder_name);
         textFile.setOnEditorActionListener(new TextView.OnEditorActionListener() {
 

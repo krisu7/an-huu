@@ -19,7 +19,7 @@
         android:orientation="vertical" >
 
         <TextView
-            android:id="@+id/anhuu_text_name"
+            android:id="@+id/anhuu_f5be488d_text_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
@@ -31,7 +31,7 @@
         </TextView>
 
         <TextView
-            android:id="@+id/anhuu_text_path"
+            android:id="@+id/anhuu_f5be488d_text_path"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/anhuu_f5be488d_2dp"
@@ -43,7 +43,7 @@
     </LinearLayout>
 
     <CheckBox
-        android:id="@+id/anhuu_checkbox"
+        android:id="@+id/anhuu_f5be488d_checkbox"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="top"

@@ -14,14 +14,14 @@
     android:orientation="horizontal" >
 
     <ProgressBar
-        android:id="@+id/anhuu_progress_bar"
+        android:id="@+id/anhuu_f5be488d_progress_bar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
         android:indeterminateOnly="true" />
 
     <TextView
-        android:id="@+id/anhuu_textview"
+        android:id="@+id/anhuu_f5be488d_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"

@@ -16,9 +16,9 @@
     - Actual themes which extend BaseThemeHelpers: contain customizations that are the same for all API levels.
     -->
 
-    <style name="AnHuu.BaseTheme.Dark" parent="@android:style/Theme"></style>
+    <style name="AnHuu.f5be488d.BaseTheme.Dark" parent="@android:style/Theme"></style>
 
-    <style name="AnHuu.BaseThemeHelper.Dark" parent="@style/AnHuu.BaseTheme.Dark">
+    <style name="AnHuu.f5be488d.BaseThemeHelper.Dark" parent="@style/AnHuu.f5be488d.BaseTheme.Dark">
         <item name="anhuu_f5be488d_ic_menu_bookmarks">@drawable/anhuu_f5be488d_ic_menu_bookmarks</item>
         <item name="anhuu_f5be488d_ic_menu_home">@drawable/anhuu_f5be488d_ic_menu_home</item>
         <item name="anhuu_f5be488d_ic_menu_gridview">@drawable/anhuu_f5be488d_ic_menu_gridview</item>
@@ -40,9 +40,9 @@
         <item name="anhuu_f5be488d_ic_widget_search_view_action_clear">@drawable/anhuu_f5be488d_ic_action_clear_dark</item>
     </style>
 
-    <style name="AnHuu.BaseTheme.Dialog.Dark" parent="@android:style/Theme" />
+    <style name="AnHuu.f5be488d.BaseTheme.Dialog.Dark" parent="@android:style/Theme" />
 
-    <style name="AnHuu.BaseThemeHelper.Dialog.Dark" parent="@style/AnHuu.BaseTheme.Dialog.Dark">
+    <style name="AnHuu.f5be488d.BaseThemeHelper.Dialog.Dark" parent="@style/AnHuu.f5be488d.BaseTheme.Dialog.Dark">
 
         <!-- AOSP -->
 
@@ -81,7 +81,7 @@
         <item name="anhuu_f5be488d_ic_widget_search_view_action_clear">@drawable/anhuu_f5be488d_ic_action_clear_dark</item>
     </style>
 
-    <style name="AnHuu.Theme.Dark" parent="@style/AnHuu.BaseThemeHelper.Dark">
+    <style name="AnHuu.f5be488d.Theme.Dark" parent="@style/AnHuu.f5be488d.BaseThemeHelper.Dark">
 
         <!-- AOSP -->
 
@@ -89,7 +89,7 @@
 
         <!-- An Hữu -->
 
-        <item name="anhuu_f5be488d_theme_dialog">@style/AnHuu.Theme.Dialog.Dark</item>
+        <item name="anhuu_f5be488d_theme_dialog">@style/AnHuu.f5be488d.Theme.Dialog.Dark</item>
         <item name="anhuu_f5be488d_button_home">@drawable/anhuu_f5be488d_button_home_light</item>
         <item name="anhuu_f5be488d_ic_widget_search_view_action_search">@drawable/anhuu_f5be488d_ic_action_search_light</item>
         <item name="anhuu_f5be488d_badge_file_provider_localfile">@drawable/anhuu_f5be488d_badge_file_provider_localfile_light</item>
@@ -104,8 +104,8 @@
         <item name="anhuu_f5be488d_color_list_group_view_background">@color/anhuu_f5be488d_list_group_view_background_dark</item>
     </style>
 
-    <style name="AnHuu.Theme.Dialog.Dark" parent="@style/AnHuu.BaseThemeHelper.Dialog.Dark">
-        <item name="anhuu_f5be488d_theme_dialog">@style/AnHuu.Theme.Dialog.Dark</item>
+    <style name="AnHuu.f5be488d.Theme.Dialog.Dark" parent="@style/AnHuu.f5be488d.BaseThemeHelper.Dialog.Dark">
+        <item name="anhuu_f5be488d_theme_dialog">@style/AnHuu.f5be488d.Theme.Dialog.Dark</item>
         <item name="anhuu_f5be488d_button_home">@drawable/anhuu_f5be488d_button_home_light</item>
         <item name="anhuu_f5be488d_ic_widget_search_view_action_search">@drawable/anhuu_f5be488d_ic_action_search_light</item>
         <item name="anhuu_f5be488d_badge_file_provider_localfile">@drawable/anhuu_f5be488d_badge_file_provider_localfile_light</item>

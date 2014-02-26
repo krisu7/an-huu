@@ -123,9 +123,9 @@ public class AnHuuSearchView extends LinearLayout {
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         inflater.inflate(R.layout.anhuu_f5be488d_widget_search_view, this, true);
 
-        mButtonSearch = findViewById(R.id.anhuu_widget_search_view_button_search);
-        mTextSearch = (EditText) findViewById(R.id.anhuu_widget_search_view_textview_search);
-        mButtonClear = findViewById(R.id.anhuu_widget_search_view_button_clear);
+        mButtonSearch = findViewById(R.id.anhuu_f5be488d_widget_search_view_button_search);
+        mTextSearch = (EditText) findViewById(R.id.anhuu_f5be488d_widget_search_view_textview_search);
+        mButtonClear = findViewById(R.id.anhuu_f5be488d_widget_search_view_button_clear);
 
         /*
          * ASSIGNS LISTENERS & ATTRIBUTES

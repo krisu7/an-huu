@@ -12,7 +12,7 @@
     android:background="?attr/anhuu_f5be488d_color_list_group_view_background" >
 
     <TextView
-        android:id="@+id/anhuu_textview_header"
+        android:id="@+id/anhuu_f5be488d_textview_header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"

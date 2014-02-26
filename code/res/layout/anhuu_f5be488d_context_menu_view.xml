@@ -12,7 +12,7 @@
     android:orientation="vertical" >
 
     <ListView
-        android:id="@+id/anhuu_listview_menu"
+        android:id="@+id/anhuu_f5be488d_listview_menu"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:divider="@drawable/anhuu_f5be488d_context_menu_item_divider" >

@@ -8,9 +8,9 @@
 
 <resources xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <style name="AnHuu.BaseTheme.Dark" parent="@style/Theme.AppCompat"></style>
+    <style name="AnHuu.f5be488d.BaseTheme.Dark" parent="@style/Theme.AppCompat"></style>
 
-    <style name="AnHuu.BaseThemeHelper.Dark" parent="@style/AnHuu.BaseTheme.Dark">
+    <style name="AnHuu.f5be488d.BaseThemeHelper.Dark" parent="@style/AnHuu.f5be488d.BaseTheme.Dark">
         <item name="anhuu_f5be488d_ic_menu_bookmarks">@drawable/anhuu_f5be488d_ic_menu_bookmarks_light</item>
         <item name="anhuu_f5be488d_ic_menu_home">@drawable/anhuu_f5be488d_ic_menu_home_light</item>
         <item name="anhuu_f5be488d_ic_menu_gridview">@drawable/anhuu_f5be488d_ic_menu_gridview_light</item>

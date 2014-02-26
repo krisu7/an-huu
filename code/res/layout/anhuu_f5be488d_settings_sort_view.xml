@@ -29,13 +29,13 @@
                 android:textAppearance="?android:attr/textAppearanceMedium" />
 
             <Button
-                android:id="@+id/anhuu_button_sort_by_name_asc"
+                android:id="@+id/anhuu_f5be488d_button_sort_by_name_asc"
                 style="@style/anhuu_f5be488d_button_sort"
                 android:contentDescription="@string/anhuu_f5be488d_title_name"
                 android:drawableRight="?attr/anhuu_f5be488d_ic_button_sort_by_name_asc" />
 
             <Button
-                android:id="@+id/anhuu_button_sort_by_name_desc"
+                android:id="@+id/anhuu_f5be488d_button_sort_by_name_desc"
                 style="@style/anhuu_f5be488d_button_sort"
                 android:contentDescription="@string/anhuu_f5be488d_title_name"
                 android:drawableRight="?attr/anhuu_f5be488d_ic_button_sort_by_name_desc" />
@@ -54,13 +54,13 @@
                 android:textAppearance="?android:attr/textAppearanceMedium" />
 
             <Button
-                android:id="@+id/anhuu_button_sort_by_size_asc"
+                android:id="@+id/anhuu_f5be488d_button_sort_by_size_asc"
                 style="@style/anhuu_f5be488d_button_sort"
                 android:contentDescription="@string/anhuu_f5be488d_title_size"
                 android:drawableRight="?attr/anhuu_f5be488d_ic_button_sort_by_size_asc" />
 
             <Button
-                android:id="@+id/anhuu_button_sort_by_size_desc"
+                android:id="@+id/anhuu_f5be488d_button_sort_by_size_desc"
                 style="@style/anhuu_f5be488d_button_sort"
                 android:contentDescription="@string/anhuu_f5be488d_title_size"
                 android:drawableRight="?attr/anhuu_f5be488d_ic_button_sort_by_size_desc" />
@@ -79,13 +79,13 @@
                 android:textAppearance="?android:attr/textAppearanceMedium" />
 
             <Button
-                android:id="@+id/anhuu_button_sort_by_date_asc"
+                android:id="@+id/anhuu_f5be488d_button_sort_by_date_asc"
                 style="@style/anhuu_f5be488d_button_sort"
                 android:contentDescription="@string/anhuu_f5be488d_title_date"
                 android:drawableRight="?attr/anhuu_f5be488d_ic_button_sort_by_date_asc" />
 
             <Button
-                android:id="@+id/anhuu_button_sort_by_date_desc"
+                android:id="@+id/anhuu_f5be488d_button_sort_by_date_desc"
                 style="@style/anhuu_f5be488d_button_sort"
                 android:contentDescription="@string/anhuu_f5be488d_title_date"
                 android:drawableRight="?attr/anhuu_f5be488d_ic_button_sort_by_date_desc" />

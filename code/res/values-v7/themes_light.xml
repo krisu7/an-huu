@@ -8,9 +8,9 @@
 
 <resources xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <style name="AnHuu.BaseTheme.Light.DarkActionBar" parent="@style/Theme.AppCompat.Light.DarkActionBar"></style>
+    <style name="AnHuu.f5be488d.BaseTheme.Light.DarkActionBar" parent="@style/Theme.AppCompat.Light.DarkActionBar"></style>
 
-    <style name="AnHuu.BaseThemeHelper.Light.DarkActionBar" parent="@style/AnHuu.BaseTheme.Light.DarkActionBar">
+    <style name="AnHuu.f5be488d.BaseThemeHelper.Light.DarkActionBar" parent="@style/AnHuu.f5be488d.BaseTheme.Light.DarkActionBar">
         <item name="anhuu_f5be488d_ic_menu_bookmarks">@drawable/anhuu_f5be488d_ic_menu_bookmarks_light</item>
         <item name="anhuu_f5be488d_ic_menu_home">@drawable/anhuu_f5be488d_ic_menu_home_light</item>
         <item name="anhuu_f5be488d_ic_menu_gridview">@drawable/anhuu_f5be488d_ic_menu_gridview_light</item>
@@ -31,7 +31,7 @@
         <item name="anhuu_f5be488d_button_bar_button_style">?android:attr/buttonBarButtonStyle</item>
     </style>
 
-    <style name="AnHuu.Theme.Light.DarkActionBar" parent="@style/AnHuu.BaseThemeHelper.Light.DarkActionBar">
+    <style name="AnHuu.f5be488d.Theme.Light.DarkActionBar" parent="@style/AnHuu.f5be488d.BaseThemeHelper.Light.DarkActionBar">
 
         <!-- AOSP -->
 
@@ -39,7 +39,7 @@
 
         <!-- An Hữu -->
 
-        <item name="anhuu_f5be488d_theme_dialog">@style/AnHuu.Theme.Dialog.Light</item>
+        <item name="anhuu_f5be488d_theme_dialog">@style/AnHuu.f5be488d.Theme.Dialog.Light</item>
         <item name="anhuu_f5be488d_button_home">@drawable/anhuu_f5be488d_button_home_dark</item>
         <item name="anhuu_f5be488d_ic_widget_search_view_action_search">@drawable/anhuu_f5be488d_ic_action_search_dark</item>
         <item name="anhuu_f5be488d_ic_widget_search_view_action_clear">@drawable/anhuu_f5be488d_ic_action_clear_dark</item>
@@ -55,9 +55,9 @@
         <item name="anhuu_f5be488d_color_list_group_view_background">@color/anhuu_f5be488d_list_group_view_background_light</item>
     </style>
 
-    <style name="AnHuu.BaseTheme.Light" parent="@style/Theme.AppCompat.Light"></style>
+    <style name="AnHuu.f5be488d.BaseTheme.Light" parent="@style/Theme.AppCompat.Light"></style>
 
-    <style name="AnHuu.BaseThemeHelper.Light" parent="@style/AnHuu.BaseTheme.Light">
+    <style name="AnHuu.f5be488d.BaseThemeHelper.Light" parent="@style/AnHuu.f5be488d.BaseTheme.Light">
         <item name="anhuu_f5be488d_ic_menu_bookmarks">@drawable/anhuu_f5be488d_ic_menu_bookmarks_dark</item>
         <item name="anhuu_f5be488d_ic_menu_home">@drawable/anhuu_f5be488d_ic_menu_home_dark</item>
         <item name="anhuu_f5be488d_ic_menu_gridview">@drawable/anhuu_f5be488d_ic_menu_gridview_dark</item>

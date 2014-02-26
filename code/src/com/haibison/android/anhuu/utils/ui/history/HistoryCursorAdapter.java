@@ -241,12 +241,13 @@ public class HistoryCursorAdapter extends ResourceCursorTreeAdapter {
         if (view.getTag() == null) {
             child = new BagChild();
             child.mTextViewTime = (TextView) view
-                    .findViewById(R.id.anhuu_textview_time);
+                    .findViewById(R.id.anhuu_f5be488d_textview_time);
             child.mTextViewName = (TextView) view
-                    .findViewById(R.id.anhuu_textview_name);
+                    .findViewById(R.id.anhuu_f5be488d_textview_name);
             child.mTextViewPath = (TextView) view
-                    .findViewById(R.id.anhuu_textview_path);
-            child.mCheckBox = (CheckBox) view.findViewById(R.id.anhuu_checkbox);
+                    .findViewById(R.id.anhuu_f5be488d_textview_path);
+            child.mCheckBox = (CheckBox) view
+                    .findViewById(R.id.anhuu_f5be488d_checkbox);
 
             view.setTag(child);
         } else
@@ -335,7 +336,7 @@ public class HistoryCursorAdapter extends ResourceCursorTreeAdapter {
         if (view.getTag() == null) {
             b = new BagGroup();
             b.mTextViewHeader = (TextView) view
-                    .findViewById(R.id.anhuu_textview_header);
+                    .findViewById(R.id.anhuu_f5be488d_textview_header);
 
             view.setTag(b);
         } else

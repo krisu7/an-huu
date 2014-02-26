@@ -18,7 +18,7 @@
         android:layout_marginLeft="@dimen/anhuu_f5be488d_2dp" >
 
         <ImageView
-            android:id="@+id/anhuu_imageview_icon"
+            android:id="@+id/anhuu_f5be488d_imageview_icon"
             android:layout_width="@dimen/anhuu_f5be488d_file_icon_size"
             android:layout_height="@dimen/anhuu_f5be488d_file_icon_size"
             android:layout_centerHorizontal="true"
@@ -27,7 +27,7 @@
             android:scaleType="center" />
 
         <ImageView
-            android:id="@+id/anhuu_imageview_locked_symbol"
+            android:id="@+id/anhuu_f5be488d_imageview_locked_symbol"
             android:layout_width="@dimen/anhuu_f5be488d_file_icon_size"
             android:layout_height="@dimen/anhuu_f5be488d_file_icon_size"
             android:layout_centerHorizontal="true"
@@ -49,7 +49,7 @@
         android:orientation="vertical" >
 
         <TextView
-            android:id="@+id/anhuu_textview_filename"
+            android:id="@+id/anhuu_f5be488d_textview_filename"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ellipsize="middle"
@@ -59,7 +59,7 @@
             android:textIsSelectable="false" />
 
         <TextView
-            android:id="@+id/anhuu_textview_file_info"
+            android:id="@+id/anhuu_f5be488d_textview_file_info"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="right"
@@ -70,7 +70,7 @@
     </LinearLayout>
 
     <CheckBox
-        android:id="@+id/anhuu_checkbox_selection"
+        android:id="@+id/anhuu_f5be488d_checkbox_selection"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="center_horizontal|top"

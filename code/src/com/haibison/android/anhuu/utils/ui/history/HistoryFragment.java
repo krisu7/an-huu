@@ -143,7 +143,7 @@ public class HistoryFragment extends DialogFragment implements
 
             @Override
             public boolean onPrepareOptionsMenu(Menu menu) {
-                menu.findItem(R.id.anhuu_menuitem_clear).setEnabled(
+                menu.findItem(R.id.anhuu_f5be488d_menuitem_clear).setEnabled(
                         mHistoryCursorAdapter != null
                                 && mHistoryCursorAdapter.getGroupCount() > 0);
                 return true;
@@ -156,7 +156,7 @@ public class HistoryFragment extends DialogFragment implements
 
                 UI.showSoftKeyboard(mSearchView, false);
 
-                if (item.getItemId() == R.id.anhuu_menuitem_clear)
+                if (item.getItemId() == R.id.anhuu_f5be488d_menuitem_clear)
                     doConfirmClearHistory();
 
                 return true;
@@ -365,16 +365,16 @@ public class HistoryFragment extends DialogFragment implements
         View mainView = inflater.inflate(
                 R.layout.anhuu_f5be488d_viewgroup_history, container, false);
 
-        mBtnSearch = mainView.findViewById(R.id.anhuu_button_search);
+        mBtnSearch = mainView.findViewById(R.id.anhuu_f5be488d_button_search);
         mViewGroupListView = mainView
-                .findViewById(R.id.anhuu_viewgroup_listview);
+                .findViewById(R.id.anhuu_f5be488d_viewgroup_listview);
         mListView = (ExpandableListView) mainView
-                .findViewById(R.id.anhuu_listview);
+                .findViewById(R.id.anhuu_f5be488d_listview);
         mSearchView = (AnHuuSearchView) mainView
-                .findViewById(R.id.anhuu_search_view);
-        mBtnNext = mainView.findViewById(R.id.anhuu_button_go_forward);
-        mBtnPrev = mainView.findViewById(R.id.anhuu_button_go_back);
-        mViewLoading = mainView.findViewById(R.id.anhuu_view_loading);
+                .findViewById(R.id.anhuu_f5be488d_search_view);
+        mBtnNext = mainView.findViewById(R.id.anhuu_f5be488d_button_go_forward);
+        mBtnPrev = mainView.findViewById(R.id.anhuu_f5be488d_button_go_back);
+        mViewLoading = mainView.findViewById(R.id.anhuu_f5be488d_view_loading);
 
         /*
          * INITIALIZES CONTROLS
@@ -387,7 +387,8 @@ public class HistoryFragment extends DialogFragment implements
         mSearchView.setOnQueryTextListener(mSearchViewOnQueryTextListener);
         mSearchView.setOnStateChangeListener(mSearchViewOnStateChangeListener);
 
-        mListView.setEmptyView(mainView.findViewById(R.id.anhuu_empty_view));
+        mListView.setEmptyView(mainView
+                .findViewById(R.id.anhuu_f5be488d_empty_view));
         mListView.setOnChildClickListener(mListViewOnChildClickListener);
         mListView.setOnItemLongClickListener(mListViewOnItemLongClickListener);
         initListViewGestureListener();
@@ -656,9 +657,9 @@ public class HistoryFragment extends DialogFragment implements
         public void onClick(View v) {
             UI.showSoftKeyboard(mSearchView, false);
 
-            if (v.getId() == R.id.anhuu_button_go_forward)
+            if (v.getId() == R.id.anhuu_f5be488d_button_go_forward)
                 mCurrentPage++;
-            else if (v.getId() == R.id.anhuu_button_go_back)
+            else if (v.getId() == R.id.anhuu_f5be488d_button_go_back)
                 mCurrentPage--;
             getLoaderManager().restartLoader(mLoaderIdHistoryData, null,
                     HistoryFragment.this);
@@ -671,9 +672,9 @@ public class HistoryFragment extends DialogFragment implements
         public boolean onLongClick(View v) {
             UI.showSoftKeyboard(mSearchView, false);
 
-            if (v.getId() == R.id.anhuu_button_go_forward)
+            if (v.getId() == R.id.anhuu_f5be488d_button_go_forward)
                 mCurrentPage = Integer.MAX_VALUE;
-            else if (v.getId() == R.id.anhuu_button_go_back)
+            else if (v.getId() == R.id.anhuu_f5be488d_button_go_back)
                 mCurrentPage = 0;
 
             getLoaderManager().restartLoader(mLoaderIdHistoryData, null,

@@ -253,9 +253,12 @@ public class BookmarkCursorAdapter extends ResourceCursorTreeAdapter {
 
         if (bag == null) {
             bag = new BagChild();
-            bag.mTextName = (TextView) view.findViewById(R.id.anhuu_text_name);
-            bag.mTextPath = (TextView) view.findViewById(R.id.anhuu_text_path);
-            bag.mCheckBox = (CheckBox) view.findViewById(R.id.anhuu_checkbox);
+            bag.mTextName = (TextView) view
+                    .findViewById(R.id.anhuu_f5be488d_text_name);
+            bag.mTextPath = (TextView) view
+                    .findViewById(R.id.anhuu_f5be488d_text_path);
+            bag.mCheckBox = (CheckBox) view
+                    .findViewById(R.id.anhuu_f5be488d_checkbox);
 
             view.setTag(bag);
         }
@@ -327,7 +330,7 @@ public class BookmarkCursorAdapter extends ResourceCursorTreeAdapter {
         if (view.getTag() == null) {
             b = new BagGroup();
             b.mTextHeader = (TextView) view
-                    .findViewById(R.id.anhuu_textview_header);
+                    .findViewById(R.id.anhuu_f5be488d_textview_header);
 
             view.setTag(b);
         } else

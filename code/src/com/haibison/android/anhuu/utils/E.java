@@ -43,7 +43,7 @@ public class E {
         }
 
         final Context ctw = new ContextThemeWrapper(context,
-                R.style.AnHuu_Theme_Dialog_Dark);
+                R.style.AnHuu_f5be488d_Theme_Dialog_Dark);
 
         final int padding = ctw.getResources().getDimensionPixelSize(
                 R.dimen.anhuu_f5be488d_10dp);
@@ -65,7 +65,8 @@ public class E {
             }// onClick()
         });
 
-        Dialog dialog = new Dialog(ctw, R.style.AnHuu_Theme_Dialog_Dark);
+        Dialog dialog = new Dialog(ctw,
+                R.style.AnHuu_f5be488d_Theme_Dialog_Dark);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialog.setCanceledOnTouchOutside(true);
         dialog.setContentView(textView);

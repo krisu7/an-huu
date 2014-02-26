@@ -271,14 +271,15 @@ public class BookmarkFragment extends DialogFragment implements
          */
 
         mViewGroupControls = mainView
-                .findViewById(R.id.anhuu_viewgroup_controls);
+                .findViewById(R.id.anhuu_f5be488d_viewgroup_controls);
         mListView = (ExpandableListView) mainView
-                .findViewById(R.id.anhuu_listview_bookmarks);
+                .findViewById(R.id.anhuu_f5be488d_listview_bookmarks);
         mViewFooter = (ViewGroup) mainView
-                .findViewById(R.id.anhuu_viewgroup_footer);
-        mBtnClear = (Button) mainView.findViewById(R.id.anhuu_button_clear);
-        mBtnOk = (Button) mainView.findViewById(R.id.anhuu_button_ok);
-        mViewLoading = mainView.findViewById(R.id.anhuu_view_loading);
+                .findViewById(R.id.anhuu_f5be488d_viewgroup_footer);
+        mBtnClear = (Button) mainView
+                .findViewById(R.id.anhuu_f5be488d_button_clear);
+        mBtnOk = (Button) mainView.findViewById(R.id.anhuu_f5be488d_button_ok);
+        mViewLoading = mainView.findViewById(R.id.anhuu_f5be488d_view_loading);
 
         if (mEditor) {
             mViewFooter.setVisibility(View.VISIBLE);
@@ -288,7 +289,8 @@ public class BookmarkFragment extends DialogFragment implements
          * Listview.
          */
 
-        mListView.setEmptyView(mainView.findViewById(R.id.anhuu_empty_view));
+        mListView.setEmptyView(mainView
+                .findViewById(R.id.anhuu_f5be488d_empty_view));
         mListView.setOnChildClickListener(mListViewOnChildClickListener);
         mListView.setOnItemLongClickListener(mListViewOnItemLongClickListener);
         initListViewGestureListener();
@@ -615,7 +617,7 @@ public class BookmarkFragment extends DialogFragment implements
         View view = LayoutInflater.from(context).inflate(
                 R.layout.anhuu_f5be488d_simple_text_input_view, null);
         final EditText textName = (EditText) view
-                .findViewById(R.id.anhuu_text1);
+                .findViewById(R.id.anhuu_f5be488d_text1);
         textName.setText(name);
         textName.selectAll();
         textName.setHint(R.string.anhuu_f5be488d_hint_new_name);

@@ -11,16 +11,16 @@
     android:layout_height="match_parent" >
 
     <RelativeLayout
-        android:id="@+id/anhuu_viewgroup_controls"
+        android:id="@+id/anhuu_f5be488d_viewgroup_controls"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:visibility="gone" >
 
         <ExpandableListView
-            android:id="@+id/anhuu_listview_bookmarks"
+            android:id="@+id/anhuu_f5be488d_listview_bookmarks"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_above="@+id/anhuu_viewgroup_footer"
+            android:layout_above="@+id/anhuu_f5be488d_viewgroup_footer"
             android:layout_alignParentTop="true"
             android:childDivider="@android:color/transparent"
             android:childIndicator="@null"
@@ -28,7 +28,7 @@
             android:groupIndicator="@null" />
 
         <TextView
-            android:id="@+id/anhuu_empty_view"
+            android:id="@+id/anhuu_f5be488d_empty_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
@@ -38,7 +38,7 @@
             android:visibility="gone" />
 
         <LinearLayout
-            android:id="@+id/anhuu_viewgroup_footer"
+            android:id="@+id/anhuu_f5be488d_viewgroup_footer"
             style="?attr/anhuu_f5be488d_button_bar_style"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -58,7 +58,7 @@
                 android:orientation="horizontal" >
 
                 <Button
-                    android:id="@+id/anhuu_button_clear"
+                    android:id="@+id/anhuu_f5be488d_button_clear"
                     style="?attr/anhuu_f5be488d_button_bar_button_style"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -67,7 +67,7 @@
                 </Button>
 
                 <Button
-                    android:id="@+id/anhuu_button_ok"
+                    android:id="@+id/anhuu_f5be488d_button_ok"
                     style="?attr/anhuu_f5be488d_button_bar_button_style"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -81,7 +81,7 @@
     <!-- Must use this to stretch the dialog (if it is used inside a dialog). -->
 
     <RelativeLayout
-        android:id="@+id/anhuu_view_loading"
+        android:id="@+id/anhuu_f5be488d_view_loading"
         android:layout_width="match_parent"
         android:layout_height="match_parent" >
 

@@ -146,15 +146,15 @@ public class BaseFileAdapter extends ResourceCursorAdapter {
         if (bag == null) {
             bag = new Bag();
             bag.mImageIcon = (ImageView) view
-                    .findViewById(R.id.anhuu_imageview_icon);
+                    .findViewById(R.id.anhuu_f5be488d_imageview_icon);
             bag.mImageLockedSymbol = (ImageView) view
-                    .findViewById(R.id.anhuu_imageview_locked_symbol);
+                    .findViewById(R.id.anhuu_f5be488d_imageview_locked_symbol);
             bag.mTxtFileName = (TextView) view
-                    .findViewById(R.id.anhuu_textview_filename);
+                    .findViewById(R.id.anhuu_f5be488d_textview_filename);
             bag.mTxtFileInfo = (TextView) view
-                    .findViewById(R.id.anhuu_textview_file_info);
+                    .findViewById(R.id.anhuu_f5be488d_textview_file_info);
             bag.mCheckboxSelection = (CheckBox) view
-                    .findViewById(R.id.anhuu_checkbox_selection);
+                    .findViewById(R.id.anhuu_f5be488d_checkbox_selection);
 
             view.setTag(bag);
         }
