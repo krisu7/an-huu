@@ -83,7 +83,7 @@ public abstract class LoadingDialog<Params, Progress, Result> extends
 
     /**
      * Creates new {@link LoadingDialog} showing "Loading..." (
-     * {@link R.string#anhuu_msg_loading}).
+     * {@link R.string#anhuu_f5be488d_msg_loading}).
      * 
      * @param context
      *            {@link Context}
@@ -91,7 +91,8 @@ public abstract class LoadingDialog<Params, Progress, Result> extends
      *            as the name means.
      */
     public LoadingDialog(Context context, boolean cancelable) {
-        this(context, context.getString(R.string.anhuu_msg_loading), cancelable);
+        this(context, context.getString(R.string.anhuu_f5be488d_msg_loading),
+                cancelable);
     }// LoadingDialog()
 
     /**

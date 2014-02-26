@@ -15,7 +15,7 @@
         android:id="@+id/anhuu_text1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/anhuu_5dp"
+        android:layout_margin="@dimen/anhuu_f5be488d_5dp"
         android:imeOptions="actionDone"
         android:inputType="text"
         android:singleLine="true"

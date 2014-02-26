@@ -44,9 +44,9 @@ public class BookmarkCursorAdapter extends ResourceCursorTreeAdapter {
      * Advanced selection options: All, None, Invert.
      */
     public static final Integer[] ADVANCED_SELECTION_OPTIONS = new Integer[] {
-            R.string.anhuu_cmd_advanced_selection_all,
-            R.string.anhuu_cmd_advanced_selection_none,
-            R.string.anhuu_cmd_advanced_selection_invert };
+            R.string.anhuu_f5be488d_cmd_advanced_selection_all,
+            R.string.anhuu_f5be488d_cmd_advanced_selection_none,
+            R.string.anhuu_f5be488d_cmd_advanced_selection_invert };
 
     /**
      * The "view holder".
@@ -301,17 +301,17 @@ public class BookmarkCursorAdapter extends ResourceCursorTreeAdapter {
             @Override
             public boolean onLongClick(View v) {
                 ContextMenuUtils.showContextMenu(v.getContext(), 0,
-                        R.string.anhuu_title_advanced_selection,
+                        R.string.anhuu_f5be488d_title_advanced_selection,
                         ADVANCED_SELECTION_OPTIONS,
                         new ContextMenuUtils.OnMenuItemClickListener() {
 
                             @Override
                             public void onClick(final int resId) {
-                                if (resId == R.string.anhuu_cmd_advanced_selection_all)
+                                if (resId == R.string.anhuu_f5be488d_cmd_advanced_selection_all)
                                     selectAll(true);
-                                else if (resId == R.string.anhuu_cmd_advanced_selection_none)
+                                else if (resId == R.string.anhuu_f5be488d_cmd_advanced_selection_none)
                                     selectAll(false);
-                                else if (resId == R.string.anhuu_cmd_advanced_selection_invert)
+                                else if (resId == R.string.anhuu_f5be488d_cmd_advanced_selection_invert)
                                     invertSelection();
                             }// onClick()
                         });

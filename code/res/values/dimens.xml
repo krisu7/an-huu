@@ -8,21 +8,21 @@
 
 <resources>
 
-    <dimen name="anhuu_30dp">30dp</dimen>
-    <dimen name="anhuu_15dp">15dp</dimen>
-    <dimen name="anhuu_10dp">10dp</dimen>
-    <dimen name="anhuu_5dp">5dp</dimen>
-    <dimen name="anhuu_2dp">2dp</dimen>
-    <dimen name="anhuu_10sp">10sp</dimen>
-    <dimen name="anhuu_5sp">5sp</dimen>
-    <dimen name="anhuu_2sp">2sp</dimen>
-    <dimen name="anhuu_button_location_max_width">256sp</dimen>
-    <dimen name="anhuu_button_location_min_width">80sp</dimen>
-    <dimen name="anhuu_context_menu_item_padding">9sp</dimen>
-    <dimen name="anhuu_context_menu_item_padding_left">18sp</dimen>
-    <dimen name="anhuu_context_menu_width">290dp</dimen>
-    <dimen name="anhuu_single_button_min_width">192sp</dimen>
-    <dimen name="anhuu_viewgroup_button_locations_bottom_divider_height">1dp</dimen>
-    <dimen name="anhuu_view_history_sub_item_textview_time_min_width">65sp</dimen>
+    <dimen name="anhuu_f5be488d_30dp">30dp</dimen>
+    <dimen name="anhuu_f5be488d_15dp">15dp</dimen>
+    <dimen name="anhuu_f5be488d_10dp">10dp</dimen>
+    <dimen name="anhuu_f5be488d_5dp">5dp</dimen>
+    <dimen name="anhuu_f5be488d_2dp">2dp</dimen>
+    <dimen name="anhuu_f5be488d_10sp">10sp</dimen>
+    <dimen name="anhuu_f5be488d_5sp">5sp</dimen>
+    <dimen name="anhuu_f5be488d_2sp">2sp</dimen>
+    <dimen name="anhuu_f5be488d_button_location_max_width">256sp</dimen>
+    <dimen name="anhuu_f5be488d_button_location_min_width">80sp</dimen>
+    <dimen name="anhuu_f5be488d_context_menu_item_padding">9sp</dimen>
+    <dimen name="anhuu_f5be488d_context_menu_item_padding_left">18sp</dimen>
+    <dimen name="anhuu_f5be488d_context_menu_width">290dp</dimen>
+    <dimen name="anhuu_f5be488d_single_button_min_width">192sp</dimen>
+    <dimen name="anhuu_f5be488d_viewgroup_button_locations_bottom_divider_height">1dp</dimen>
+    <dimen name="anhuu_f5be488d_view_history_sub_item_textview_time_min_width">65sp</dimen>
 
 </resources>

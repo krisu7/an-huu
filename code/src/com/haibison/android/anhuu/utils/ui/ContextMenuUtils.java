@@ -45,7 +45,7 @@ public class ContextMenuUtils {
             String title, final Integer[] itemIds,
             final OnMenuItemClickListener listener) {
         final Dialog dialog = new Dialog(context, UI.resolveAttribute(context,
-                R.attr.anhuu_theme_dialog));
+                R.attr.anhuu_f5be488d_theme_dialog));
         dialog.setCanceledOnTouchOutside(true);
         if (iconId > 0)
             dialog.requestWindowFeature(Window.FEATURE_LEFT_ICON);
@@ -87,7 +87,7 @@ public class ContextMenuUtils {
         WindowManager.LayoutParams lp = new WindowManager.LayoutParams();
         lp.copyFrom(dialog.getWindow().getAttributes());
         lp.width = context.getResources().getDimensionPixelSize(
-                R.dimen.anhuu_context_menu_width);
+                R.dimen.anhuu_f5be488d_context_menu_width);
         dialog.getWindow().setAttributes(lp);
     }// showContextMenu()
 

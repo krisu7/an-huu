@@ -12,6 +12,6 @@
         android:id="@+id/anhuu_menuitem_clear"
         android:icon="@android:drawable/ic_menu_close_clear_cancel"
         android:showAsAction="ifRoom|withText"
-        android:title="@string/anhuu_cmd_clear"/>
+        android:title="@string/anhuu_f5be488d_cmd_clear"/>
 
 </menu>

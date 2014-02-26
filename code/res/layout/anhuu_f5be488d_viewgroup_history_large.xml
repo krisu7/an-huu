@@ -16,7 +16,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_margin="@dimen/anhuu_5dp" >
+        android:layout_margin="@dimen/anhuu_f5be488d_5dp" >
 
         <TextView
             android:id="@+id/anhuu_textview_header"
@@ -26,7 +26,7 @@
             android:layout_centerVertical="true"
             android:drawableLeft="@android:drawable/ic_menu_recent_history"
             android:gravity="center_vertical"
-            android:text="@string/anhuu_history"
+            android:text="@string/anhuu_f5be488d_history"
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
         <com.haibison.android.anhuu.ui.widget.AnHuuSearchView
@@ -34,16 +34,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_marginBottom="@dimen/anhuu_5dp"
-            android:layout_marginLeft="@dimen/anhuu_15dp"
-            android:layout_marginRight="@dimen/anhuu_15dp"
-            android:layout_marginTop="@dimen/anhuu_5dp"
+            android:layout_marginBottom="@dimen/anhuu_f5be488d_5dp"
+            android:layout_marginLeft="@dimen/anhuu_f5be488d_15dp"
+            android:layout_marginRight="@dimen/anhuu_f5be488d_15dp"
+            android:layout_marginTop="@dimen/anhuu_f5be488d_5dp"
             android:layout_toLeftOf="@+id/anhuu_viewgroup_navigators"
             android:layout_toRightOf="@id/anhuu_textview_header"
             anhuu:closable="false"
-            anhuu:delayTimeSubmission="@integer/anhuu_search_view_delay_time_submission"
+            anhuu:delayTimeSubmission="@integer/anhuu_f5be488d_search_view_delay_time_submission"
             anhuu:enabled="false"
-            anhuu:hint="@string/anhuu_hint_search"
+            anhuu:hint="@string/anhuu_f5be488d_hint_search"
             anhuu:iconified="false" />
 
         <LinearLayout
@@ -56,16 +56,16 @@
 
             <ImageView
                 android:id="@+id/anhuu_button_go_back"
-                style="@style/anhuu_action_navi_left"
+                style="@style/anhuu_f5be488d_action_navi_left"
                 android:layout_marginTop="0dp"
-                android:contentDescription="@string/anhuu_hint_newer"
+                android:contentDescription="@string/anhuu_f5be488d_hint_newer"
                 android:enabled="false" />
 
             <ImageView
                 android:id="@+id/anhuu_button_go_forward"
-                style="@style/anhuu_action_navi_right"
+                style="@style/anhuu_f5be488d_action_navi_right"
                 android:layout_marginTop="0dp"
-                android:contentDescription="@string/anhuu_hint_older"
+                android:contentDescription="@string/anhuu_f5be488d_hint_older"
                 android:enabled="false" />
         </LinearLayout>
     </RelativeLayout>
@@ -73,9 +73,9 @@
     <View
         android:id="@+id/anhuu_view_header_divider"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/anhuu_viewgroup_button_locations_bottom_divider_height"
+        android:layout_height="@dimen/anhuu_f5be488d_viewgroup_button_locations_bottom_divider_height"
         android:layout_below="@id/anhuu_viewgroup_header"
-        android:background="@color/anhuu_border_line_dark" />
+        android:background="@color/anhuu_f5be488d_border_line_dark" />
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -101,9 +101,9 @@
                 android:id="@+id/anhuu_empty_view"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="@dimen/anhuu_15dp"
+                android:layout_margin="@dimen/anhuu_f5be488d_15dp"
                 android:gravity="center"
-                android:text="@string/anhuu_msg_empty"
+                android:text="@string/anhuu_f5be488d_msg_empty"
                 android:textStyle="italic"
                 android:visibility="gone" />
         </RelativeLayout>

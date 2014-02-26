@@ -46,7 +46,7 @@ public class E {
                 R.style.AnHuu_Theme_Dialog_Dark);
 
         final int padding = ctw.getResources().getDimensionPixelSize(
-                R.dimen.anhuu_10dp);
+                R.dimen.anhuu_f5be488d_10dp);
         TextView textView = new TextView(ctw);
         textView.setText(msg);
         textView.setPadding(padding, padding, padding, padding);

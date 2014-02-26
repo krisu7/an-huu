@@ -8,14 +8,14 @@
 
 <resources>
 
-    <attr name="anhuu_color_listview_cache_hint" format="reference" />
-    <attr name="anhuu_color_list_group_view_background" format="reference" />
+    <attr name="anhuu_f5be488d_color_listview_cache_hint" format="reference" />
+    <attr name="anhuu_f5be488d_color_list_group_view_background" format="reference" />
 
-    <color name="anhuu_border_line_dark">#ff4a8cf7</color>
-    <!-- <color name="anhuu_listview_cache_hint_dark">#20252a</color> OR 080c21 -->
-    <color name="anhuu_listview_cache_hint_dark">#00000000</color>
-    <color name="anhuu_listview_cache_hint_light">#efefef</color>
-    <color name="anhuu_list_group_view_background_dark">#cc1f1f1f</color>
-    <color name="anhuu_list_group_view_background_light">#ffd9d9d9</color>
+    <color name="anhuu_f5be488d_border_line_dark">#ff4a8cf7</color>
+    <!-- <color name="anhuu_f5be488d_listview_cache_hint_dark">#20252a</color> OR 080c21 -->
+    <color name="anhuu_f5be488d_listview_cache_hint_dark">#00000000</color>
+    <color name="anhuu_f5be488d_listview_cache_hint_light">#efefef</color>
+    <color name="anhuu_f5be488d_list_group_view_background_dark">#cc1f1f1f</color>
+    <color name="anhuu_f5be488d_list_group_view_background_light">#ffd9d9d9</color>
 
 </resources>

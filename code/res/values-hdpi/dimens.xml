@@ -8,10 +8,10 @@
 
 <resources>
 
-    <dimen name="anhuu_widget_search_view_button_clear_size">60px</dimen>
-    <dimen name="anhuu_button_navigators_min_height">60px</dimen>
-    <dimen name="anhuu_button_ok_saveas_size">60px</dimen>
-    <dimen name="anhuu_thumbnail_size">60px</dimen>
-    <dimen name="anhuu_file_icon_size">60px</dimen>
+    <dimen name="anhuu_f5be488d_widget_search_view_button_clear_size">60px</dimen>
+    <dimen name="anhuu_f5be488d_button_navigators_min_height">60px</dimen>
+    <dimen name="anhuu_f5be488d_button_ok_saveas_size">60px</dimen>
+    <dimen name="anhuu_f5be488d_thumbnail_size">60px</dimen>
+    <dimen name="anhuu_f5be488d_file_icon_size">60px</dimen>
 
 </resources>

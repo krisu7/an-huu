@@ -14,7 +14,7 @@
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_margin="@dimen/anhuu_5dp"
+        android:layout_margin="@dimen/anhuu_f5be488d_5dp"
         android:layout_weight="1"
         android:orientation="vertical" >
 
@@ -25,7 +25,7 @@
             android:layout_gravity="center_vertical"
             android:ellipsize="middle"
             android:gravity="center_vertical"
-            android:maxLines="@integer/anhuu_bookmark_filename_max_lines"
+            android:maxLines="@integer/anhuu_f5be488d_bookmark_filename_max_lines"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textIsSelectable="false" >
         </TextView>
@@ -34,9 +34,9 @@
             android:id="@+id/anhuu_text_path"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/anhuu_2dp"
+            android:layout_marginTop="@dimen/anhuu_f5be488d_2dp"
             android:ellipsize="middle"
-            android:maxLines="@integer/anhuu_bookmark_pathname_max_lines"
+            android:maxLines="@integer/anhuu_f5be488d_bookmark_pathname_max_lines"
             android:textIsSelectable="false"
             android:visibility="gone" >
         </TextView>
@@ -50,7 +50,7 @@
         android:focusable="false"
         android:focusableInTouchMode="false"
         android:gravity="top"
-        android:padding="@dimen/anhuu_5dp"
+        android:padding="@dimen/anhuu_f5be488d_5dp"
         android:visibility="gone" />
 
 </LinearLayout>

@@ -147,10 +147,10 @@ public class BookmarkFragment extends DialogFragment implements
             Log.d(CLASSNAME, "onCreateDialog()");
 
         Dialog dialog = new Dialog(getActivity(), UI.resolveAttribute(
-                getActivity(), R.attr.anhuu_theme_dialog));
+                getActivity(), R.attr.anhuu_f5be488d_theme_dialog));
         dialog.setCanceledOnTouchOutside(true);
         dialog.requestWindowFeature(Window.FEATURE_LEFT_ICON);
-        dialog.setTitle(R.string.anhuu_title_bookmark_manager);
+        dialog.setTitle(R.string.anhuu_f5be488d_title_bookmark_manager);
         dialog.setContentView(initContentView(dialog.getLayoutInflater(), null));
         dialog.setFeatureDrawableResource(Window.FEATURE_LEFT_ICON,
                 R.drawable.anhuu_f5be488d_bookmarks_dark);
@@ -263,8 +263,8 @@ public class BookmarkFragment extends DialogFragment implements
      * Loads content view from XML and init controls.
      */
     private View initContentView(LayoutInflater inflater, ViewGroup container) {
-        View mainView = inflater.inflate(R.layout.anhuu_f5be488d_viewgroup_bookmarks,
-                container, false);
+        View mainView = inflater.inflate(
+                R.layout.anhuu_f5be488d_viewgroup_bookmarks, container, false);
 
         /*
          * Maps controls.
@@ -484,19 +484,19 @@ public class BookmarkFragment extends DialogFragment implements
                     Log.d(CLASSNAME, String.format(
                             "onItemLongClick() -- group = %,d", iGroup));
                 ContextMenuUtils.showContextMenu(getActivity(), 0,
-                        R.string.anhuu_title_advanced_selection,
+                        R.string.anhuu_f5be488d_title_advanced_selection,
                         BookmarkCursorAdapter.ADVANCED_SELECTION_OPTIONS,
                         new ContextMenuUtils.OnMenuItemClickListener() {
 
                             @Override
                             public void onClick(final int resId) {
-                                if (resId == R.string.anhuu_cmd_advanced_selection_all)
+                                if (resId == R.string.anhuu_f5be488d_cmd_advanced_selection_all)
                                     mBookmarkCursorAdapter.selectAll(iGroup,
                                             true);
-                                else if (resId == R.string.anhuu_cmd_advanced_selection_none)
+                                else if (resId == R.string.anhuu_f5be488d_cmd_advanced_selection_none)
                                     mBookmarkCursorAdapter.selectAll(iGroup,
                                             false);
-                                else if (resId == R.string.anhuu_cmd_advanced_selection_invert)
+                                else if (resId == R.string.anhuu_f5be488d_cmd_advanced_selection_invert)
                                     mBookmarkCursorAdapter
                                             .invertSelection(iGroup);
                             }// onClick()
@@ -516,18 +516,19 @@ public class BookmarkFragment extends DialogFragment implements
                         .getColumnIndex(BookmarkContract.COLUMN_NAME));
 
                 ContextMenuUtils.showContextMenu(getActivity(),
-                        R.drawable.anhuu_f5be488d_bookmarks_dark, Texts.quote(name),
-                        new Integer[] { R.string.anhuu_cmd_rename,
-                                R.string.anhuu_cmd_sort_by_name },
+                        R.drawable.anhuu_f5be488d_bookmarks_dark,
+                        Texts.quote(name), new Integer[] {
+                                R.string.anhuu_f5be488d_cmd_rename,
+                                R.string.anhuu_f5be488d_cmd_sort_by_name },
                         new ContextMenuUtils.OnMenuItemClickListener() {
 
                             @Override
                             public void onClick(int resId) {
-                                if (resId == R.string.anhuu_cmd_rename) {
+                                if (resId == R.string.anhuu_f5be488d_cmd_rename) {
                                     doEnterNewNameOrRenameBookmark(
                                             getActivity(), providerId,
                                             bookmarkId, uri, name);
-                                } else if (resId == R.string.anhuu_cmd_sort_by_name) {
+                                } else if (resId == R.string.anhuu_f5be488d_cmd_sort_by_name) {
                                     sortBookmarks(iGroup);
                                 }
                             }// onClick()
@@ -617,7 +618,7 @@ public class BookmarkFragment extends DialogFragment implements
                 .findViewById(R.id.anhuu_text1);
         textName.setText(name);
         textName.selectAll();
-        textName.setHint(R.string.anhuu_hint_new_name);
+        textName.setHint(R.string.anhuu_f5be488d_hint_new_name);
         textName.setOnEditorActionListener(new TextView.OnEditorActionListener() {
 
             @Override
@@ -637,8 +638,8 @@ public class BookmarkFragment extends DialogFragment implements
 
         dialog.setView(view);
         dialog.setIcon(R.drawable.anhuu_f5be488d_bookmarks_dark);
-        dialog.setTitle(id < 0 ? R.string.anhuu_title_new_bookmark
-                : R.string.anhuu_title_rename);
+        dialog.setTitle(id < 0 ? R.string.anhuu_f5be488d_title_new_bookmark
+                : R.string.anhuu_f5be488d_title_rename);
         dialog.setButton(DialogInterface.BUTTON_POSITIVE,
                 context.getString(android.R.string.ok),
                 new DialogInterface.OnClickListener() {
@@ -649,7 +650,7 @@ public class BookmarkFragment extends DialogFragment implements
                         if (android.text.TextUtils.isEmpty(newName)) {
                             Dlg.toast(
                                     context,
-                                    R.string.anhuu_msg_bookmark_name_is_invalid,
+                                    R.string.anhuu_f5be488d_msg_bookmark_name_is_invalid,
                                     Dlg.LENGTH_SHORT);
                             return;
                         }
@@ -720,8 +721,8 @@ public class BookmarkFragment extends DialogFragment implements
                             }
                         }
 
-                        Dlg.toast(context,
-                                context.getString(R.string.anhuu_msg_done),
+                        Dlg.toast(context, context
+                                .getString(R.string.anhuu_f5be488d_msg_done),
                                 Dlg.LENGTH_SHORT);
                     }// onClick()
                 });
@@ -773,7 +774,7 @@ public class BookmarkFragment extends DialogFragment implements
             } else {
                 Dlg.confirmYesno(
                         getActivity(),
-                        getString(R.string.anhuu_msg_confirm_clear_all_bookmarks),
+                        getString(R.string.anhuu_f5be488d_msg_confirm_clear_all_bookmarks),
                         new DialogInterface.OnClickListener() {
 
                             @Override

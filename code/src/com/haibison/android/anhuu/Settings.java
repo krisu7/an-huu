@@ -115,10 +115,12 @@ public class Settings {
          * @return {@link ViewType}
          */
         public static ViewType getViewType(Context c) {
-            return ViewType.LIST.ordinal() == p(c).getInt(
-                    c.getString(R.string.anhuu_pkey_display_view_type),
-                    c.getResources().getInteger(
-                            R.integer.anhuu_pkey_display_view_type_def)) ? ViewType.LIST
+            return ViewType.LIST.ordinal() == p(c)
+                    .getInt(c
+                            .getString(R.string.anhuu_f5be488d_pkey_display_view_type),
+                            c.getResources()
+                                    .getInteger(
+                                            R.integer.anhuu_f5be488d_pkey_display_view_type_def)) ? ViewType.LIST
                     : ViewType.GRID;
         }// getViewType()
 
@@ -132,13 +134,14 @@ public class Settings {
          *            used.
          */
         public static void setViewType(Context c, ViewType v) {
-            String key = c.getString(R.string.anhuu_pkey_display_view_type);
+            String key = c
+                    .getString(R.string.anhuu_f5be488d_pkey_display_view_type);
             if (v == null)
                 p(c).edit()
                         .putInt(key,
                                 c.getResources()
                                         .getInteger(
-                                                R.integer.anhuu_pkey_display_view_type_def))
+                                                R.integer.anhuu_f5be488d_pkey_display_view_type_def))
                         .commit();
             else
                 p(c).edit().putInt(key, v.ordinal()).commit();
@@ -153,10 +156,12 @@ public class Settings {
          *         {@link BaseFile#SORT_BY_NAME}, {@link BaseFile#SORT_BY_SIZE}.
          */
         public static int getSortType(Context c) {
-            return p(c).getInt(
-                    c.getString(R.string.anhuu_pkey_display_sort_type),
-                    c.getResources().getInteger(
-                            R.integer.anhuu_pkey_display_sort_type_def));
+            return p(c)
+                    .getInt(c
+                            .getString(R.string.anhuu_f5be488d_pkey_display_sort_type),
+                            c.getResources()
+                                    .getInteger(
+                                            R.integer.anhuu_f5be488d_pkey_display_sort_type_def));
         }// getSortType()
 
         /**
@@ -171,13 +176,14 @@ public class Settings {
          *            value will be used.
          */
         public static void setSortType(Context c, Integer v) {
-            String key = c.getString(R.string.anhuu_pkey_display_sort_type);
+            String key = c
+                    .getString(R.string.anhuu_f5be488d_pkey_display_sort_type);
             if (v == null)
                 p(c).edit()
                         .putInt(key,
                                 c.getResources()
                                         .getInteger(
-                                                R.integer.anhuu_pkey_display_sort_type_def))
+                                                R.integer.anhuu_f5be488d_pkey_display_sort_type_def))
                         .commit();
             else
                 p(c).edit().putInt(key, v).commit();
@@ -191,10 +197,12 @@ public class Settings {
          * @return {@code true} if sort is ascending, {@code false} otherwise.
          */
         public static boolean isSortAscending(Context c) {
-            return p(c).getBoolean(
-                    c.getString(R.string.anhuu_pkey_display_sort_ascending),
-                    c.getResources().getBoolean(
-                            R.bool.anhuu_pkey_display_sort_ascending_def));
+            return p(c)
+                    .getBoolean(
+                            c.getString(R.string.anhuu_f5be488d_pkey_display_sort_ascending),
+                            c.getResources()
+                                    .getBoolean(
+                                            R.bool.anhuu_f5be488d_pkey_display_sort_ascending_def));
         }// isSortAscending()
 
         /**
@@ -209,10 +217,10 @@ public class Settings {
         public static void setSortAscending(Context c, Boolean v) {
             if (v == null)
                 v = c.getResources().getBoolean(
-                        R.bool.anhuu_pkey_display_sort_ascending_def);
+                        R.bool.anhuu_f5be488d_pkey_display_sort_ascending_def);
             p(c).edit()
                     .putBoolean(
-                            c.getString(R.string.anhuu_pkey_display_sort_ascending),
+                            c.getString(R.string.anhuu_f5be488d_pkey_display_sort_ascending),
                             v).commit();
         }// setSortAscending()
 
@@ -228,10 +236,10 @@ public class Settings {
         public static boolean isShowTimeForOldDaysThisYear(Context c) {
             return p(c)
                     .getBoolean(
-                            c.getString(R.string.anhuu_pkey_display_show_time_for_old_days_this_year),
+                            c.getString(R.string.anhuu_f5be488d_pkey_display_show_time_for_old_days_this_year),
                             c.getResources()
                                     .getBoolean(
-                                            R.bool.anhuu_pkey_display_show_time_for_old_days_this_year_def));
+                                            R.bool.anhuu_f5be488d_pkey_display_show_time_for_old_days_this_year_def));
         }// isShowTimeForOldDaysThisYear()
 
         /**
@@ -248,10 +256,10 @@ public class Settings {
             if (v == null)
                 v = c.getResources()
                         .getBoolean(
-                                R.bool.anhuu_pkey_display_show_time_for_old_days_this_year_def);
+                                R.bool.anhuu_f5be488d_pkey_display_show_time_for_old_days_this_year_def);
             p(c).edit()
                     .putBoolean(
-                            c.getString(R.string.anhuu_pkey_display_show_time_for_old_days_this_year),
+                            c.getString(R.string.anhuu_f5be488d_pkey_display_show_time_for_old_days_this_year),
                             v).commit();
         }// setShowTimeForOldDaysThisYear()
 
@@ -267,10 +275,10 @@ public class Settings {
         public static boolean isShowTimeForOldDays(Context c) {
             return p(c)
                     .getBoolean(
-                            c.getString(R.string.anhuu_pkey_display_show_time_for_old_days),
+                            c.getString(R.string.anhuu_f5be488d_pkey_display_show_time_for_old_days),
                             c.getResources()
                                     .getBoolean(
-                                            R.bool.anhuu_pkey_display_show_time_for_old_days_def));
+                                            R.bool.anhuu_f5be488d_pkey_display_show_time_for_old_days_def));
         }// isShowTimeForOldDays()
 
         /**
@@ -285,11 +293,12 @@ public class Settings {
          */
         public static void setShowTimeForOldDays(Context c, Boolean v) {
             if (v == null)
-                v = c.getResources().getBoolean(
-                        R.bool.anhuu_pkey_display_show_time_for_old_days_def);
+                v = c.getResources()
+                        .getBoolean(
+                                R.bool.anhuu_f5be488d_pkey_display_show_time_for_old_days_def);
             p(c).edit()
                     .putBoolean(
-                            c.getString(R.string.anhuu_pkey_display_show_time_for_old_days),
+                            c.getString(R.string.anhuu_f5be488d_pkey_display_show_time_for_old_days),
                             v).commit();
         }// setShowTimeForOldDays()
 
@@ -304,10 +313,10 @@ public class Settings {
         public static boolean isRememberLastLocation(Context c) {
             return p(c)
                     .getBoolean(
-                            c.getString(R.string.anhuu_pkey_display_remember_last_location),
+                            c.getString(R.string.anhuu_f5be488d_pkey_display_remember_last_location),
                             c.getResources()
                                     .getBoolean(
-                                            R.bool.anhuu_pkey_display_remember_last_location_def));
+                                            R.bool.anhuu_f5be488d_pkey_display_remember_last_location_def));
         }// isRememberLastLocation()
 
         /**
@@ -322,11 +331,12 @@ public class Settings {
          */
         public static void setRememberLastLocation(Context c, Boolean v) {
             if (v == null)
-                v = c.getResources().getBoolean(
-                        R.bool.anhuu_pkey_display_remember_last_location_def);
+                v = c.getResources()
+                        .getBoolean(
+                                R.bool.anhuu_f5be488d_pkey_display_remember_last_location_def);
             p(c).edit()
                     .putBoolean(
-                            c.getString(R.string.anhuu_pkey_display_remember_last_location),
+                            c.getString(R.string.anhuu_f5be488d_pkey_display_remember_last_location),
                             v).commit();
         }// setRememberLastLocation()
 
@@ -339,9 +349,10 @@ public class Settings {
          * @since v4.7 beta
          */
         public static String getLastLocation(Context c) {
-            return p(c).getString(
-                    c.getString(R.string.anhuu_pkey_display_last_location),
-                    null);
+            return p(c)
+                    .getString(
+                            c.getString(R.string.anhuu_f5be488d_pkey_display_last_location),
+                            null);
         }// getLastLocation()
 
         /**
@@ -355,7 +366,7 @@ public class Settings {
         public static void setLastLocation(Context c, String v) {
             p(c).edit()
                     .putString(
-                            c.getString(R.string.anhuu_pkey_display_last_location),
+                            c.getString(R.string.anhuu_f5be488d_pkey_display_last_location),
                             v).commit();
         }// setLastLocation()
 

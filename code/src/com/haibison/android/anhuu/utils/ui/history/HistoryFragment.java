@@ -122,8 +122,9 @@ public class HistoryFragment extends DialogFragment implements
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        mMaxItemsPerPage = getResources().getInteger(
-                R.integer.anhuu_pkey_history_manager_display_items_per_page);
+        mMaxItemsPerPage = getResources()
+                .getInteger(
+                        R.integer.anhuu_f5be488d_pkey_history_manager_display_items_per_page);
     }// onCreate()
 
     @Override
@@ -131,7 +132,7 @@ public class HistoryFragment extends DialogFragment implements
         if (BuildConfig.DEBUG)
             Log.d(CLASSNAME, "onCreateDialog()");
         Dialog dialog = new Dialog(getActivity(), UI.resolveAttribute(
-                getActivity(), R.attr.anhuu_theme_dialog)) {
+                getActivity(), R.attr.anhuu_f5be488d_theme_dialog)) {
 
             @Override
             public boolean onCreateOptionsMenu(Menu menu) {
@@ -361,8 +362,8 @@ public class HistoryFragment extends DialogFragment implements
         /*
          * LOADS CONTROLS
          */
-        View mainView = inflater.inflate(R.layout.anhuu_f5be488d_viewgroup_history,
-                container, false);
+        View mainView = inflater.inflate(
+                R.layout.anhuu_f5be488d_viewgroup_history, container, false);
 
         mBtnSearch = mainView.findViewById(R.id.anhuu_button_search);
         mViewGroupListView = mainView
@@ -484,7 +485,7 @@ public class HistoryFragment extends DialogFragment implements
      */
     private void doConfirmClearHistory() {
         Dlg.confirmYesno(getActivity(),
-                getString(R.string.anhuu_msg_confirm_clear_history),
+                getString(R.string.anhuu_f5be488d_msg_confirm_clear_history),
                 new DialogInterface.OnClickListener() {
 
                     @Override
@@ -745,19 +746,19 @@ public class HistoryFragment extends DialogFragment implements
                     Log.d(CLASSNAME, String.format(
                             "onItemLongClick() -- group = %,d", iGroup));
                 ContextMenuUtils.showContextMenu(getActivity(), 0,
-                        R.string.anhuu_title_advanced_selection,
+                        R.string.anhuu_f5be488d_title_advanced_selection,
                         HistoryCursorAdapter.ADVANCED_SELECTION_OPTIONS,
                         new ContextMenuUtils.OnMenuItemClickListener() {
 
                             @Override
                             public void onClick(final int resId) {
-                                if (resId == R.string.anhuu_cmd_advanced_selection_all)
+                                if (resId == R.string.anhuu_f5be488d_cmd_advanced_selection_all)
                                     mHistoryCursorAdapter.selectAll(iGroup,
                                             true);
-                                else if (resId == R.string.anhuu_cmd_advanced_selection_none)
+                                else if (resId == R.string.anhuu_f5be488d_cmd_advanced_selection_none)
                                     mHistoryCursorAdapter.selectAll(iGroup,
                                             false);
-                                else if (resId == R.string.anhuu_cmd_advanced_selection_invert)
+                                else if (resId == R.string.anhuu_f5be488d_cmd_advanced_selection_invert)
                                     mHistoryCursorAdapter
                                             .invertSelection(iGroup);
                             }// onClick()

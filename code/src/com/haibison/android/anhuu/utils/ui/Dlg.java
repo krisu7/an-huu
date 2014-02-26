@@ -80,7 +80,7 @@ public class Dlg {
             DialogInterface.OnDismissListener listener) {
         AlertDialog dlg = newAlertDlg(context);
         dlg.setIcon(android.R.drawable.ic_dialog_info);
-        dlg.setTitle(R.string.anhuu_title_info);
+        dlg.setTitle(R.string.anhuu_f5be488d_title_info);
         dlg.setMessage(msg);
         dlg.setOnDismissListener(listener);
         dlg.show();
@@ -139,7 +139,7 @@ public class Dlg {
             DialogInterface.OnCancelListener listener) {
         AlertDialog dlg = newAlertDlg(context);
         dlg.setIcon(android.R.drawable.ic_dialog_alert);
-        dlg.setTitle(R.string.anhuu_title_error);
+        dlg.setTitle(R.string.anhuu_f5be488d_title_error);
         dlg.setMessage(msg);
         dlg.setOnCancelListener(listener);
         dlg.show();
@@ -173,8 +173,8 @@ public class Dlg {
     public static void showUnknownError(Context context, Throwable t,
             DialogInterface.OnCancelListener listener) {
         showError(context, String.format(
-                context.getString(R.string.anhuu_pmsg_unknown_error), t),
-                listener);
+                context.getString(R.string.anhuu_f5be488d_pmsg_unknown_error),
+                t), listener);
     }// showUnknownError()
 
     /**
@@ -195,7 +195,7 @@ public class Dlg {
             DialogInterface.OnCancelListener onNo) {
         AlertDialog dlg = newAlertDlg(context);
         dlg.setIcon(android.R.drawable.ic_dialog_alert);
-        dlg.setTitle(R.string.anhuu_title_confirmation);
+        dlg.setTitle(R.string.anhuu_f5be488d_title_confirmation);
         dlg.setMessage(msg);
         dlg.setButton(DialogInterface.BUTTON_POSITIVE,
                 context.getString(android.R.string.yes), onYes);
@@ -230,7 +230,7 @@ public class Dlg {
      */
     public static Dialog newDlg(Context context) {
         Dialog res = new Dialog(context, UI.resolveAttribute(context,
-                R.attr.anhuu_theme_dialog));
+                R.attr.anhuu_f5be488d_theme_dialog));
         res.setCanceledOnTouchOutside(true);
         return res;
     }// newAlertDlg()
@@ -259,8 +259,9 @@ public class Dlg {
      * @since v4.3 beta
      */
     public static AlertDialog.Builder newAlertDlgBuilder(Context context) {
-        return new AlertDialog.Builder(new ContextThemeWrapper(context,
-                UI.resolveAttribute(context, R.attr.anhuu_theme_dialog)));
+        return new AlertDialog.Builder(
+                new ContextThemeWrapper(context, UI.resolveAttribute(context,
+                        R.attr.anhuu_f5be488d_theme_dialog)));
     }// newAlertDlgBuilder()
 
 }

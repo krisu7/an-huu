@@ -14,18 +14,18 @@
         android:id="@+id/anhuu_textview_time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/anhuu_2sp"
-        android:layout_marginLeft="@dimen/anhuu_2sp"
-        android:layout_marginRight="@dimen/anhuu_5sp"
-        android:layout_marginTop="@dimen/anhuu_5sp"
+        android:layout_marginBottom="@dimen/anhuu_f5be488d_2sp"
+        android:layout_marginLeft="@dimen/anhuu_f5be488d_2sp"
+        android:layout_marginRight="@dimen/anhuu_f5be488d_5sp"
+        android:layout_marginTop="@dimen/anhuu_f5be488d_5sp"
         android:gravity="right|top"
-        android:minWidth="@dimen/anhuu_view_history_sub_item_textview_time_min_width"
+        android:minWidth="@dimen/anhuu_f5be488d_view_history_sub_item_textview_time_min_width"
         android:textIsSelectable="false" />
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/anhuu_2sp"
+        android:layout_margin="@dimen/anhuu_f5be488d_2sp"
         android:layout_toLeftOf="@+id/anhuu_checkbox"
         android:layout_toRightOf="@id/anhuu_textview_time" >
 
@@ -35,7 +35,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:ellipsize="middle"
-            android:maxLines="@integer/anhuu_history_filename_max_lines"
+            android:maxLines="@integer/anhuu_f5be488d_history_filename_max_lines"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textIsSelectable="false" />
 
@@ -45,9 +45,9 @@
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_below="@id/anhuu_textview_name"
-            android:layout_marginTop="@dimen/anhuu_2sp"
+            android:layout_marginTop="@dimen/anhuu_f5be488d_2sp"
             android:ellipsize="middle"
-            android:maxLines="@integer/anhuu_history_pathname_max_lines"
+            android:maxLines="@integer/anhuu_f5be488d_history_pathname_max_lines"
             android:textIsSelectable="false" />
     </RelativeLayout>
 
@@ -59,6 +59,6 @@
         android:focusable="false"
         android:focusableInTouchMode="false"
         android:gravity="top|right"
-        android:padding="@dimen/anhuu_5sp" />
+        android:padding="@dimen/anhuu_f5be488d_5sp" />
 
 </RelativeLayout>

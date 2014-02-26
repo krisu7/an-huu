@@ -88,17 +88,17 @@ public class BaseFileAdapter extends ResourceCursorAdapter {
         switch (mFilterMode) {
         case BaseFile.FILTER_FILES_AND_DIRECTORIES:
             mAdvancedSelectionOptions = new Integer[] {
-                    R.string.anhuu_cmd_advanced_selection_all,
-                    R.string.anhuu_cmd_advanced_selection_none,
-                    R.string.anhuu_cmd_advanced_selection_invert,
-                    R.string.anhuu_cmd_select_all_files,
-                    R.string.anhuu_cmd_select_all_folders };
+                    R.string.anhuu_f5be488d_cmd_advanced_selection_all,
+                    R.string.anhuu_f5be488d_cmd_advanced_selection_none,
+                    R.string.anhuu_f5be488d_cmd_advanced_selection_invert,
+                    R.string.anhuu_f5be488d_cmd_select_all_files,
+                    R.string.anhuu_f5be488d_cmd_select_all_folders };
             break;// FILTER_FILES_AND_DIRECTORIES
         default:
             mAdvancedSelectionOptions = new Integer[] {
-                    R.string.anhuu_cmd_advanced_selection_all,
-                    R.string.anhuu_cmd_advanced_selection_none,
-                    R.string.anhuu_cmd_advanced_selection_invert };
+                    R.string.anhuu_f5be488d_cmd_advanced_selection_all,
+                    R.string.anhuu_f5be488d_cmd_advanced_selection_none,
+                    R.string.anhuu_f5be488d_cmd_advanced_selection_invert };
             break;// FILTER_DIRECTORIES_ONLY and FILTER_FILES_ONLY
         }
     }// BaseFileAdapter()
@@ -495,27 +495,27 @@ public class BaseFileAdapter extends ResourceCursorAdapter {
         @Override
         public boolean onLongClick(final View v) {
             ContextMenuUtils.showContextMenu(v.getContext(), 0,
-                    R.string.anhuu_title_advanced_selection,
+                    R.string.anhuu_f5be488d_title_advanced_selection,
                     mAdvancedSelectionOptions,
                     new ContextMenuUtils.OnMenuItemClickListener() {
 
                         @Override
                         public void onClick(final int resId) {
                             new LoadingDialog<Void, Void, Void>(v.getContext(),
-                                    R.string.anhuu_msg_loading, false) {
+                                    R.string.anhuu_f5be488d_msg_loading, false) {
 
                                 @Override
                                 protected Void doInBackground(Void... params) {
-                                    if (resId == R.string.anhuu_cmd_advanced_selection_all)
+                                    if (resId == R.string.anhuu_f5be488d_cmd_advanced_selection_all)
                                         asyncSelectAll(-1, true);
-                                    else if (resId == R.string.anhuu_cmd_advanced_selection_none)
+                                    else if (resId == R.string.anhuu_f5be488d_cmd_advanced_selection_none)
                                         asyncSelectAll(-1, false);
-                                    else if (resId == R.string.anhuu_cmd_advanced_selection_invert)
+                                    else if (resId == R.string.anhuu_f5be488d_cmd_advanced_selection_invert)
                                         asyncInvertSelection();
-                                    else if (resId == R.string.anhuu_cmd_select_all_files)
+                                    else if (resId == R.string.anhuu_f5be488d_cmd_select_all_files)
                                         asyncSelectAll(BaseFile.FILE_TYPE_FILE,
                                                 true);
-                                    else if (resId == R.string.anhuu_cmd_select_all_folders)
+                                    else if (resId == R.string.anhuu_f5be488d_cmd_select_all_folders)
                                         asyncSelectAll(
                                                 BaseFile.FILE_TYPE_DIRECTORY,
                                                 true);

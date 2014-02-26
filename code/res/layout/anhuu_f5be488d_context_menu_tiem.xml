@@ -9,11 +9,11 @@
 <TextView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="@dimen/anhuu_5dp"
-    android:paddingBottom="@dimen/anhuu_context_menu_item_padding"
-    android:paddingLeft="@dimen/anhuu_context_menu_item_padding_left"
-    android:paddingRight="@dimen/anhuu_context_menu_item_padding"
-    android:paddingTop="@dimen/anhuu_context_menu_item_padding"
+    android:layout_margin="@dimen/anhuu_f5be488d_5dp"
+    android:paddingBottom="@dimen/anhuu_f5be488d_context_menu_item_padding"
+    android:paddingLeft="@dimen/anhuu_f5be488d_context_menu_item_padding_left"
+    android:paddingRight="@dimen/anhuu_f5be488d_context_menu_item_padding"
+    android:paddingTop="@dimen/anhuu_f5be488d_context_menu_item_padding"
     android:textAppearance="?android:attr/textAppearanceMedium" >
 
 </TextView>

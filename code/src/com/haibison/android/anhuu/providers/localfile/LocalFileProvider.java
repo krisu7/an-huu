@@ -193,8 +193,8 @@ public class LocalFileProvider extends BaseFileProvider {
                     BaseFile.COLUMN_PROVIDER_ID, BaseFile.COLUMN_PROVIDER_NAME,
                     BaseFile.COLUMN_PROVIDER_ICON_ATTR });
             matrixCursor.newRow().add(LocalFileContract._ID)
-                    .add(getContext().getString(R.string.anhuu_phone))
-                    .add(R.attr.anhuu_badge_file_provider_localfile);
+                    .add(getContext().getString(R.string.anhuu_f5be488d_phone))
+                    .add(R.attr.anhuu_f5be488d_badge_file_provider_localfile);
             return matrixCursor;
         }
         case URI_API_COMMAND: {

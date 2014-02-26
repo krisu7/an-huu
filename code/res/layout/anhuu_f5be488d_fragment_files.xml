@@ -18,12 +18,12 @@
 
         <ImageView
             android:id="@+id/anhuu_button_go_back"
-            style="@style/anhuu_main_button_navi_left"
+            style="@style/anhuu_f5be488d_main_button_navi_left"
             android:layout_alignParentLeft="true" />
 
         <ImageView
             android:id="@+id/anhuu_button_go_forward"
-            style="@style/anhuu_main_button_navi_right"
+            style="@style/anhuu_f5be488d_main_button_navi_right"
             android:layout_toRightOf="@id/anhuu_button_go_back" />
 
         <RelativeLayout
@@ -31,8 +31,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
-            android:layout_marginRight="@dimen/anhuu_5dp"
-            android:layout_marginTop="@dimen/anhuu_5dp"
+            android:layout_marginRight="@dimen/anhuu_f5be488d_5dp"
+            android:layout_marginTop="@dimen/anhuu_f5be488d_5dp"
             android:layout_toRightOf="@id/anhuu_button_go_forward" >
 
             <HorizontalScrollView
@@ -53,9 +53,9 @@
             <View
                 android:id="@+id/anhuu_header_view_divider"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/anhuu_viewgroup_button_locations_bottom_divider_height"
+                android:layout_height="@dimen/anhuu_f5be488d_viewgroup_button_locations_bottom_divider_height"
                 android:layout_below="@id/anhuu_view_locations_container"
-                android:background="@color/anhuu_border_line_dark" />
+                android:background="@color/anhuu_f5be488d_border_line_dark" />
 
             <TextView
                 android:id="@+id/anhuu_textview_full_dir_name"
@@ -76,8 +76,8 @@
         android:layout_height="match_parent"
         android:layout_above="@+id/anhuu_viewgroup_footer_container"
         android:layout_below="@id/anhuu_viewgroup_header"
-        android:layout_marginBottom="@dimen/anhuu_10dp"
-        android:layout_marginTop="@dimen/anhuu_10dp" >
+        android:layout_marginBottom="@dimen/anhuu_f5be488d_10dp"
+        android:layout_marginTop="@dimen/anhuu_f5be488d_10dp" >
 
         <RelativeLayout
             android:id="@+id/anhuu_viewgroup_files"
@@ -99,7 +99,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_gravity="center"
-                android:layout_margin="@dimen/anhuu_10dp"
+                android:layout_margin="@dimen/anhuu_f5be488d_10dp"
                 android:gravity="center"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:textStyle="italic"
@@ -114,7 +114,7 @@
 
     <LinearLayout
         android:id="@+id/anhuu_viewgroup_footer_container"
-        style="?attr/anhuu_button_bar_style"
+        style="?attr/anhuu_f5be488d_button_bar_style"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
@@ -125,11 +125,11 @@
         <View
             android:id="@+id/anhuu_footer_view_divider"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/anhuu_viewgroup_button_locations_bottom_divider_height" />
+            android:layout_height="@dimen/anhuu_f5be488d_viewgroup_button_locations_bottom_divider_height" />
 
         <LinearLayout
             android:id="@+id/anhuu_viewgroup_footer"
-            style="?attr/anhuu_button_bar_style"
+            style="?attr/anhuu_f5be488d_button_bar_style"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -140,9 +140,9 @@
                 android:id="@+id/anhuu_textview_saveas_filename"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/anhuu_5dp"
+                android:layout_margin="@dimen/anhuu_f5be488d_5dp"
                 android:layout_weight="1"
-                android:hint="@string/anhuu_hint_save_as_filename"
+                android:hint="@string/anhuu_f5be488d_hint_save_as_filename"
                 android:imeOptions="actionDone"
                 android:singleLine="true"
                 android:textAppearance="?android:attr/textAppearanceMedium"
@@ -153,11 +153,11 @@
 
             <Button
                 android:id="@+id/anhuu_button_ok"
-                style="?attr/anhuu_button_bar_button_style"
+                style="?attr/anhuu_f5be488d_button_bar_button_style"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_margin="@dimen/anhuu_5dp"
+                android:layout_margin="@dimen/anhuu_f5be488d_5dp"
                 android:visibility="gone" />
         </LinearLayout>
     </LinearLayout>

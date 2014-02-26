@@ -82,7 +82,7 @@ public class DateUtils {
                         .get(Calendar.DAY_OF_YEAR)) {
             res = String.format(
                     "%s, %s",
-                    context.getString(R.string.anhuu_yesterday),
+                    context.getString(R.string.anhuu_f5be488d_yesterday),
                     android.text.format.DateUtils.formatDateTime(context,
                             date.getTimeInMillis(), FORMAT_SHORT_TIME));
         }// yesterday

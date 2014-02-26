@@ -12,11 +12,11 @@
     <item
         android:id="@+id/anhuu_menuitem_history"
         android:icon="@android:drawable/ic_menu_recent_history"
-        android:title="@string/anhuu_history"
+        android:title="@string/anhuu_f5be488d_history"
         anhuu:showAsAction="ifRoom"/>
     <item
         android:id="@+id/anhuu_menuitem_sort"
-        android:title="@string/anhuu_cmd_sort"
+        android:title="@string/anhuu_f5be488d_cmd_sort"
         anhuu:showAsAction="ifRoom"/>
     <item
         android:id="@+id/anhuu_menuitem_switch_viewmode"
@@ -25,7 +25,7 @@
     <item
         android:id="@+id/anhuu_menuitem_new_folder"
         android:icon="@android:drawable/ic_menu_add"
-        android:title="@string/anhuu_cmd_new_folder"
+        android:title="@string/anhuu_f5be488d_cmd_new_folder"
         anhuu:showAsAction="ifRoom"/>
 
 </menu>

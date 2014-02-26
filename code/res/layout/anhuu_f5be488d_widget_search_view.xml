@@ -12,9 +12,9 @@
 
     <ImageButton
         android:id="@+id/anhuu_widget_search_view_button_search"
-        style="@style/anhuu_widget_search_view_button_search"
+        style="@style/anhuu_f5be488d_widget_search_view_button_search"
         android:layout_centerVertical="true"
-        android:contentDescription="@string/anhuu_hint_search"
+        android:contentDescription="@string/anhuu_f5be488d_hint_search"
         android:focusable="true"
         android:focusableInTouchMode="true" />
 
@@ -27,17 +27,17 @@
         android:gravity="center_vertical"
         android:imeOptions="actionSearch"
         android:inputType="text"
-        android:paddingRight="@dimen/anhuu_widget_search_view_button_clear_size"
+        android:paddingRight="@dimen/anhuu_f5be488d_widget_search_view_button_clear_size"
         android:singleLine="true"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:visibility="gone" />
 
     <ImageButton
         android:id="@+id/anhuu_widget_search_view_button_clear"
-        style="@style/anhuu_widget_search_view_button_clear"
+        style="@style/anhuu_f5be488d_widget_search_view_button_clear"
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
-        android:contentDescription="@string/anhuu_hint_clear"
+        android:contentDescription="@string/anhuu_f5be488d_hint_clear"
         android:visibility="gone" />
 
 </RelativeLayout>

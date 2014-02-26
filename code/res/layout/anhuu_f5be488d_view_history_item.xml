@@ -9,7 +9,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="?attr/anhuu_color_list_group_view_background" >
+    android:background="?attr/anhuu_f5be488d_color_list_group_view_background" >
 
     <TextView
         android:id="@+id/anhuu_textview_header"
@@ -18,8 +18,8 @@
         android:layout_centerInParent="true"
         android:ellipsize="middle"
         android:gravity="center"
-        android:maxLines="@integer/anhuu_history_filename_max_lines"
-        android:padding="@dimen/anhuu_10sp"
+        android:maxLines="@integer/anhuu_f5be488d_history_filename_max_lines"
+        android:padding="@dimen/anhuu_f5be488d_10sp"
         android:textIsSelectable="false"
         android:textStyle="bold" />
 

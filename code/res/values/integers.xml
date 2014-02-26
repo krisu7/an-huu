@@ -8,10 +8,10 @@
 
 <resources>
 
-    <integer name="anhuu_bookmark_filename_max_lines">1</integer>
-    <integer name="anhuu_bookmark_pathname_max_lines">3</integer>
-    <integer name="anhuu_history_filename_max_lines">2</integer>
-    <integer name="anhuu_history_pathname_max_lines">3</integer>
-    <integer name="anhuu_search_view_delay_time_submission">999</integer>
+    <integer name="anhuu_f5be488d_bookmark_filename_max_lines">1</integer>
+    <integer name="anhuu_f5be488d_bookmark_pathname_max_lines">3</integer>
+    <integer name="anhuu_f5be488d_history_filename_max_lines">2</integer>
+    <integer name="anhuu_f5be488d_history_pathname_max_lines">3</integer>
+    <integer name="anhuu_f5be488d_search_view_delay_time_submission">999</integer>
 
 </resources>

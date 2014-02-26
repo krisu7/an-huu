@@ -315,7 +315,8 @@ public class FileChooserActivity extends FragmentActivity {
                     Log.d(CLASSNAME,
                             "onKeyDown() >> KEYCODE_BACK >> cancelling previous query...");
                 mFragmentFiles.cancelPreviousLoader();
-                Dlg.toast(this, R.string.anhuu_msg_cancelled, Dlg.LENGTH_SHORT);
+                Dlg.toast(this, R.string.anhuu_f5be488d_msg_cancelled,
+                        Dlg.LENGTH_SHORT);
                 return true;
             }
         }

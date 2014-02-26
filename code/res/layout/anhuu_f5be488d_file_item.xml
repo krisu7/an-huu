@@ -15,12 +15,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal|top"
-        android:layout_marginLeft="@dimen/anhuu_2dp" >
+        android:layout_marginLeft="@dimen/anhuu_f5be488d_2dp" >
 
         <ImageView
             android:id="@+id/anhuu_imageview_icon"
-            android:layout_width="@dimen/anhuu_file_icon_size"
-            android:layout_height="@dimen/anhuu_file_icon_size"
+            android:layout_width="@dimen/anhuu_f5be488d_file_icon_size"
+            android:layout_height="@dimen/anhuu_f5be488d_file_icon_size"
             android:layout_centerHorizontal="true"
             android:adjustViewBounds="true"
             android:contentDescription="@null"
@@ -28,8 +28,8 @@
 
         <ImageView
             android:id="@+id/anhuu_imageview_locked_symbol"
-            android:layout_width="@dimen/anhuu_file_icon_size"
-            android:layout_height="@dimen/anhuu_file_icon_size"
+            android:layout_width="@dimen/anhuu_f5be488d_file_icon_size"
+            android:layout_height="@dimen/anhuu_f5be488d_file_icon_size"
             android:layout_centerHorizontal="true"
             android:adjustViewBounds="true"
             android:contentDescription="@null"
@@ -42,9 +42,9 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
-        android:layout_marginBottom="@dimen/anhuu_2dp"
-        android:layout_marginRight="@dimen/anhuu_5dp"
-        android:layout_marginTop="@dimen/anhuu_2dp"
+        android:layout_marginBottom="@dimen/anhuu_f5be488d_2dp"
+        android:layout_marginRight="@dimen/anhuu_f5be488d_5dp"
+        android:layout_marginTop="@dimen/anhuu_f5be488d_2dp"
         android:layout_weight="0.1"
         android:orientation="vertical" >
 
@@ -77,6 +77,6 @@
         android:focusable="false"
         android:focusableInTouchMode="false"
         android:gravity="center_horizontal|top"
-        android:padding="@dimen/anhuu_2dp" />
+        android:padding="@dimen/anhuu_f5be488d_2dp" />
 
 </LinearLayout>

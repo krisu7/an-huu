@@ -312,8 +312,8 @@ public class FragmentFiles extends Fragment implements
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
-        final View rootView = inflater.inflate(R.layout.anhuu_f5be488d_fragment_files,
-                container, false);
+        final View rootView = inflater.inflate(
+                R.layout.anhuu_f5be488d_fragment_files, container, false);
 
         /*
          * MAP CONTROLS
@@ -406,19 +406,25 @@ public class FragmentFiles extends Fragment implements
 
         switch (Display.getSortType(getActivity())) {
         case BaseFile.SORT_BY_NAME:
-            miSort.setIcon(UI.resolveAttribute(getActivity(),
-                    sortAscending ? R.attr.anhuu_ic_menu_sort_by_name_asc
-                            : R.attr.anhuu_ic_menu_sort_by_name_desc));
+            miSort.setIcon(UI
+                    .resolveAttribute(
+                            getActivity(),
+                            sortAscending ? R.attr.anhuu_f5be488d_ic_menu_sort_by_name_asc
+                                    : R.attr.anhuu_f5be488d_ic_menu_sort_by_name_desc));
             break;
         case BaseFile.SORT_BY_SIZE:
-            miSort.setIcon(UI.resolveAttribute(getActivity(),
-                    sortAscending ? R.attr.anhuu_ic_menu_sort_by_size_asc
-                            : R.attr.anhuu_ic_menu_sort_by_size_desc));
+            miSort.setIcon(UI
+                    .resolveAttribute(
+                            getActivity(),
+                            sortAscending ? R.attr.anhuu_f5be488d_ic_menu_sort_by_size_asc
+                                    : R.attr.anhuu_f5be488d_ic_menu_sort_by_size_desc));
             break;
         case BaseFile.SORT_BY_MODIFICATION_TIME:
-            miSort.setIcon(UI.resolveAttribute(getActivity(),
-                    sortAscending ? R.attr.anhuu_ic_menu_sort_by_date_asc
-                            : R.attr.anhuu_ic_menu_sort_by_date_desc));
+            miSort.setIcon(UI
+                    .resolveAttribute(
+                            getActivity(),
+                            sortAscending ? R.attr.anhuu_f5be488d_ic_menu_sort_by_date_asc
+                                    : R.attr.anhuu_f5be488d_ic_menu_sort_by_date_desc));
             break;
         }
 
@@ -430,13 +436,13 @@ public class FragmentFiles extends Fragment implements
         switch (Display.getViewType(getActivity())) {
         case GRID:
             menuItem.setIcon(UI.resolveAttribute(getActivity(),
-                    R.attr.anhuu_ic_menu_listview));
-            menuItem.setTitle(R.string.anhuu_cmd_list_view);
+                    R.attr.anhuu_f5be488d_ic_menu_listview));
+            menuItem.setTitle(R.string.anhuu_f5be488d_cmd_list_view);
             break;
         case LIST:
             menuItem.setIcon(UI.resolveAttribute(getActivity(),
-                    R.attr.anhuu_ic_menu_gridview));
-            menuItem.setTitle(R.string.anhuu_cmd_grid_view);
+                    R.attr.anhuu_f5be488d_ic_menu_gridview));
+            menuItem.setTitle(R.string.anhuu_f5be488d_cmd_grid_view);
             break;
         }
 
@@ -571,8 +577,10 @@ public class FragmentFiles extends Fragment implements
         getActivity().supportInvalidateOptionsMenu();
 
         if (data == null) {
-            showFooterView(true,
-                    getString(R.string.anhuu_msg_failed_please_try_again), true);
+            showFooterView(
+                    true,
+                    getString(R.string.anhuu_f5be488d_msg_failed_please_try_again),
+                    true);
             return;
         }
 
@@ -613,8 +621,9 @@ public class FragmentFiles extends Fragment implements
         showFooterView(
                 hasMoreFiles || mFileAdapter.isEmpty(),
                 hasMoreFiles ? getString(
-                        R.string.anhuu_pmsg_max_file_count_allowed,
-                        mMaxFileCount) : getString(R.string.anhuu_msg_empty),
+                        R.string.anhuu_f5be488d_pmsg_max_file_count_allowed,
+                        mMaxFileCount)
+                        : getString(R.string.anhuu_f5be488d_msg_empty),
                 mFileAdapter.isEmpty());
 
         if (mNewLoader || selectedFile != null)
@@ -661,26 +670,30 @@ public class FragmentFiles extends Fragment implements
                     .setOnClickListener(mBtnBookmarkManagerOnClickListener);
 
         if (mIsSaveDialog) {
-            getActivity().setTitle(R.string.anhuu_title_save_as);
+            getActivity().setTitle(R.string.anhuu_f5be488d_title_save_as);
         } else {
             switch (mFilterMode) {
             case BaseFile.FILTER_FILES_ONLY:
                 getActivity().setTitle(
                         getResources().getQuantityText(
-                                R.plurals.anhuu_title_choose_files,
+                                R.plurals.anhuu_f5be488d_title_choose_files,
                                 mIsMultiSelection ? 2 : 1));
                 break;
             case BaseFile.FILTER_FILES_AND_DIRECTORIES:
-                getActivity().setTitle(
-                        getResources().getQuantityText(
-                                R.plurals.anhuu_title_choose_files_directories,
-                                mIsMultiSelection ? 2 : 1));
+                getActivity()
+                        .setTitle(
+                                getResources()
+                                        .getQuantityText(
+                                                R.plurals.anhuu_f5be488d_title_choose_files_directories,
+                                                mIsMultiSelection ? 2 : 1));
                 break;
             case BaseFile.FILTER_DIRECTORIES_ONLY:
-                getActivity().setTitle(
-                        getResources().getQuantityText(
-                                R.plurals.anhuu_title_choose_directories,
-                                mIsMultiSelection ? 2 : 1));
+                getActivity()
+                        .setTitle(
+                                getResources()
+                                        .getQuantityText(
+                                                R.plurals.anhuu_f5be488d_title_choose_directories,
+                                                mIsMultiSelection ? 2 : 1));
                 break;
             }
         }// title of activity
@@ -736,7 +749,7 @@ public class FragmentFiles extends Fragment implements
                 && !getActivity().getWindow().isFloating()) {
             mViewFiles.setCacheColorHint(getResources().getColor(
                     UI.resolveAttribute(getActivity(),
-                            R.attr.anhuu_color_listview_cache_hint)));
+                            R.attr.anhuu_f5be488d_color_listview_cache_hint)));
         }
 
         /*
@@ -831,10 +844,10 @@ public class FragmentFiles extends Fragment implements
             mBtnOk.setVisibility(View.VISIBLE);
             mBtnOk.setOnClickListener(mBtnOk_SaveDialog_OnClickListener);
             mBtnOk.setBackgroundResource(UI.resolveAttribute(getActivity(),
-                    R.attr.anhuu_selector_button_ok_saveas));
+                    R.attr.anhuu_f5be488d_selector_button_ok_saveas));
 
             int size = getResources().getDimensionPixelSize(
-                    R.dimen.anhuu_button_ok_saveas_size);
+                    R.dimen.anhuu_f5be488d_button_ok_saveas_size);
             LinearLayout.LayoutParams lp = (LinearLayout.LayoutParams) mBtnOk
                     .getLayoutParams();
             lp.width = size;
@@ -851,7 +864,7 @@ public class FragmentFiles extends Fragment implements
                 viewGroupFooter.setLayoutParams(lp);
 
                 mBtnOk.setMinWidth(getResources().getDimensionPixelSize(
-                        R.dimen.anhuu_single_button_min_width));
+                        R.dimen.anhuu_f5be488d_single_button_min_width));
                 mBtnOk.setText(android.R.string.ok);
                 mBtnOk.setVisibility(View.VISIBLE);
                 mBtnOk.setOnClickListener(mBtnOk_OpenDialog_OnClickListener);
@@ -1130,7 +1143,8 @@ public class FragmentFiles extends Fragment implements
                     result.putParcelable(PATH, path);
                     return result;
                 } else {
-                    errMsg = getString(R.string.anhuu_pmsg_cannot_access_dir,
+                    errMsg = getString(
+                            R.string.anhuu_f5be488d_pmsg_cannot_access_dir,
                             BaseFileProviderUtils.getFileName(getActivity(),
                                     path));
                 }
@@ -1192,8 +1206,9 @@ public class FragmentFiles extends Fragment implements
      * As the name means...
      */
     private void showCannotConnectToServiceAndWaitForTheUserToFinish() {
-        Dlg.showError(getActivity(),
-                R.string.anhuu_msg_cannot_connect_to_file_provider_service,
+        Dlg.showError(
+                getActivity(),
+                R.string.anhuu_f5be488d_msg_cannot_connect_to_file_provider_service,
                 new DialogInterface.OnCancelListener() {
 
                     @Override
@@ -1318,7 +1333,7 @@ public class FragmentFiles extends Fragment implements
      */
     private void resortViewFiles() {
         final Dialog dialog = new Dialog(getActivity(), UI.resolveAttribute(
-                getActivity(), R.attr.anhuu_theme_dialog));
+                getActivity(), R.attr.anhuu_f5be488d_theme_dialog));
         dialog.setCanceledOnTouchOutside(true);
 
         // get the index of button of current sort type
@@ -1381,11 +1396,11 @@ public class FragmentFiles extends Fragment implements
             if (i == btnCurrentSortTypeIdx) {
                 v.setEnabled(false);
                 if (v instanceof Button)
-                    ((Button) v).setText(R.string.anhuu_bullet);
+                    ((Button) v).setText(R.string.anhuu_f5be488d_bullet);
             }
         }
 
-        dialog.setTitle(R.string.anhuu_title_sort_by);
+        dialog.setTitle(R.string.anhuu_f5be488d_title_sort_by);
         dialog.setContentView(view);
         dialog.show();
     }// resortViewFiles()
@@ -1419,7 +1434,7 @@ public class FragmentFiles extends Fragment implements
                         Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
             Dlg.toast(
                     getActivity(),
-                    R.string.anhuu_msg_app_doesnot_have_permission_to_create_files,
+                    R.string.anhuu_f5be488d_msg_app_doesnot_have_permission_to_create_files,
                     Dlg.LENGTH_SHORT);
             return;
         }
@@ -1440,8 +1455,9 @@ public class FragmentFiles extends Fragment implements
                 if (result)
                     showNewDirectoryCreationDialog();
                 else
-                    Dlg.toast(getActivity(),
-                            R.string.anhuu_msg_cannot_create_new_folder_here,
+                    Dlg.toast(
+                            getActivity(),
+                            R.string.anhuu_f5be488d_msg_cannot_create_new_folder_here,
                             Dlg.LENGTH_SHORT);
             }// onProgressUpdate()
 
@@ -1458,7 +1474,7 @@ public class FragmentFiles extends Fragment implements
                 R.layout.anhuu_f5be488d_simple_text_input_view, null);
         final EditText textFile = (EditText) view
                 .findViewById(R.id.anhuu_text1);
-        textFile.setHint(R.string.anhuu_hint_folder_name);
+        textFile.setHint(R.string.anhuu_f5be488d_hint_folder_name);
         textFile.setOnEditorActionListener(new TextView.OnEditorActionListener() {
 
             @Override
@@ -1475,7 +1491,7 @@ public class FragmentFiles extends Fragment implements
         });
 
         dialog.setView(view);
-        dialog.setTitle(R.string.anhuu_cmd_new_folder);
+        dialog.setTitle(R.string.anhuu_f5be488d_cmd_new_folder);
         dialog.setIcon(android.R.drawable.ic_menu_add);
         dialog.setButton(DialogInterface.BUTTON_POSITIVE,
                 getString(android.R.string.ok),
@@ -1489,7 +1505,7 @@ public class FragmentFiles extends Fragment implements
                             Dlg.toast(
                                     getActivity(),
                                     getString(
-                                            R.string.anhuu_pmsg_filename_is_invalid,
+                                            R.string.anhuu_f5be488d_pmsg_filename_is_invalid,
                                             name), Dlg.LENGTH_SHORT);
                             return;
                         }
@@ -1522,14 +1538,15 @@ public class FragmentFiles extends Fragment implements
                                 super.onPostExecute(result);
 
                                 if (result != null) {
-                                    Dlg.toast(getActivity(),
-                                            getString(R.string.anhuu_msg_done),
+                                    Dlg.toast(
+                                            getActivity(),
+                                            getString(R.string.anhuu_f5be488d_msg_done),
                                             Dlg.LENGTH_SHORT);
                                 } else
                                     Dlg.toast(
                                             getActivity(),
                                             getString(
-                                                    R.string.anhuu_pmsg_cannot_create_folder,
+                                                    R.string.anhuu_f5be488d_pmsg_cannot_create_folder,
                                                     name), Dlg.LENGTH_SHORT);
                             }// onPostExecute()
 
@@ -1588,9 +1605,10 @@ public class FragmentFiles extends Fragment implements
         if (!BaseFileProviderUtils.fileCanWrite(cursor)) {
             Dlg.toast(
                     getActivity(),
-                    getString(R.string.anhuu_pmsg_cannot_delete_file,
-                            isFile ? getString(R.string.anhuu_file)
-                                    : getString(R.string.anhuu_folder),
+                    getString(
+                            R.string.anhuu_f5be488d_pmsg_cannot_delete_file,
+                            isFile ? getString(R.string.anhuu_f5be488d_file)
+                                    : getString(R.string.anhuu_f5be488d_folder),
                             filename), Dlg.LENGTH_SHORT);
             return;
         }
@@ -1601,7 +1619,7 @@ public class FragmentFiles extends Fragment implements
                         Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
             Dlg.toast(
                     getActivity(),
-                    R.string.anhuu_msg_app_doesnot_have_permission_to_delete_files,
+                    R.string.anhuu_f5be488d_msg_app_doesnot_have_permission_to_delete_files,
                     Dlg.LENGTH_SHORT);
             return;
         }
@@ -1617,19 +1635,19 @@ public class FragmentFiles extends Fragment implements
 
         Dlg.confirmYesno(
                 getActivity(),
-                getString(R.string.anhuu_pmsg_confirm_delete_file,
-                        isFile ? getString(R.string.anhuu_file)
-                                : getString(R.string.anhuu_folder), filename),
-                new DialogInterface.OnClickListener() {
+                getString(R.string.anhuu_f5be488d_pmsg_confirm_delete_file,
+                        isFile ? getString(R.string.anhuu_f5be488d_file)
+                                : getString(R.string.anhuu_f5be488d_folder),
+                        filename), new DialogInterface.OnClickListener() {
 
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         new LoadingDialog<Void, Void, Boolean>(
                                 getActivity(),
                                 getString(
-                                        R.string.anhuu_pmsg_deleting_file,
-                                        isFile ? getString(R.string.anhuu_file)
-                                                : getString(R.string.anhuu_folder),
+                                        R.string.anhuu_f5be488d_pmsg_deleting_file,
+                                        isFile ? getString(R.string.anhuu_f5be488d_file)
+                                                : getString(R.string.anhuu_f5be488d_folder),
                                         filename), true) {
 
                             final int taskId = EnvUtils.genId();
@@ -1638,9 +1656,9 @@ public class FragmentFiles extends Fragment implements
                                 Dlg.toast(
                                         getActivity(),
                                         getString(
-                                                R.string.anhuu_pmsg_file_has_been_deleted,
-                                                isFile ? getString(R.string.anhuu_file)
-                                                        : getString(R.string.anhuu_folder),
+                                                R.string.anhuu_f5be488d_pmsg_file_has_been_deleted,
+                                                isFile ? getString(R.string.anhuu_f5be488d_file)
+                                                        : getString(R.string.anhuu_f5be488d_folder),
                                                 filename), Dlg.LENGTH_SHORT);
                             }// notifyFileDeleted()
 
@@ -1685,7 +1703,7 @@ public class FragmentFiles extends Fragment implements
                                                     false);
                                             Dlg.toast(
                                                     getActivity(),
-                                                    R.string.anhuu_msg_cancelled,
+                                                    R.string.anhuu_f5be488d_msg_cancelled,
                                                     Dlg.LENGTH_SHORT);
                                         } else
                                             notifyFileDeleted();
@@ -1707,9 +1725,9 @@ public class FragmentFiles extends Fragment implements
                                     Dlg.toast(
                                             getActivity(),
                                             getString(
-                                                    R.string.anhuu_pmsg_cannot_delete_file,
-                                                    isFile ? getString(R.string.anhuu_file)
-                                                            : getString(R.string.anhuu_folder),
+                                                    R.string.anhuu_f5be488d_pmsg_cannot_delete_file,
+                                                    isFile ? getString(R.string.anhuu_f5be488d_file)
+                                                            : getString(R.string.anhuu_f5be488d_folder),
                                                     filename), Dlg.LENGTH_SHORT);
                                 }
                             }// onPostExecute()
@@ -1768,13 +1786,14 @@ public class FragmentFiles extends Fragment implements
             protected Uri doInBackground(Void... params) {
                 if (!BaseFileProviderUtils.fileCanWrite(getActivity(),
                         getCurrentLocation())) {
-                    publishProgress(getString(R.string.anhuu_msg_cannot_save_a_file_here));
+                    publishProgress(getString(R.string.anhuu_f5be488d_msg_cannot_save_a_file_here));
                     return null;
                 }
 
                 if (fileUri == null && !FileUtils.isFilenameValid(filename)) {
                     publishProgress(getString(
-                            R.string.anhuu_pmsg_filename_is_invalid, filename));
+                            R.string.anhuu_f5be488d_pmsg_filename_is_invalid,
+                            filename));
                     return null;
                 }
 
@@ -1819,7 +1838,7 @@ public class FragmentFiles extends Fragment implements
                     Dlg.toast(
                             getActivity(),
                             getString(
-                                    R.string.anhuu_pmsg_filename_is_directory,
+                                    R.string.anhuu_f5be488d_pmsg_filename_is_directory,
                                     filename), Dlg.LENGTH_SHORT);
                     break;
                 }// FILE_TYPE_DIRECTORY
@@ -1827,7 +1846,8 @@ public class FragmentFiles extends Fragment implements
                 case BaseFile.FILE_TYPE_FILE: {
                     Dlg.confirmYesno(
                             getActivity(),
-                            getString(R.string.anhuu_pmsg_confirm_replace_file,
+                            getString(
+                                    R.string.anhuu_f5be488d_pmsg_confirm_replace_file,
                                     filename),
                             new DialogInterface.OnClickListener() {
 
@@ -1896,7 +1916,8 @@ public class FragmentFiles extends Fragment implements
                     return bundle;
                 }// if
 
-                errMsg = getString(R.string.anhuu_pmsg_cannot_access_dir,
+                errMsg = getString(
+                        R.string.anhuu_f5be488d_pmsg_cannot_access_dir,
                         BaseFileProviderUtils.getFileName(getActivity(),
                                 params[0]));
 
@@ -1996,7 +2017,7 @@ public class FragmentFiles extends Fragment implements
             LinearLayout.LayoutParams lpDivider;
             LayoutInflater inflater = getLayoutInflater(null);
             final int dim = getResources().getDimensionPixelSize(
-                    R.dimen.anhuu_5dp);
+                    R.dimen.anhuu_f5be488d_5dp);
             int count = 0;
 
             @Override
@@ -2045,7 +2066,8 @@ public class FragmentFiles extends Fragment implements
                  */
                 if (mViewAddressBar.getChildCount() > 0) {
                     View divider = inflater.inflate(
-                            R.layout.anhuu_f5be488d_view_locations_divider, null);
+                            R.layout.anhuu_f5be488d_view_locations_divider,
+                            null);
 
                     if (lpDivider == null) {
                         lpDivider = new LinearLayout.LayoutParams(dim, dim);
@@ -2061,7 +2083,7 @@ public class FragmentFiles extends Fragment implements
                 TextView btnLoc = (TextView) inflater.inflate(
                         R.layout.anhuu_f5be488d_button_location, null);
                 String name = BaseFileProviderUtils.getFileName(progress[0]);
-                btnLoc.setText(TextUtils.isEmpty(name) ? getString(R.string.anhuu_root)
+                btnLoc.setText(TextUtils.isEmpty(name) ? getString(R.string.anhuu_f5be488d_root)
                         : name);
                 btnLoc.setTag(lastUri);
                 btnLoc.setOnClickListener(mBtnLocationOnClickListener);
@@ -2072,7 +2094,7 @@ public class FragmentFiles extends Fragment implements
                     Rect r = new Rect();
                     btnLoc.getPaint().getTextBounds(name, 0, name.length(), r);
                     if (r.width() >= getResources().getDimensionPixelSize(
-                            R.dimen.anhuu_button_location_max_width)
+                            R.dimen.anhuu_f5be488d_button_location_max_width)
                             - btnLoc.getPaddingLeft()
                             - btnLoc.getPaddingRight()) {
                         mTextFullDirName.setText(progress[0]
@@ -2401,22 +2423,27 @@ public class FragmentFiles extends Fragment implements
             final Uri uri = BaseFileProviderUtils.getUri(cursor);
             final String name = BaseFileProviderUtils.getFileName(cursor);
 
-            ContextMenuUtils.showContextMenu(getActivity(), 0, 0,
-                    new Integer[] { R.string.anhuu_cmd_add_to_bookmarks },
-                    new ContextMenuUtils.OnMenuItemClickListener() {
+            ContextMenuUtils
+                    .showContextMenu(
+                            getActivity(),
+                            0,
+                            0,
+                            new Integer[] { R.string.anhuu_f5be488d_cmd_add_to_bookmarks },
+                            new ContextMenuUtils.OnMenuItemClickListener() {
 
-                        @Override
-                        public void onClick(final int resId) {
-                            if (resId == R.string.anhuu_cmd_add_to_bookmarks) {
-                                BookmarkFragment
-                                        .doEnterNewNameOrRenameBookmark(
-                                                getActivity(),
-                                                BaseFileProviderUtils.getProviderId(uri
-                                                        .getAuthority()), -1,
-                                                uri, name);
-                            }
-                        }// onClick()
-                    });
+                                @Override
+                                public void onClick(final int resId) {
+                                    if (resId == R.string.anhuu_f5be488d_cmd_add_to_bookmarks) {
+                                        BookmarkFragment
+                                                .doEnterNewNameOrRenameBookmark(
+                                                        getActivity(),
+                                                        BaseFileProviderUtils
+                                                                .getProviderId(uri
+                                                                        .getAuthority()),
+                                                        -1, uri, name);
+                                    }
+                                }// onClick()
+                            });
         }// onBuildOptionsMenu()
 
         @Override

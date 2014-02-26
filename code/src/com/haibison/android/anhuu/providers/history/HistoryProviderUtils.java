@@ -44,8 +44,10 @@ public class HistoryProviderUtils {
              * ones.
              */
             final long validityInMillis = new Date().getTime()
-                    - (context.getResources().getInteger(
-                            R.integer.anhuu_pkey_history_validity_in_days_def) * DateUtils.DAY_IN_MILLIS);
+                    - (context
+                            .getResources()
+                            .getInteger(
+                                    R.integer.anhuu_f5be488d_pkey_history_validity_in_days_def) * DateUtils.DAY_IN_MILLIS);
 
             if (BuildConfig.DEBUG)
                 Log.d(CLASSNAME, String.format(

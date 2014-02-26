@@ -32,43 +32,43 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:layout_margin="@dimen/anhuu_15dp"
-            android:text="@string/anhuu_msg_empty"
+            android:layout_margin="@dimen/anhuu_f5be488d_15dp"
+            android:text="@string/anhuu_f5be488d_msg_empty"
             android:textStyle="italic"
             android:visibility="gone" />
 
         <LinearLayout
             android:id="@+id/anhuu_viewgroup_footer"
-            style="?attr/anhuu_button_bar_style"
+            style="?attr/anhuu_f5be488d_button_bar_style"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:layout_margin="@dimen/anhuu_2dp"
+            android:layout_margin="@dimen/anhuu_f5be488d_2dp"
             android:orientation="vertical"
             android:visibility="gone" >
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/anhuu_viewgroup_button_locations_bottom_divider_height" />
+                android:layout_height="@dimen/anhuu_f5be488d_viewgroup_button_locations_bottom_divider_height" />
 
             <LinearLayout
-                style="?attr/anhuu_button_bar_style"
+                style="?attr/anhuu_f5be488d_button_bar_style"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal" >
 
                 <Button
                     android:id="@+id/anhuu_button_clear"
-                    style="?attr/anhuu_button_bar_button_style"
+                    style="?attr/anhuu_f5be488d_button_bar_button_style"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="@string/anhuu_cmd_clear" >
+                    android:text="@string/anhuu_f5be488d_cmd_clear" >
                 </Button>
 
                 <Button
                     android:id="@+id/anhuu_button_ok"
-                    style="?attr/anhuu_button_bar_button_style"
+                    style="?attr/anhuu_f5be488d_button_bar_button_style"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
