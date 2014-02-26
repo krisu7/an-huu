@@ -24,7 +24,7 @@
             android:layout_alignParentTop="true"
             android:childDivider="@android:color/transparent"
             android:childIndicator="@null"
-            android:divider="@drawable/anhuu_expandable_listview_group_divider"
+            android:divider="@drawable/anhuu_f5be488d_expandable_listview_group_divider"
             android:groupIndicator="@null" />
 
         <TextView

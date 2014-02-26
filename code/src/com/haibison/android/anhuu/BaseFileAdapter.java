@@ -459,7 +459,7 @@ public class BaseFileAdapter extends ResourceCursorAdapter {
 
             switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
-                v.setBackgroundResource(R.drawable.anhuu_image_button_dark_pressed);
+                v.setBackgroundResource(R.drawable.anhuu_f5be488d_image_button_dark_pressed);
                 break;
             case MotionEvent.ACTION_UP:
             case MotionEvent.ACTION_CANCEL:

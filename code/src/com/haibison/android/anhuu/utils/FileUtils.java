@@ -29,21 +29,21 @@ public class FileUtils {
     private static final SparseArray<Pattern> MAP_FILE_ICONS = new SparseArray<Pattern>();
 
     static {
-        MAP_FILE_ICONS.put(R.drawable.anhuu_file_audio,
+        MAP_FILE_ICONS.put(R.drawable.anhuu_f5be488d_file_audio,
                 Pattern.compile(MimeTypes.REGEX_FILE_TYPE_AUDIOS));
-        MAP_FILE_ICONS.put(R.drawable.anhuu_file_video,
+        MAP_FILE_ICONS.put(R.drawable.anhuu_f5be488d_file_video,
                 Pattern.compile(MimeTypes.REGEX_FILE_TYPE_VIDEOS));
-        MAP_FILE_ICONS.put(R.drawable.anhuu_file_image,
+        MAP_FILE_ICONS.put(R.drawable.anhuu_f5be488d_file_image,
                 Pattern.compile(MimeTypes.REGEX_FILE_TYPE_IMAGES));
-        MAP_FILE_ICONS.put(R.drawable.anhuu_file_plain_text,
+        MAP_FILE_ICONS.put(R.drawable.anhuu_f5be488d_file_plain_text,
                 Pattern.compile(MimeTypes.REGEX_FILE_TYPE_PLAIN_TEXTS));
 
         /*
          * APK files are counted before compressed files.
          */
-        MAP_FILE_ICONS.put(R.drawable.anhuu_file_apk,
+        MAP_FILE_ICONS.put(R.drawable.anhuu_f5be488d_file_apk,
                 Pattern.compile(MimeTypes.REGEX_FILE_TYPE_APKS));
-        MAP_FILE_ICONS.put(R.drawable.anhuu_file_compressed,
+        MAP_FILE_ICONS.put(R.drawable.anhuu_f5be488d_file_compressed,
                 Pattern.compile(MimeTypes.REGEX_FILE_TYPE_COMPRESSED));
     }
 
@@ -62,7 +62,7 @@ public class FileUtils {
     public static int getResIcon(int fileType, String fileName) {
         switch (fileType) {
         case BaseFile.FILE_TYPE_DIRECTORY: {
-            return R.drawable.anhuu_folder;
+            return R.drawable.anhuu_f5be488d_folder;
         }// FILE_TYPE_DIRECTORY
 
         case BaseFile.FILE_TYPE_FILE: {
@@ -70,7 +70,7 @@ public class FileUtils {
                 if (MAP_FILE_ICONS.valueAt(i).matcher(fileName).find())
                     return MAP_FILE_ICONS.keyAt(i);
 
-            return R.drawable.anhuu_file;
+            return R.drawable.anhuu_f5be488d_file;
         }// FILE_TYPE_FILE
 
         default:

@@ -153,7 +153,7 @@ public class BookmarkFragment extends DialogFragment implements
         dialog.setTitle(R.string.anhuu_title_bookmark_manager);
         dialog.setContentView(initContentView(dialog.getLayoutInflater(), null));
         dialog.setFeatureDrawableResource(Window.FEATURE_LEFT_ICON,
-                R.drawable.anhuu_bookmarks_dark);
+                R.drawable.anhuu_f5be488d_bookmarks_dark);
 
         return dialog;
     }// onCreateDialog()
@@ -516,7 +516,7 @@ public class BookmarkFragment extends DialogFragment implements
                         .getColumnIndex(BookmarkContract.COLUMN_NAME));
 
                 ContextMenuUtils.showContextMenu(getActivity(),
-                        R.drawable.anhuu_bookmarks_dark, Texts.quote(name),
+                        R.drawable.anhuu_f5be488d_bookmarks_dark, Texts.quote(name),
                         new Integer[] { R.string.anhuu_cmd_rename,
                                 R.string.anhuu_cmd_sort_by_name },
                         new ContextMenuUtils.OnMenuItemClickListener() {
@@ -636,7 +636,7 @@ public class BookmarkFragment extends DialogFragment implements
         });
 
         dialog.setView(view);
-        dialog.setIcon(R.drawable.anhuu_bookmarks_dark);
+        dialog.setIcon(R.drawable.anhuu_f5be488d_bookmarks_dark);
         dialog.setTitle(id < 0 ? R.string.anhuu_title_new_bookmark
                 : R.string.anhuu_title_rename);
         dialog.setButton(DialogInterface.BUTTON_POSITIVE,

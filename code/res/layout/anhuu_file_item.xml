@@ -34,7 +34,7 @@
             android:adjustViewBounds="true"
             android:contentDescription="@null"
             android:scaleType="center"
-            android:src="@drawable/anhuu_file_locked_dark"
+            android:src="@drawable/anhuu_f5be488d_file_locked_dark"
             android:visibility="gone" />
     </RelativeLayout>
 

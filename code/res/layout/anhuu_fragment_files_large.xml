@@ -27,7 +27,7 @@
             android:id="@+id/anhuu_textview_bookmarks"
             style="@style/anhuu_home_button_navigators"
             android:layout_below="@id/anhuu_textview_home"
-            android:drawableLeft="@drawable/anhuu_bookmarks_dark"
+            android:drawableLeft="@drawable/anhuu_f5be488d_bookmarks_dark"
             android:text="@string/anhuu_title_bookmarks" />
 
         <View
@@ -47,7 +47,7 @@
     <View
         android:layout_width="@dimen/anhuu_5dp"
         android:layout_height="match_parent"
-        android:background="@drawable/anhuu_expandable_listview_group_divider" />
+        android:background="@drawable/anhuu_f5be488d_expandable_listview_group_divider" />
 
     <RelativeLayout
         android:layout_width="0dp"

@@ -11,22 +11,22 @@
     <style name="AnHuu.BaseTheme.Light.DarkActionBar" parent="@style/Theme.AppCompat.Light.DarkActionBar"></style>
 
     <style name="AnHuu.BaseThemeHelper.Light.DarkActionBar" parent="@style/AnHuu.BaseTheme.Light.DarkActionBar">
-        <item name="anhuu_ic_menu_bookmarks">@drawable/anhuu_ic_menu_bookmarks_light</item>
-        <item name="anhuu_ic_menu_home">@drawable/anhuu_ic_menu_home_light</item>
-        <item name="anhuu_ic_menu_gridview">@drawable/anhuu_ic_menu_gridview_light</item>
-        <item name="anhuu_ic_menu_listview">@drawable/anhuu_ic_menu_listview_light</item>
-        <item name="anhuu_ic_menu_sort_by_date_asc">@drawable/anhuu_ic_menu_sort_by_date_asc_light</item>
-        <item name="anhuu_ic_menu_sort_by_date_desc">@drawable/anhuu_ic_menu_sort_by_date_desc_light</item>
-        <item name="anhuu_ic_menu_sort_by_name_asc">@drawable/anhuu_ic_menu_sort_by_name_asc_light</item>
-        <item name="anhuu_ic_menu_sort_by_name_desc">@drawable/anhuu_ic_menu_sort_by_name_desc_light</item>
-        <item name="anhuu_ic_menu_sort_by_size_asc">@drawable/anhuu_ic_menu_sort_by_size_asc_light</item>
-        <item name="anhuu_ic_menu_sort_by_size_desc">@drawable/anhuu_ic_menu_sort_by_size_desc_light</item>
-        <item name="anhuu_ic_button_sort_by_date_asc">@drawable/anhuu_ic_menu_sort_by_date_asc</item>
-        <item name="anhuu_ic_button_sort_by_date_desc">@drawable/anhuu_ic_menu_sort_by_date_desc</item>
-        <item name="anhuu_ic_button_sort_by_name_asc">@drawable/anhuu_ic_menu_sort_by_name_asc</item>
-        <item name="anhuu_ic_button_sort_by_name_desc">@drawable/anhuu_ic_menu_sort_by_name_desc</item>
-        <item name="anhuu_ic_button_sort_by_size_asc">@drawable/anhuu_ic_menu_sort_by_size_asc</item>
-        <item name="anhuu_ic_button_sort_by_size_desc">@drawable/anhuu_ic_menu_sort_by_size_desc</item>
+        <item name="anhuu_ic_menu_bookmarks">@drawable/anhuu_f5be488d_ic_menu_bookmarks_light</item>
+        <item name="anhuu_ic_menu_home">@drawable/anhuu_f5be488d_ic_menu_home_light</item>
+        <item name="anhuu_ic_menu_gridview">@drawable/anhuu_f5be488d_ic_menu_gridview_light</item>
+        <item name="anhuu_ic_menu_listview">@drawable/anhuu_f5be488d_ic_menu_listview_light</item>
+        <item name="anhuu_ic_menu_sort_by_date_asc">@drawable/anhuu_f5be488d_ic_menu_sort_by_date_asc_light</item>
+        <item name="anhuu_ic_menu_sort_by_date_desc">@drawable/anhuu_f5be488d_ic_menu_sort_by_date_desc_light</item>
+        <item name="anhuu_ic_menu_sort_by_name_asc">@drawable/anhuu_f5be488d_ic_menu_sort_by_name_asc_light</item>
+        <item name="anhuu_ic_menu_sort_by_name_desc">@drawable/anhuu_f5be488d_ic_menu_sort_by_name_desc_light</item>
+        <item name="anhuu_ic_menu_sort_by_size_asc">@drawable/anhuu_f5be488d_ic_menu_sort_by_size_asc_light</item>
+        <item name="anhuu_ic_menu_sort_by_size_desc">@drawable/anhuu_f5be488d_ic_menu_sort_by_size_desc_light</item>
+        <item name="anhuu_ic_button_sort_by_date_asc">@drawable/anhuu_f5be488d_ic_menu_sort_by_date_asc</item>
+        <item name="anhuu_ic_button_sort_by_date_desc">@drawable/anhuu_f5be488d_ic_menu_sort_by_date_desc</item>
+        <item name="anhuu_ic_button_sort_by_name_asc">@drawable/anhuu_f5be488d_ic_menu_sort_by_name_asc</item>
+        <item name="anhuu_ic_button_sort_by_name_desc">@drawable/anhuu_f5be488d_ic_menu_sort_by_name_desc</item>
+        <item name="anhuu_ic_button_sort_by_size_asc">@drawable/anhuu_f5be488d_ic_menu_sort_by_size_asc</item>
+        <item name="anhuu_ic_button_sort_by_size_desc">@drawable/anhuu_f5be488d_ic_menu_sort_by_size_desc</item>
         <item name="anhuu_button_bar_style">?android:attr/buttonBarStyle</item>
         <item name="anhuu_button_bar_button_style">?android:attr/buttonBarButtonStyle</item>
     </style>
@@ -35,22 +35,22 @@
 
         <!-- AOSP -->
 
-        <item name="android:windowBackground">@drawable/anhuu_background_light</item>
+        <item name="android:windowBackground">@drawable/anhuu_f5be488d_background_light</item>
 
         <!-- An Hữu -->
 
         <item name="anhuu_theme_dialog">@style/AnHuu.Theme.Dialog.Light</item>
-        <item name="anhuu_button_home">@drawable/anhuu_button_home_dark</item>
-        <item name="anhuu_ic_widget_search_view_action_search">@drawable/anhuu_ic_action_search_dark</item>
-        <item name="anhuu_ic_widget_search_view_action_clear">@drawable/anhuu_ic_action_clear_dark</item>
-        <item name="anhuu_badge_file_provider_localfile">@drawable/anhuu_badge_file_provider_localfile_dark</item>
-        <item name="anhuu_selector_image_button">@drawable/anhuu_selector_image_button_light</item>
-        <item name="anhuu_selector_button_location">@drawable/anhuu_selector_button_location_light</item>
-        <item name="anhuu_selector_main_button_navi_left">@drawable/anhuu_selector_main_button_navi_left_light</item>
-        <item name="anhuu_selector_main_button_navi_right">@drawable/anhuu_selector_main_button_navi_right_light</item>
-        <item name="anhuu_selector_button_ok_saveas">@drawable/anhuu_selector_button_ok_saveas_light</item>
-        <item name="anhuu_selector_action_navi_left_foreground">@drawable/anhuu_selector_action_navi_left_light_foreground</item>
-        <item name="anhuu_selector_action_navi_right_foreground">@drawable/anhuu_selector_action_navi_right_light_foreground</item>
+        <item name="anhuu_button_home">@drawable/anhuu_f5be488d_button_home_dark</item>
+        <item name="anhuu_ic_widget_search_view_action_search">@drawable/anhuu_f5be488d_ic_action_search_dark</item>
+        <item name="anhuu_ic_widget_search_view_action_clear">@drawable/anhuu_f5be488d_ic_action_clear_dark</item>
+        <item name="anhuu_badge_file_provider_localfile">@drawable/anhuu_f5be488d_badge_file_provider_localfile_dark</item>
+        <item name="anhuu_selector_image_button">@drawable/anhuu_f5be488d_selector_image_button_light</item>
+        <item name="anhuu_selector_button_location">@drawable/anhuu_f5be488d_selector_button_location_light</item>
+        <item name="anhuu_selector_main_button_navi_left">@drawable/anhuu_f5be488d_selector_main_button_navi_left_light</item>
+        <item name="anhuu_selector_main_button_navi_right">@drawable/anhuu_f5be488d_selector_main_button_navi_right_light</item>
+        <item name="anhuu_selector_button_ok_saveas">@drawable/anhuu_f5be488d_selector_button_ok_saveas_light</item>
+        <item name="anhuu_selector_action_navi_left_foreground">@drawable/anhuu_f5be488d_selector_action_navi_left_light_foreground</item>
+        <item name="anhuu_selector_action_navi_right_foreground">@drawable/anhuu_f5be488d_selector_action_navi_right_light_foreground</item>
         <item name="anhuu_color_listview_cache_hint">@color/anhuu_listview_cache_hint_light</item>
         <item name="anhuu_color_list_group_view_background">@color/anhuu_list_group_view_background_light</item>
     </style>
@@ -58,22 +58,22 @@
     <style name="AnHuu.BaseTheme.Light" parent="@style/Theme.AppCompat.Light"></style>
 
     <style name="AnHuu.BaseThemeHelper.Light" parent="@style/AnHuu.BaseTheme.Light">
-        <item name="anhuu_ic_menu_bookmarks">@drawable/anhuu_ic_menu_bookmarks_dark</item>
-        <item name="anhuu_ic_menu_home">@drawable/anhuu_ic_menu_home_dark</item>
-        <item name="anhuu_ic_menu_gridview">@drawable/anhuu_ic_menu_gridview_dark</item>
-        <item name="anhuu_ic_menu_listview">@drawable/anhuu_ic_menu_listview_dark</item>
-        <item name="anhuu_ic_menu_sort_by_date_asc">@drawable/anhuu_ic_menu_sort_by_date_asc_dark</item>
-        <item name="anhuu_ic_menu_sort_by_date_desc">@drawable/anhuu_ic_menu_sort_by_date_desc_dark</item>
-        <item name="anhuu_ic_menu_sort_by_name_asc">@drawable/anhuu_ic_menu_sort_by_name_asc_dark</item>
-        <item name="anhuu_ic_menu_sort_by_name_desc">@drawable/anhuu_ic_menu_sort_by_name_desc_dark</item>
-        <item name="anhuu_ic_menu_sort_by_size_asc">@drawable/anhuu_ic_menu_sort_by_size_asc_dark</item>
-        <item name="anhuu_ic_menu_sort_by_size_desc">@drawable/anhuu_ic_menu_sort_by_size_desc_dark</item>
-        <item name="anhuu_ic_button_sort_by_date_asc">@drawable/anhuu_ic_menu_sort_by_date_asc</item>
-        <item name="anhuu_ic_button_sort_by_date_desc">@drawable/anhuu_ic_menu_sort_by_date_desc</item>
-        <item name="anhuu_ic_button_sort_by_name_asc">@drawable/anhuu_ic_menu_sort_by_name_asc</item>
-        <item name="anhuu_ic_button_sort_by_name_desc">@drawable/anhuu_ic_menu_sort_by_name_desc</item>
-        <item name="anhuu_ic_button_sort_by_size_asc">@drawable/anhuu_ic_menu_sort_by_size_asc</item>
-        <item name="anhuu_ic_button_sort_by_size_desc">@drawable/anhuu_ic_menu_sort_by_size_desc</item>
+        <item name="anhuu_ic_menu_bookmarks">@drawable/anhuu_f5be488d_ic_menu_bookmarks_dark</item>
+        <item name="anhuu_ic_menu_home">@drawable/anhuu_f5be488d_ic_menu_home_dark</item>
+        <item name="anhuu_ic_menu_gridview">@drawable/anhuu_f5be488d_ic_menu_gridview_dark</item>
+        <item name="anhuu_ic_menu_listview">@drawable/anhuu_f5be488d_ic_menu_listview_dark</item>
+        <item name="anhuu_ic_menu_sort_by_date_asc">@drawable/anhuu_f5be488d_ic_menu_sort_by_date_asc_dark</item>
+        <item name="anhuu_ic_menu_sort_by_date_desc">@drawable/anhuu_f5be488d_ic_menu_sort_by_date_desc_dark</item>
+        <item name="anhuu_ic_menu_sort_by_name_asc">@drawable/anhuu_f5be488d_ic_menu_sort_by_name_asc_dark</item>
+        <item name="anhuu_ic_menu_sort_by_name_desc">@drawable/anhuu_f5be488d_ic_menu_sort_by_name_desc_dark</item>
+        <item name="anhuu_ic_menu_sort_by_size_asc">@drawable/anhuu_f5be488d_ic_menu_sort_by_size_asc_dark</item>
+        <item name="anhuu_ic_menu_sort_by_size_desc">@drawable/anhuu_f5be488d_ic_menu_sort_by_size_desc_dark</item>
+        <item name="anhuu_ic_button_sort_by_date_asc">@drawable/anhuu_f5be488d_ic_menu_sort_by_date_asc</item>
+        <item name="anhuu_ic_button_sort_by_date_desc">@drawable/anhuu_f5be488d_ic_menu_sort_by_date_desc</item>
+        <item name="anhuu_ic_button_sort_by_name_asc">@drawable/anhuu_f5be488d_ic_menu_sort_by_name_asc</item>
+        <item name="anhuu_ic_button_sort_by_name_desc">@drawable/anhuu_f5be488d_ic_menu_sort_by_name_desc</item>
+        <item name="anhuu_ic_button_sort_by_size_asc">@drawable/anhuu_f5be488d_ic_menu_sort_by_size_asc</item>
+        <item name="anhuu_ic_button_sort_by_size_desc">@drawable/anhuu_f5be488d_ic_menu_sort_by_size_desc</item>
         <item name="anhuu_button_bar_style">?android:attr/buttonBarStyle</item>
         <item name="anhuu_button_bar_button_style">?android:attr/buttonBarButtonStyle</item>
     </style>
