@@ -35,4 +35,11 @@ public class Sys {
      */
     public static final int LIB_VERSION_CODE = 61;
 
+    /**
+     * This unique ID is used for stuffs such as preferences' file name.
+     * 
+     * @since v4.9 beta
+     */
+    public static final String UID = "9795e88b-2ab4-4b81-a548-409091a1e0c6";
+
 }

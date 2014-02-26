@@ -28,20 +28,13 @@ import com.haibison.android.anhuu.utils.Sys;
 public class Settings {
 
     /**
-     * This unique ID is used for storing preferences.
-     * 
-     * @since v4.9 beta
-     */
-    public static final String UID = "9795e88b-2ab4-4b81-a548-409091a1e0c6";
-
-    /**
      * Generates global preference filename of this library.
      * 
      * @return the global preference filename.
      */
     public static final String genPreferenceFilename() {
-        return String.format("%s_%s", Sys.LIB_CODE_NAME, UID);
-    }
+        return String.format("%s_%s", Sys.LIB_CODE_NAME, Sys.UID);
+    }// genPreferenceFilename()
 
     /**
      * Generates global database filename.
@@ -51,8 +44,8 @@ public class Settings {
      * @return the global database filename.
      */
     public static final String genDatabaseFilename(String name) {
-        return String.format("%s_%s_%s", Sys.LIB_CODE_NAME, UID, name);
-    }
+        return String.format("%s_%s_%s", Sys.LIB_CODE_NAME, Sys.UID, name);
+    }// genDatabaseFilename()
 
     /**
      * Gets new {@link SharedPreferences}
@@ -68,7 +61,7 @@ public class Settings {
          */
         return context.getApplicationContext().getSharedPreferences(
                 genPreferenceFilename(), Context.MODE_MULTI_PROCESS);
-    }
+    }// p()
 
     /**
      * Setup {@code pm} to use global unique filename and global access mode.
@@ -127,7 +120,7 @@ public class Settings {
                     c.getResources().getInteger(
                             R.integer.anhuu_pkey_display_view_type_def)) ? ViewType.LIST
                     : ViewType.GRID;
-        }
+        }// getViewType()
 
         /**
          * Sets view type.
@@ -149,7 +142,7 @@ public class Settings {
                         .commit();
             else
                 p(c).edit().putInt(key, v.ordinal()).commit();
-        }
+        }// setViewType()
 
         /**
          * Gets sort type.
@@ -164,7 +157,7 @@ public class Settings {
                     c.getString(R.string.anhuu_pkey_display_sort_type),
                     c.getResources().getInteger(
                             R.integer.anhuu_pkey_display_sort_type_def));
-        }
+        }// getSortType()
 
         /**
          * Sets {@link SortType}
@@ -188,7 +181,7 @@ public class Settings {
                         .commit();
             else
                 p(c).edit().putInt(key, v).commit();
-        }
+        }// setSortType()
 
         /**
          * Gets sort ascending.
@@ -202,7 +195,7 @@ public class Settings {
                     c.getString(R.string.anhuu_pkey_display_sort_ascending),
                     c.getResources().getBoolean(
                             R.bool.anhuu_pkey_display_sort_ascending_def));
-        }
+        }// isSortAscending()
 
         /**
          * Sets sort ascending.
@@ -221,7 +214,7 @@ public class Settings {
                     .putBoolean(
                             c.getString(R.string.anhuu_pkey_display_sort_ascending),
                             v).commit();
-        }
+        }// setSortAscending()
 
         /**
          * Checks setting of showing time for old days in this year. Default is
@@ -239,7 +232,7 @@ public class Settings {
                             c.getResources()
                                     .getBoolean(
                                             R.bool.anhuu_pkey_display_show_time_for_old_days_this_year_def));
-        }
+        }// isShowTimeForOldDaysThisYear()
 
         /**
          * Enables or disables showing time of old days in this year.
@@ -260,7 +253,7 @@ public class Settings {
                     .putBoolean(
                             c.getString(R.string.anhuu_pkey_display_show_time_for_old_days_this_year),
                             v).commit();
-        }
+        }// setShowTimeForOldDaysThisYear()
 
         /**
          * Checks setting of showing time for old days in last year and older.
@@ -278,7 +271,7 @@ public class Settings {
                             c.getResources()
                                     .getBoolean(
                                             R.bool.anhuu_pkey_display_show_time_for_old_days_def));
-        }
+        }// isShowTimeForOldDays()
 
         /**
          * Enables or disables showing time of old days in last year and older.
@@ -298,7 +291,7 @@ public class Settings {
                     .putBoolean(
                             c.getString(R.string.anhuu_pkey_display_show_time_for_old_days),
                             v).commit();
-        }
+        }// setShowTimeForOldDays()
 
         /**
          * Checks if remembering last location is enabled or not.
@@ -315,7 +308,7 @@ public class Settings {
                             c.getResources()
                                     .getBoolean(
                                             R.bool.anhuu_pkey_display_remember_last_location_def));
-        }
+        }// isRememberLastLocation()
 
         /**
          * Enables or disables remembering last location.
@@ -335,7 +328,7 @@ public class Settings {
                     .putBoolean(
                             c.getString(R.string.anhuu_pkey_display_remember_last_location),
                             v).commit();
-        }
+        }// setRememberLastLocation()
 
         /**
          * Gets last location.
@@ -349,7 +342,7 @@ public class Settings {
             return p(c).getString(
                     c.getString(R.string.anhuu_pkey_display_last_location),
                     null);
-        }
+        }// getLastLocation()
 
         /**
          * Sets last location.
@@ -364,7 +357,7 @@ public class Settings {
                     .putString(
                             c.getString(R.string.anhuu_pkey_display_last_location),
                             v).commit();
-        }
+        }// setLastLocation()
 
     }// Display
 
