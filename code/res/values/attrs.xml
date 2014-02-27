@@ -8,7 +8,7 @@
 
 <resources>
 
-    <declare-styleable name="AnHuuSearchView">
+    <declare-styleable name="AnHuu.f5be488d.SearchView">
 
         <!--
              Delay time to invoke a submission after the user entered a search query and waited for.

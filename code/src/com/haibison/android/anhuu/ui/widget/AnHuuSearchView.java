@@ -143,16 +143,18 @@ public class AnHuuSearchView extends LinearLayout {
          */
 
         TypedArray a = context.obtainStyledAttributes(attrs,
-                R.styleable.AnHuuSearchView);
+                R.styleable.AnHuu_f5be488d_SearchView);
 
         setDelayTimeSubmission(a.getInt(
-                R.styleable.AnHuuSearchView_delayTimeSubmission, 0));
-        updateViewsVisibility(
-                a.getBoolean(R.styleable.AnHuuSearchView_iconified, true),
-                false);
-        setClosable(a.getBoolean(R.styleable.AnHuuSearchView_closable, true));
-        setEnabled(a.getBoolean(R.styleable.AnHuuSearchView_enabled, true));
-        mTextSearch.setHint(a.getString(R.styleable.AnHuuSearchView_hint));
+                R.styleable.AnHuu_f5be488d_SearchView_delayTimeSubmission, 0));
+        updateViewsVisibility(a.getBoolean(
+                R.styleable.AnHuu_f5be488d_SearchView_iconified, true), false);
+        setClosable(a.getBoolean(
+                R.styleable.AnHuu_f5be488d_SearchView_closable, true));
+        setEnabled(a.getBoolean(R.styleable.AnHuu_f5be488d_SearchView_enabled,
+                true));
+        mTextSearch.setHint(a
+                .getString(R.styleable.AnHuu_f5be488d_SearchView_hint));
 
         a.recycle();
     }// AnHuuSearchView()
