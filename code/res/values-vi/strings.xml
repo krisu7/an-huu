@@ -27,7 +27,7 @@
     <string name="anhuu_f5be488d_file">tập tin</string>
     <string name="anhuu_f5be488d_folder">thư mục</string>
     <string name="anhuu_f5be488d_hint_clear">xóa</string>
-    <string name="anhuu_f5be488d_hint_double_tap_to_select_file">Chạm 2 lần để chọn tập tin/ thư mục…</string>
+    <string name="anhuu_f5be488d_hint_double_tap_to_select_file">Chạm 2 lần để chọn tập tin/thư mục…</string>
     <string name="anhuu_f5be488d_hint_folder_name">tên thư mục</string>
     <string name="anhuu_f5be488d_hint_new_name">tên mới</string>
     <string name="anhuu_f5be488d_hint_newer">mới hơn</string>
@@ -35,8 +35,8 @@
     <string name="anhuu_f5be488d_hint_save_as_filename">tên tập tin</string>
     <string name="anhuu_f5be488d_hint_search">tìm kiếm</string>
     <string name="anhuu_f5be488d_history">Lịch sử</string>
-    <string name="anhuu_f5be488d_msg_app_doesnot_have_permission_to_create_files">Ứng dụng này không có quyền tạo mới tập tin/ thư mục</string>
-    <string name="anhuu_f5be488d_msg_app_doesnot_have_permission_to_delete_files">Ứng dụng này không có quyền xóa tập tin/ thư mục</string>
+    <string name="anhuu_f5be488d_msg_app_doesnot_have_permission_to_create_files">Ứng dụng này không có quyền tạo mới tập tin/thư mục</string>
+    <string name="anhuu_f5be488d_msg_app_doesnot_have_permission_to_delete_files">Ứng dụng này không có quyền xóa tập tin/thư mục</string>
     <string name="anhuu_f5be488d_msg_bookmark_name_is_invalid">Tên không hợp lệ</string>
     <string name="anhuu_f5be488d_msg_cancelled">Hủy bỏ</string>
     <string name="anhuu_f5be488d_msg_cannot_connect_to_file_provider_service">Không thể kết nối đến dịch vụ cung cấp tập tin</string>
@@ -88,7 +88,7 @@
         <item quantity="other">Chọn tập tin…</item>
     </plurals>
     <plurals name="anhuu_f5be488d_title_choose_files_directories">
-        <item quantity="other">Chọn tập tin/ thư mục…</item>
+        <item quantity="other">Chọn tập tin/thư mục…</item>
     </plurals>
 
 </resources>
