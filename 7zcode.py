@@ -41,8 +41,8 @@ if ARGS.snapshot:
 
 # Open Sys.java to get library version name.
 FILE_SYS = os.sep.join([
-        SRC_DIR, 'code', 'src', 'com', 'haibison', 'android', 'lib', 'anhuu',
-        'utils', 'Sys.java'])
+        SRC_DIR, 'code', 'src', 'com', 'haibison', 'android', 'anhuu', 'utils',
+        'Sys.java'])
 with open(FILE_SYS, 'r') as f:
     for line in f:
         line = line.strip()
