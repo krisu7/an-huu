@@ -8,12 +8,15 @@
 
 
 <!--
-    Thanks to Simon McCorkindale for contributing this translation.
+    We sincerely Thank Simon McCorkindale - a kind friend who helped us
+    translate this file into his mother language.
+
     Website: http://www.aroha.mobi/ 
 -->
 
 <resources>
 
+    <string name="anhuu_f5be488d_cmd_add_to_bookmarks">ブックマークに追加</string>
     <string name="anhuu_f5be488d_cmd_advanced_selection_all">全て</string>
     <string name="anhuu_f5be488d_cmd_advanced_selection_invert">逆選択</string>
     <string name="anhuu_f5be488d_cmd_advanced_selection_none">なし</string>
@@ -24,23 +27,37 @@
     <string name="anhuu_f5be488d_cmd_new_folder">新規フォルダ</string>
     <string name="anhuu_f5be488d_cmd_reload">再読み込み</string>
     <string name="anhuu_f5be488d_cmd_remove_from_list">リストから削除</string>
+    <string name="anhuu_f5be488d_cmd_rename">リネーム</string>
     <string name="anhuu_f5be488d_cmd_select_all_files">全てのファイルを選択</string>
     <string name="anhuu_f5be488d_cmd_select_all_folders">全てのフォルダを選択</string>
     <string name="anhuu_f5be488d_cmd_sort">ソート</string>
-    <string name="anhuu_f5be488d_ellipsize">・・・</string>
+    <string name="anhuu_f5be488d_cmd_sort_by_name">並べ名前で</string>
     <string name="anhuu_f5be488d_file">ファイル</string>
     <string name="anhuu_f5be488d_folder">フォルダ</string>
+    <string name="anhuu_f5be488d_hint_clear">澄む</string>
     <string name="anhuu_f5be488d_hint_double_tap_to_select_file">ダブルタップでファイルやフォルダを選択</string>
     <string name="anhuu_f5be488d_hint_folder_name">フォルダ名</string>
+    <string name="anhuu_f5be488d_hint_new_name">新名称</string>
+    <string name="anhuu_f5be488d_hint_newer">新しい</string>
+    <string name="anhuu_f5be488d_hint_older">年嵩の</string>
     <string name="anhuu_f5be488d_hint_save_as_filename">ファイル名</string>
+    <string name="anhuu_f5be488d_hint_search">検索</string>
+    <string name="anhuu_f5be488d_history">歴史</string>
     <string name="anhuu_f5be488d_msg_app_doesnot_have_permission_to_create_files">新規フォルダ・ファイルを作成する権限がありません</string>
     <string name="anhuu_f5be488d_msg_app_doesnot_have_permission_to_delete_files">新規フォルダ・ファイルを削除する権限がありません</string>
+    <string name="anhuu_f5be488d_msg_bookmark_name_is_invalid">ブックマーク名が無効です</string>
     <string name="anhuu_f5be488d_msg_cancelled">取り消されました</string>
     <string name="anhuu_f5be488d_msg_cannot_connect_to_file_provider_service">ファイルプロバイダサービスへ接続できません</string>
+    <string name="anhuu_f5be488d_msg_cannot_create_new_folder_here">ここに新しいフォルダを作成することはできません</string>
+    <string name="anhuu_f5be488d_msg_cannot_save_a_file_here">ここにファイルを保存できない</string>
+    <string name="anhuu_f5be488d_msg_confirm_clear_all_bookmarks">あなたは本当にすべてのブックマークを消去しますか？</string>
+    <string name="anhuu_f5be488d_msg_confirm_clear_history">あなたが履歴をクリアしてもよろしいですか？</string>
     <string name="anhuu_f5be488d_msg_done">完了</string>
     <string name="anhuu_f5be488d_msg_empty">空っぽ</string>
+    <string name="anhuu_f5be488d_msg_failed_please_try_again">失敗しました。もう一度やり直してください。</string>
     <string name="anhuu_f5be488d_msg_filename_is_empty">ファイル名が空っぽ</string>
     <string name="anhuu_f5be488d_msg_loading">読み込み中・・・</string>
+    <string name="anhuu_f5be488d_phone">携帯電話</string>
     <string name="anhuu_f5be488d_pmsg_cannot_access_dir">\"%1$s\"をアクセスできません</string>
     <string name="anhuu_f5be488d_pmsg_cannot_create_folder">新規フォルダ\"%1$s\"を作成できません</string>
     <string name="anhuu_f5be488d_pmsg_cannot_delete_file">%1$sの\"%2$s\"を削除できません</string>
@@ -56,15 +73,20 @@
     <string name="anhuu_f5be488d_root">トップ</string>
     <string name="anhuu_f5be488d_title_advanced_selection">選択</string>
     <string name="anhuu_f5be488d_title_alert">警告</string>
+    <string name="anhuu_f5be488d_title_bookmark_manager">ブックマークマネージャ</string>
+    <string name="anhuu_f5be488d_title_bookmarks">ブックマーク</string>
     <string name="anhuu_f5be488d_title_confirmation">確認</string>
     <string name="anhuu_f5be488d_title_date">日付</string>
     <string name="anhuu_f5be488d_title_error">エラー</string>
     <string name="anhuu_f5be488d_title_history">ヒストリー</string>
     <string name="anhuu_f5be488d_title_info">詳細</string>
     <string name="anhuu_f5be488d_title_name">名前</string>
+    <string name="anhuu_f5be488d_title_new_bookmark">新しいブックマークを作成します。</string>
+    <string name="anhuu_f5be488d_title_rename">リネーム</string>
     <string name="anhuu_f5be488d_title_save_as">次として保存</string>
     <string name="anhuu_f5be488d_title_size">サイズ</string>
     <string name="anhuu_f5be488d_title_sort_by">次でソート</string>
+    <string name="anhuu_f5be488d_today">今日</string>
     <string name="anhuu_f5be488d_yesterday">昨日</string>
 
     <plurals name="anhuu_f5be488d_title_choose_directories">

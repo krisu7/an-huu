@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright (c) 2012 Hai Bison
+
+    See the file LICENSE at the root directory of this project for copying
+    permission.
+-->
+
+<!--
+    We sincerely Thank Simon McCorkindale - a kind friend who helped us
+    translate this file into his mother language.
+
+    Website: http://www.aroha.mobi/
+-->
+
+<resources>
+
+    <string name="anhuu_f5be488d_ellipsize">・・・</string>
+
+</resources>
