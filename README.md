@@ -1,6 +1,6 @@
 # An Hữu
 
-* Version: 5.5.2 beta
+* Version: 5.5.2 (#62)
 
 
 Feel free to contact us at:
@@ -31,22 +31,32 @@ project. We hope this project will be always useful for everyone.
 
 # HISTORY
 
-* Version 5.5.2 beta:
+* Version 5.5.2 (#62)
+    + *Release:* March 11, 2014
+    + Change package name to `com.haibison.android.anhuu`.
+    + Change prefixes for resources:
+        - from `anhuu_` to `anhuu_f5be488d_`
+        - from `AnHuu.` to `AnHuu.f5be488d.`
+    + Design new image resources to replace some old images which were copied
+      from AOSP.
+    + Optimize code and make some changes to UI...
+
+* Version 5.5.2 beta
     + *Initialize:* December 24, 2013
 
-* Version 5.5.1:
+* Version 5.5.1
     + *Release:* December 10, 2013
     + Update prefix of resource IDs from `afc_` to `anhuu_`, 'Afc_' to `AnHuu_`.
     + Refactor some "preferences" classes to one class `Settings`.
     + Optimize code.
 
-* Version 5.5:
+* Version 5.5
     + *Release:* December 10, 2013
     + Change library name from `android-filechooser` to `An Hữu`. Also change
       package name from `group.pals.android.lib.ui.filechooser` to
       `com.haibison.android.lib.anhuu`.
 
-* Version 5.4.4:
+* Version 5.4.4
     + *Release:* October 28, 2013
     + Add `ACTION_CHOOSE` and `ACTION_SAVE`.
     + Add `EXTRA_RESULT_FILE_EXISTS` for `ACTION_SAVE`.
@@ -54,13 +64,13 @@ project. We hope this project will be always useful for everyone.
       results for `ACTION_CHOOSE`.
     + Minor changes.
 
-* Version 5.4.4 beta:
+* Version 5.4.4 beta
     + *Initialize:* October 23, 2013
 
-* Version 5.4.3:
+* Version 5.4.3
     + *Release:* October 23, 2013
 
-* Version 5.4.3 beta:
+* Version 5.4.3 beta
     + *Initialize:* September 30, 2013
 
 * Version 5.4.2
