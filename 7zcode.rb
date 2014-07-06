@@ -10,17 +10,22 @@
 require 'optparse'
 require 'ostruct'
 
-Description = "
+DESCRIPTION = "
 Compress project as a .7z file -- just the source code to publish to community,
 not all the files to backup.
 "
 
 ##
-# Formats string `s` with predefined indent.
+# Prints message `msg`. If `title` is not `nil`, prints it first with predefined
+# indent.
 #
-def indent(s)
-    '%15s' % s
-end # indent
+def say(msg, title=nil)
+    if title
+        puts "%15s: #{msg}" % title
+    else
+        puts msg
+    end
+end # say
 
 ##
 # Parses arguments.
@@ -32,7 +37,7 @@ def parse_args(args=ARGV.clone)
 
     # Now parse args
     OptionParser.new do |opts|
-        opts.banner = Description
+        opts.banner = DESCRIPTION
         opts.separator ''
         opts.separator 'Specific options:'
 
@@ -54,19 +59,19 @@ end # parse_args
 if __FILE__ == $0
     args = parse_args
 
-    Src_dir = File.dirname(File.absolute_path($0))
-    puts indent('Backing up') + ': ' + Src_dir
+    SRC_DIR = File.dirname(File.absolute_path($0))
+    say SRC_DIR, 'Backing up'
 
     revision = nil
     if args.snapshot
-        revision = `hg log -l 1 "#{Src_dir}"`
+        revision = `hg log -l 1 "#{SRC_DIR}"`
         if revision = revision.match(/^changeset:[ \t]+[0-9]+:[0-9a-f]+$/)
             revision = revision[0].match(/:[ \t]+[0-9]+:/)[0][1..-2].strip
         end
     end
 
     # Open Sys.java to get library version name.
-    File_sys = File.join(Src_dir, 'code', 'src', 'com', 'haibison', 'android',
+    File_sys = File.join(SRC_DIR, 'code', 'src', 'com', 'haibison', 'android',
                          'anhuu', 'utils', 'Sys.java')
     version = ''
     File.open(File_sys, 'r').each_line do |line|
@@ -78,11 +83,11 @@ if __FILE__ == $0
 
     # Now build target file name
     filename = File.join(
-        File.dirname(Src_dir),
+        File.dirname(SRC_DIR),
         'an-huu_v%s_%ssrc.7z' % [
             version,
             (args.snapshot and revision) ? 'r%s_' % revision : ''])
-    puts indent('To') + ': ' + filename
+    say filename, 'To'
 
     # Ignore list
     ignore_list = [
@@ -91,21 +96,21 @@ if __FILE__ == $0
         File.join('proguard', 'dump.txt'), File.join('code', 'bin'),
         File.join('code', 'gen'), File.join('code', 'local.properties')
     ]
-    ignore_list.map!{ |s| '-xr!*' + File.join(File.basename(Src_dir), s)}
+    ignore_list.map!{ |s| '-xr!*' + File.join(File.basename(SRC_DIR), s)}
 
-    Cmd = ['7z', 'a'] + ignore_list + [
+    cmd = ['7z', 'a'] + ignore_list + [
         '-t7z', '-m0=LZMA2', '-mmt=on', '-mx9', '-md=64m', '-mfb=64', '-ms=4g',
-        '-l', '-mhe=on', '-w', filename, Src_dir ]
+        '-l', '-mhe=on', '-w', filename, SRC_DIR ]
 
-    system(*Cmd)
+    system(*cmd)
 
     puts
 
     if File.file? filename
-        puts indent('Backed up to') + ': ' + filename
+        say filename, 'Backed up to'
         #File.delete(filename)
     else
-        puts indent(' ! Error') + ': expected target file not existed'
-        exit(1)
+        say 'expected target file not existed', '! Error'
+        exit 1
     end
 end # if __FILE__ == $0
