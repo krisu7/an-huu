@@ -1,6 +1,6 @@
 # An Hữu
 
-* Version: 5.5.2 (#62)
+* Version: 5.5.3 beta (#63)
 
 
 Feel free to contact us at:
@@ -31,8 +31,11 @@ project. We hope this project will be always useful for everyone.
 
 # HISTORY
 
+* Version 5.5.3 beta (#63)
+    + *Initialize:* July 7th, 2014
+
 * Version 5.5.2 (#62)
-    + *Release:* March 11, 2014
+    + *Release:* March 11th, 2014
     + Change package name to `com.haibison.android.anhuu`.
     + Change prefixes for resources:
         - from `anhuu_` to `anhuu_f5be488d_`
@@ -42,22 +45,22 @@ project. We hope this project will be always useful for everyone.
     + Optimize code and make some changes to UI...
 
 * Version 5.5.2 beta
-    + *Initialize:* December 24, 2013
+    + *Initialize:* December 24th, 2013
 
 * Version 5.5.1
-    + *Release:* December 10, 2013
+    + *Release:* December 10th, 2013
     + Update prefix of resource IDs from `afc_` to `anhuu_`, 'Afc_' to `AnHuu_`.
     + Refactor some "preferences" classes to one class `Settings`.
     + Optimize code.
 
 * Version 5.5
-    + *Release:* December 10, 2013
+    + *Release:* December 10th, 2013
     + Change library name from `android-filechooser` to `An Hữu`. Also change
       package name from `group.pals.android.lib.ui.filechooser` to
       `com.haibison.android.lib.anhuu`.
 
 * Version 5.4.4
-    + *Release:* October 28, 2013
+    + *Release:* October 28th, 2013
     + Add `ACTION_CHOOSE` and `ACTION_SAVE`.
     + Add `EXTRA_RESULT_FILE_EXISTS` for `ACTION_SAVE`.
     + `EXTRA_RESULTS` now returns as a `Uri` for `ACTION_SAVE`. It keeps the old
@@ -65,25 +68,25 @@ project. We hope this project will be always useful for everyone.
     + Minor changes.
 
 * Version 5.4.4 beta
-    + *Initialize:* October 23, 2013
+    + *Initialize:* October 23rd, 2013
 
 * Version 5.4.3
-    + *Release:* October 23, 2013
+    + *Release:* October 23rd, 2013
 
 * Version 5.4.3 beta
-    + *Initialize:* September 30, 2013
+    + *Initialize:* September 30th, 2013
 
 * Version 5.4.2
-    + *Release:* September 27, 2013
+    + *Release:* September 27th, 2013
     + Fix light themes with dark action bar.
 
 * Version 5.4.1
-    + *Release:* September 26, 2013
+    + *Release:* September 26th, 2013
     + Fix light themes: now they use light action bar.
     + Add light themes with dark action bar.
 
 * Version 5.4
-    + *Release:* August 02, 2013
+    + *Release:* August 2nd, 2013
     + Integrate library `android-support-v7-appcompat` for action bar in APIs
       7-10.
     + Update icon sets following latest Android guidelines.
@@ -91,22 +94,22 @@ project. We hope this project will be always useful for everyone.
     + Some minor changes...
 
 * Version 5.4 beta
-    + *Initialize:* June 15, 2013
+    + *Initialize:* June 15th, 2013
 
 * Version 5.3
-    + *Release:* June 12, 2013
+    + *Release:* June 12th, 2013
     + Add light themes (normal with action bar and dialog);
     + Fix some grammars (plural forms of verbs in multi-selection mode...);
 
 * Version 5.2
-    + *Initialize:* May 5, 2013
+    + *Initialize:* May 5th, 2013
     + *Release:* May 5, 2013
     + All providers: use the host's package name as authority prefix instead of
       UUID authority suffix;
     + Change coding style: use UPPER_CASE for `static final` fields and enums;
 
 * Version 5.1
-    + *Release:* April 28, 2013
+    + *Release:* April 28th, 2013
     + We're happy to announce that new version has more comfortable UI, more
       efficient and is stable. We've changed the entire architecture of the
       project. Now it uses content providers to serve requests. That's better
@@ -118,15 +121,15 @@ project. We hope this project will be always useful for everyone.
     + Thank you for using our services.
 
 * Version 5.1 beta
-    + *Initialize:* October 23, 2012
+    + *Initialize:* October 23rd, 2012
 
 * Version 5.0
-    + *Release:* October 21, 2012
+    + *Release:* October 21st, 2012
     + We don't use Apache License 2.0 anymore. Now the library is released under
       MIT license.
 
 * Version 4.9
-    + *Release:* October 20, 2012
+    + *Release:* October 20th, 2012
     + Improves the speed of formatting file time;
     + Uses a unique filename of `SharedPreferences` instead of default
       application's `SharedPreferences`;
@@ -137,20 +140,20 @@ project. We hope this project will be always useful for everyone.
     + Updates NOTICE;
 
 * Version 4.9 beta
-    + *Initialize:* October 12, 2012
+    + *Initialize:* October 12th, 2012
 
 * Version 4.8.1
-    + *Release:* October 12, 2012
+    + *Release:* October 12th, 2012
     + Fixes a bug that file item does not draw properly after flinging it to
       delete files;
 
 * Version 4.8
-    + *Release:* October 12, 2012
+    + *Release:* October 12th, 2012
     + Fixes a small bug that last location or selected file will be not pushed
       into history;
 
 * Version 4.7
-    + *Release:* October 12, 2012
+    + *Release:* October 12th, 2012
     + All date formatting utilities were moved from `/IFileAdapter` to
       `/utils.DateUtils`;
     + Removes key `/FileChooserActivity._UseThemeDialog`;
@@ -163,20 +166,20 @@ project. We hope this project will be always useful for everyone.
     + Minor changes;
 
 * Version 4.7 beta
-    + *Initialize:* October 02, 2012
+    + *Initialize:* October 2nd, 2012
 
 * Version 4.6.2
-    + *Release:* October 01, 2012
+    + *Release:* October 1st, 2012
     + Fixes: View does not reload after changing view type between list view and
       grid view.
 
 * Version 4.6.1
-    + *Release:* October 01, 2012
+    + *Release:* October 1st, 2012
     + Fixes: View does not reload after changing view type between list view and
       grid view.
 
 * Version 4.6
-    + *Release:* October 01, 2012
+    + *Release:* October 1st, 2012
     + Updates UI;
     + Removes deprecated method `History.push(A, A)`;
     + Keeps and shows full history to the user (wherever they have been gone
@@ -189,33 +192,33 @@ project. We hope this project will be always useful for everyone.
         - Issue #10;
 
 * Version 4.6 beta
-    + *Initialize:* September 08, 2012
+    + *Initialize:* September 8th, 2012
 
 * Version 4.5
-    + *Release:* September 07, 2012
+    + *Release:* September 7th, 2012
     + New icons for menu `Home`, `Reload` and for file types audio, image,
       video, plain text and compressed;
 
 * Version 4.5 beta
-    + *Initialize:* August 31, 2012
+    + *Initialize:* August 31st, 2012
 
 * Version 4.4
-    + *Release:* August 30, 2012
+    + *Release:* August 30th, 2012
     + Added languages: Spanish, Vietnamese. Special thanks to C. - a kind friend
       who helped us translate the library into Spanish;
 
 * Version 4.3
-    + *Release:* August 29, 2012
+    + *Release:* August 29th, 2012
     + Fixed [issue #2];
     + Upgraded UI;
     + Added history viewer;
     + Improved some minor code;
 
 * Version 4.3 beta
-    + Initialization: May 19, 2012
+    + Initialization: May 19th, 2012
 
 * Version 4.2
-    + *Release:* May 15, 2012
+    + *Release:* May 15th, 2012
     + due to [Android bug #30622], so we prefix all resource names with `afc_`;
     + add small text view below location bar, to show current location's full
       name if it is truncated by the view's ellipsize property;
@@ -225,10 +228,10 @@ project. We hope this project will be always useful for everyone.
     + some UI fixes/ updates;
 
 * Version 4.2 beta
-    + Initialization: May 13, 2012
+    + Initialization: May 13th, 2012
 
 * Version 4.1
-    + *Release:* May 12, 2012
+    + *Release:* May 12th, 2012
     + update UI messages;
     + if the app does not have permission `WRITE_EXTERNAL_STORAGE`, notify user
       when he creates or deletes folder/ file;
@@ -236,10 +239,10 @@ project. We hope this project will be always useful for everyone.
       to;
 
 * Version 4.1 beta
-    + Initialization: May 11, 2012
+    + Initialization: May 11th, 2012
 
 * Version 4.0 - Tablet
-    + *Release:* May 11, 2012
+    + *Release:* May 11th, 2012
     + add `Home` button;
     + add grid view/ list view mode;
     + allow creating new directory;
@@ -251,39 +254,39 @@ project. We hope this project will be always useful for everyone.
     + some minor changes;
 
 * Version 4.0 beta
-    + Initialization: May 08, 2012
+    + Initialization: May 8th, 2012
 
 * Version 3.5
-    + *Release:* May 01, 2012
+    + *Release:* May 1st, 2012
     + remove button `Cancel` (use default `Back` button of system)
     + hello May Day  :-)
 
 * Version 3.4
-    + *Release:* March 23, 2012
+    + *Release:* March 23rd, 2012
     + fix serious bug: hardcode service action name of local file provider;
       the service will be called as a remote service, which will raise
       fatal exception if there are multiple instances of the library installed
       on the device;
 
 * Version 3.3
-    + *Release:* March 22, 2012
+    + *Release:* March 22nd, 2012
     + fix bug in LoadingDialog: if the user finishes the owner activity, the
       application can crash if the dialog is going to show up or dismiss;
     + improve `FileChooserActivity`: make its height and width always fit the
       screen size in dialog theme;
 
 * Version 3.2
-    + *Release:* March 16, 2012
+    + *Release:* March 16th, 2012
     + add package `io`: `IFile` and `LocalFile`;
     + use `IFile` instead of `java.io.File`;
     + remove `FileContainer` and package `bean`;
 
 * Version 3.1
-    + *Release:* March 15, 2012
+    + *Release:* March 15th, 2012
     + add `FileProviderService`;
 
 * Version 3.0
-    + *Release:* March 15, 2012
+    + *Release:* March 15th, 2012
     + move file listing functions to external service;
     + change project name from `FileChooser` to `android-filechooser`  :-D
     + some minor changes:
@@ -293,7 +296,7 @@ project. We hope this project will be always useful for everyone.
         - ...
 
 * Version 2.0
-    + *Release:* Feb 22, 2012
+    + *Release:* February 22nd, 2012
     + change default date format to `yyyy.MM.dd hh:mm a`;
     + try using sdcard as rootpath if it is not specified; if sdcard is not
       available, use `/`;
@@ -301,23 +304,23 @@ project. We hope this project will be always useful for everyone.
     + show directories' date (last modified);
 
 * Version 1.91
-    + *Release:* Feb 06, 2012
+    + *Release:* February 6th, 2012
     + Add: show file time (last modified);
 
 * Version 1.9
-    + *Release:* Feb 06, 2012
+    + *Release:* February 6th, 2012
     + Fix: crash if cast footer of listview to `DataModel`;
 
 * Version 1.8.2
-    + *Release:* Feb 06, 2012
+    + *Release:* February 6th, 2012
     + enable fast scroll of the list view;
 
 * Version 1.8.1
-    + *Release:* Feb 05, 2012
+    + *Release:* February 5th, 2012
     + Fix: it doesn't remember the first path (rootpath) in history;
 
 * Version 1.8
-    + *Release:* Feb 05, 2012
+    + *Release:* February 5th, 2012
     + Shows progress dialog while listing files of a directory;
     + Adds flag max file count allowed, in case the directory has thousands of
       files, the application can harm memory. Default value is `1,024`;
@@ -325,22 +328,22 @@ project. We hope this project will be always useful for everyone.
       this is up to Android developers  :-)
 
 * Version 1.7
-    + *Release:* Jan 22, 2012
+    + *Release:* January 22nd, 2012
     + add function to check if filename (in save dialog mode) is valid or not;
     + change name `FilesAdapter` to `FileAdapter`;
 
 * Version 1.6
-    + *Release:* Jan 13, 2012
+    + *Release:* January 13th, 2012
     + check and warn user if save as filename is a directory;
     + when finish, return some flags for further use (in case the caller needs);
 
 * Version 1.5
-    + *Release:* Jan 13, 2012
+    + *Release:* January 13th, 2012
     + apply Apache License 2.0;
     + set result code to `RESULT_CANCELED` when user clicks button `Cancel`;
 
 * Version 1.4
-    + *Release:* Jan 08, 2012
+    + *Release:* January 8th, 2012
     + first publishing;
     + choose file(s) dialog;
     + choose file(s) and/or directory(ies) dialog;

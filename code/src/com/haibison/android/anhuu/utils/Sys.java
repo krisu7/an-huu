@@ -28,12 +28,12 @@ public class Sys {
     /**
      * The library version name.
      */
-    public static final String LIB_VERSION_NAME = "5.5.2";
+    public static final String LIB_VERSION_NAME = "5.5.3 beta";
 
     /**
      * The library version code.
      */
-    public static final int LIB_VERSION_CODE = 62;
+    public static final int LIB_VERSION_CODE = 63;
 
     /**
      * This unique ID is used for stuffs such as preferences' file name.
