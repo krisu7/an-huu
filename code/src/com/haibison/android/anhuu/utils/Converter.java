@@ -16,10 +16,9 @@ package com.haibison.android.anhuu.utils;
 public class Converter {
 
     /**
-     * Converts {@code size} (in bytes) to string. This tip is from:
-     * {@code http://stackoverflow.com/a/5599842/942821}.
+     * Converts bytes to string.
      * 
-     * @param size
+     * @param bytes
      *            the size in bytes.
      * @return e.g.:
      *         <p/>
@@ -30,22 +29,25 @@ public class Converter {
      *         <li>...</li>
      *         </ul>
      */
-    public static String sizeToStr(double size) {
-        if (size <= 0)
-            return "0 B";
+    public static String bytesToStr(double bytes) {
+        final short kib = 1024;
+        if (Math.abs(bytes) < kib)
+            return String.format("%.0f B", bytes);
 
-        final String[] units = { "", "Ki", "Mi", "Gi", "Ti", "Pi", "Ei", "Zi",
-                "Yi" };
-        final short blockSize = 1024;
+        final String units = "KMGTPEZY";
+        final double nearestPower = Math.floor(Math.log(Math.abs(bytes))
+                / Math.log(2) / 10);
+        String unit = units.charAt(Math.min((int) nearestPower - 1,
+                units.length() - 1))
+                + "iB";
 
-        int digitGroups = (int) (Math.log10(size) / Math.log10(blockSize));
-        if (digitGroups >= units.length)
-            digitGroups = units.length - 1;
-        size = size / Math.pow(blockSize, digitGroups);
-
-        return String.format(
-                String.format("%s %%sB", digitGroups == 0 ? "%,.0f" : "%,.2f"),
-                size, units[digitGroups]);
-    }// sizeToStr()
+        /*
+         * Bytes might exceed max unit that we have. So ignore the overflow
+         * value.
+         */
+        return String.format("%.2f %s",
+                bytes / Math.pow(kib, Math.min(nearestPower, units.length())),
+                unit);
+    }// bytesToStr()
 
 }

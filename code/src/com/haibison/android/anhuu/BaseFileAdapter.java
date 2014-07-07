@@ -205,7 +205,7 @@ public class BaseFileAdapter extends ResourceCursorAdapter {
                 .getColumnIndex(BaseFile.COLUMN_MODIFICATION_TIME)));
         if (BaseFileProviderUtils.isFile(cursor))
             bag.mTxtFileInfo.setText(String.format("%s, %s", Converter
-                    .sizeToStr(cursor.getLong(cursor
+                    .bytesToStr(cursor.getLong(cursor
                             .getColumnIndex(BaseFile.COLUMN_SIZE))), time));
         else
             bag.mTxtFileInfo.setText(time);
