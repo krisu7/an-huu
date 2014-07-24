@@ -5,20 +5,19 @@
 
 Feel free to contact us at:
 
-* [Homepage]
 * E-mails:
     + haibison.apps[at]gmail.com
 
 
 # What is this project?
 
-This is a simple library - a file chooser for [Android].
+This is a simple library -- a file chooser for [Android].
 
 
 # CREDITS
 
 We sincerely thank all of our friends -- who have been contributing to this
-project. We hope this project will be always useful for everyone.
+project.  We hope this project will be always useful for everyone.
 
 * C
 * Simon McCorkindale
@@ -351,7 +350,6 @@ project. We hope this project will be always useful for everyone.
 
 
 [Android]: http://www.android.com
-[Homepage]: http://www.haibison.com
 [Keepass2Android]: https://keepass2android.codeplex.com/
 [issue #2]: https://code.google.com/p/android-filechooser/issues/detail?id=2
 [Android bug #30622]: https://code.google.com/p/android/issues/detail?id=30622
